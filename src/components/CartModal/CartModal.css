@@ -1,0 +1,76 @@
+.left-dashtop {
+    border-left: 1px solid  #d3d3d3 ;
+    border-right: 1px solid  #d3d3d3 ;
+    border-bottom: 1px solid  #d3d3d3 ;
+
+
+
+  }
+  .left-dash {
+    border-left: 1px solid  #d3d3d3 ;
+    border-right: 1px solid  #d3d3d3 ;
+
+
+
+  }
+  .container-scroll {
+      height: 300px;
+    overflow-y: auto;
+  }
+  
+  .container-scroll2 {
+    height: 300px;
+  overflow-y: auto;
+}
+  
+  .proceed-button {
+    background: linear-gradient(
+        330deg,
+        #33669A,
+        rgba(253, 187, 45, 1) 96%
+      );
+    border-color: white;
+    font-size: large;
+  }
+  .cart-heading {
+    background-color: #33669A;
+}
+  .cart-ending {
+      background-color: #33669A;
+  }
+  .img-center{
+    align-items: center;
+  }
+.imgStyle:hover {
+  -webkit-transition: -webkit-transform 0.8s ease-in-out;
+  transition: transform 0.8s ease-in-out;
+  box-shadow: 0px 4px 80px rgba(0, 0, 0, 0.322);
+  cursor: pointer;
+}
+
+.newimgStyle {
+  margin-top: 20px;
+  margin-left: 30%;
+
+  align-self: center;
+}
+.btn-cartmodal {
+  background-color: grey;
+  border-color: grey;
+}
+
+.btn-cartmodal2 {
+}
+
+  .cart-item {
+      margin-top:10px;
+      margin-bottom:10px;
+
+      background-color: #33669A10;
+  }
+  
+  .final-heading {
+    margin-bottom:10px;
+    color: "white";
+    background-color: #33669A;
+}

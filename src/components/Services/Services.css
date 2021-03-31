@@ -1,0 +1,56 @@
+@media (min-width: 768px) {
+  .seven-cols .col-md-1,
+  .seven-cols .col-sm-1,
+  .seven-cols .col-lg-1 {
+    width: 100%;
+    *width: 100%;
+  }
+}
+
+@media (min-width: 992px) {
+  .seven-cols .col-md-1,
+  .seven-cols .col-sm-1,
+  .seven-cols .col-lg-1 {
+    width: 14.285714285714285714285714285714%;
+    *width: 14.285714285714285714285714285714%;
+  }
+}
+
+/**
+ *  The following is not really needed in this case
+ *  Only to demonstrate the usage of @media for large screens
+ */
+@media (min-width: 1200px) {
+  .seven-cols .col-md-1,
+  .seven-cols .col-sm-1,
+  .seven-cols .col-lg-1 {
+    width: 14.285714285714285714285714285714%;
+    *width: 14.285714285714285714285714285714%;
+    padding-left: 60px;
+    color: #ababab;
+    font-size: 12px;
+    text-align: center;
+  }
+}
+.main-container {
+  border-radius: 10px;
+}
+.main-container p {
+  padding-top: 10px;
+}
+
+.imgStyle:hover {
+  -webkit-transition: -webkit-transform 0.8s ease-in-out;
+  transition: transform 0.8s ease-in-out;
+  box-shadow: 0px 4px 80px rgba(0, 0, 0, 0.322);
+  cursor: pointer;
+}
+
+.desktopServices {
+  margin-right: 30px;
+  margin-left: 30px;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.198);
+  background-color: white;
+  border-radius: 40px;
+  margin-bottom: 50px;
+}

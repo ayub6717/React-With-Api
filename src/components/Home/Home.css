@@ -1,0 +1,48 @@
+/* .header-banner {
+  margin-top: 0px;
+  background: linear-gradient(
+      rgba(0, 0, 0, 0.2),
+      rgba(0, 0, 0, 0.2)
+    ),
+    url(../../images/home2.jpg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  height: 400px;
+}
+.header-bannerMobile {
+  margin-top: -50px;
+  background-color: #33669A20;
+  background-repeat: no-repeat;
+  background-size: 100%;
+} */
+
+
+.header-bannerMobile h1 {
+  font-size: 60px;
+  text-align: center;
+}
+.header-bannerMobile h3 {
+  font-size: 30px;
+  text-align: center;
+  color: #33669A;
+}
+.header-banner h1 {
+  font-size: 60px;
+  text-align: center;
+}
+.header-banner h3 {
+  font-size: 30px;
+  text-align: center;
+  color: #33669A;
+}
+.headingHome {
+  padding-top: 20px;
+  margin-bottom: 50px;
+}
+.headingHomeSmall {
+  padding-top: 100px;
+  margin-bottom: 20px;
+}
+.service-container {
+  padding-top: 170px;
+}

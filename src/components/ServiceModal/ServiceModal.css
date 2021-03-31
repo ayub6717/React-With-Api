@@ -1,0 +1,8 @@
+.body-color {
+  background: #ffffff;
+  color: #343a40;
+}
+.modal-scroll {
+  height: 700px;
+  overflow-y: auto;
+}

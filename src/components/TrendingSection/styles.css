@@ -1,0 +1,17 @@
+.slick-container {
+    margin: 0 auto;
+    margin-top: -30px;
+    width: 100%;
+    color: #333;
+  }
+  .slick-prev::before, .slick-next::before { color: #33669A !important; height:"30px"; width:"30px";}
+  
+  .slick-container img {
+      padding: 0px;
+      border-width: 0px;
+      margin:auto;
+      margin-top: 30px;
+
+    width: 247px;
+    height: 184px;
+  }

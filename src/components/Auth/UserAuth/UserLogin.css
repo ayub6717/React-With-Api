@@ -1,0 +1,11 @@
+.link-p {
+    cursor: pointer;
+    color: blue;
+    text-decoration: underline;
+}
+.link-p:hover {
+    cursor: pointer;
+    color: 33669A;
+    font-size: large;
+    text-decoration: underline;
+}

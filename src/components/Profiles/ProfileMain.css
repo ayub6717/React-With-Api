@@ -1,0 +1,37 @@
+.UserDashboardList li {
+  font-weight: 600;
+  text-align: right;
+  border-radius: 5px;
+  padding-top:10px;
+  padding-bottom:10px;
+  list-style: none;
+}
+
+.UserDashboardList li:hover {
+
+  background-color: #f4f5f8;
+  text-align: center;
+  cursor: pointer;
+}
+.UserDashboardListAccount {
+  
+
+  background-color: #f4f5f8;
+  border-right: 5px solid #33669A;
+}
+.vl {
+  border-left: 1px solid lightgray;
+  height: 500px;
+}
+td {
+  text-align: left;
+  padding: 10px 40px 20px 40px;
+}
+tr {
+  border-bottom: 1px solid lightgray;
+}
+.homeSpan {
+  color: #33669A;
+  padding: 10px;
+  font-size: larger;
+}

@@ -1,0 +1,54 @@
+.ClientBack{
+    background-image: url("https://cdn1.bbcode0.com/uploads/2021/3/11/9e73ba2f9f23b022f4f1bc9035b0e959-full.png");
+    width: 100%;
+    height: auto;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.ClientText{
+    text-align: center;
+    font-size: 60px;
+}
+
+.call-now{
+    padding-top: 50px;
+    text-align: center;
+}
+
+.rec-shadow{
+    box-shadow: 0 5px 9px 0 rgba(0, 0, 0, 0.2), 0 2px 18px 0 rgba(0, 0, 0, 0.034);
+    border-radius:10px;
+    padding: 10px !important;
+
+}
+
+.call-bg{
+    background-color: rgba(43, 189, 121, 0.815);
+    color: white;
+    margin-bottom: -71px;
+}
+.call-btn{
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    padding-right: 50px;
+    margin-top: 10px;
+}
+
+
+@media only screen and (max-width: 443px) {
+
+
+    .rec-shadow {
+       padding:5px !important;
+    }
+
+    .call-now{
+        padding-top: 10px;
+        text-align: center;
+        margin-top: -34px !important;
+    }
+    .call-mid{
+        text-align: center;
+    }
+  }

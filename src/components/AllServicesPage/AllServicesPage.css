@@ -1,0 +1,92 @@
+html {
+  scroll-behavior: smooth;
+}
+.scroll-class {
+  margin-top: 15px;
+}
+.section-nav {
+  top: 0; /* required */
+
+  position: -webkit-sticky;
+  position: sticky;
+  align-self: start;
+  border-right: 1px solid #33669A80;
+  margin-right: 30px;
+  margin-top: 30px;
+  height: 100vh;
+  list-style: none;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  
+}
+
+/* .section-nav li.active > a::after {
+  height: 10px;
+  display: block;
+  width: 100px;
+  background: #808080;
+  border-bottom: 1px white;
+  content: "";
+} */
+
+/* Sidebar Navigation */
+
+.section-nav a {
+  text-decoration: none;
+  display: block;
+  color: #33669A;
+  font-weight: 600;
+  background-color: #ffffff;
+  margin: 5px;
+  padding: 10px;
+  border-radius: 10px;
+  list-style-type: none;
+
+  transition: all 50ms ease-in-out; /* 💡 This small transition makes setting of the active state smooth */
+}
+.section-nav ul {
+  text-decoration: none;
+  list-style-type: none;
+
+}
+
+.section-nav a:hover,
+.section-nav a:focus {
+  font-weight: 600;
+  cursor: pointer;
+  border-right: 5px solid #33669A;
+  background-color: rgb(241, 241, 241);
+  margin: 5px;
+  padding: 10px;
+  color: white;
+
+  border-radius: 10px;
+}
+
+/** Poor man's reset **/
+* {
+  box-sizing: border-box;
+}
+
+/** enlarge the sections for this demo, so that we have a long scrollable page **/
+section {
+  padding-bottom: 20rem;
+}
+hr {
+  height: 0.25rem;
+  width: 25%;
+  margin: 0;
+  background: #33669A;
+  border: none;
+  transition: 0.3s ease-in-out;
+}
+
+.some-class {
+  background-color: red;
+}
+
+.some-active-class {
+  background-color: green;
+
+}

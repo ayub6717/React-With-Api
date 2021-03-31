@@ -1,0 +1,10 @@
+.choice-section p {
+  padding-top: 10px;
+  font-size: 18px;
+  font-weight: light;
+}
+.choice-div {
+  background-color: white;
+  height: 110px;
+  width: 210px;
+}

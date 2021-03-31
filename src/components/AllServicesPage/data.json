@@ -1,0 +1,71 @@
+{
+    "serviceId": 1,
+    "iconfile": "",
+    "coverfile": "",
+    "includeHeading": [
+        {
+            "includeHeading": "included 1"
+        },
+        {
+            "includeHeading": "included 2"
+        }
+    ],
+    "faq": [
+        {
+            "question": "question 1",
+            "answer": "answer 1"
+        },
+        {
+            "question": "q 2",
+            "answer": "a 2"
+        }
+    ],
+    "excludeHeading": [
+        {
+            "excludeHeading": "excluded 1"
+        },
+        {
+            "excludeHeading": "excluded 2"
+        }
+    ],
+    "details": "details",
+    "pricing": "p",
+    "payment": "ppp",
+    "nightshifting": "nnnn",
+    "tandc": [
+        {
+            "termsHeading": "h1",
+            "termsDetails": "d1"
+        },
+        {
+            "termsHeading": "h2",
+            "termsDetails": "d2"
+        }
+    ],
+    "choose": [
+        {
+            "chooseHeading": "c1",
+            "chooseDetails": "cd1"
+        },
+        {
+            "chooseHeading": "c2",
+            "chooseDetails": "cd2"
+        }
+    ],
+    "servicefeatures": [
+        {
+            "featuresHeading": "s1"
+        },
+        {
+            "featuresHeading": "s1"
+        }
+    ],
+    "minidetails": [
+        {
+            "mini": "mini details 1 new"
+        },
+        {
+            "mini": "mini details 2 new"
+        }
+    ]
+}
