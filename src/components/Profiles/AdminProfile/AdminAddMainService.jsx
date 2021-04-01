@@ -694,13 +694,15 @@ const deleteFinalService = async (id) => {
 
                     <div className="row justify-content-center" style={{ marginBottom: "20px" }}>
                       <div className="col-md-8">
-                        <input
+                        <textarea
+                          style={{height:"200px"}}
                           name="mini"
                           className="form-control"
                           placeholder="Enter What is mini details"
                           value={x.mini}
                           onChange={e => handleInputChangeMini(e, i)}
                         />
+
                       </div>
                       <div className="col-md-2" style={{ marginTop: "0px" }}>
                         {inputListMini.length - 1 === i &&
@@ -722,7 +724,8 @@ const deleteFinalService = async (id) => {
               <h4 className="text-success">
                 Details
               </h4>
-              <input
+              <textarea
+                style={{height:"200px"}}
                 className="form-control"
                 type="text"
                 name=""
@@ -743,7 +746,8 @@ const deleteFinalService = async (id) => {
 
                     <div className="row justify-content-center" style={{ marginBottom: "20px" }}>
                       <div className="col-md-8">
-                        <input
+                        <textarea
+                          style={{height:"100px"}}
                           name="includeHeading"
                           className="form-control"
                           placeholder="Enter What is included"
@@ -783,8 +787,8 @@ const deleteFinalService = async (id) => {
 
                     <div className="row justify-content-center" style={{ marginBottom: "20px" }}>
                       <div className="col-md-8">
-                        <input
-                          name="excludeHeading"
+                        <textarea
+                          style={{height:"100px"}}
                           className="form-control"
                           placeholder="Enter What is excluded"
                           value={x.excludeHeading}

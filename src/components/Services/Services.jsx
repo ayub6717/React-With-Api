@@ -3,7 +3,7 @@ import "./Services.css";
 import service1 from "../../icons/service1.png";
 import service2 from "../../icons/service2.png";
 import service3 from "../../icons/service3.png";
-import service4 from "../../icons/service4.png";
+// import service4 from "../../icons/service4.png";
 import service5 from "../../icons/service5.png";
 import service6 from "../../icons/service6.png";
 import service7 from "../../icons/service7.png";
