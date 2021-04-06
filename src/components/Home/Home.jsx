@@ -51,7 +51,6 @@ import Safety from "../Safety/Safety"
 
 
 
-
 const Home = () => {
 
   /*react responsive starts here*/
@@ -251,7 +250,7 @@ const Home = () => {
               style={{
                 textAlign: "center",
                 fontSize: "24px",
-                color: "#33669A",
+                color: "#33669A",     
                 marginTop: "10px",
               }}
             >
@@ -273,13 +272,13 @@ const Home = () => {
 
           }
         </div> */}
-        {isDesktopOrLaptop ?
+        {/* {isDesktopOrLaptop ?
           <Footer></Footer>
 
           :
           <FooterMobile></FooterMobile>
 
-        }
+        } */}
       </div>
     </div>
   );

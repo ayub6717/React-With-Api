@@ -2,10 +2,10 @@ import React, { useEffect, useRef, useState } from "react";
 import NavBar from "../NavBar/NavBar";
 import "./AllServicesPage.css";
 import { Link } from "react-router-dom";
-import Footer from "../Footer/Footer";
+// import Footer from "../Footer/Footer";
 import NavBarDropDown from "../NavBar/NavBarDropDown";
 import { NavbarBrand, Row, Col } from "react-bootstrap";
-import FooterMobile from "../Footer/FooterMobile";
+// import FooterMobile from "../Footer/FooterMobile";
 import { useMediaQuery } from 'react-responsive';
 const AllServicesPage = () => {
   useEffect(() => {
@@ -90,7 +90,7 @@ const AllServicesPage = () => {
 
       
 
-<FooterMobile></FooterMobile>
+{/* <FooterMobile></FooterMobile> */}
 
 
     </div >

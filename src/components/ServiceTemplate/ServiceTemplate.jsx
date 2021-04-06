@@ -12,8 +12,8 @@ import { useHistory } from "react-router-dom";
 import { reactLocalStorage } from "reactjs-localstorage";
 import { useMediaQuery } from 'react-responsive';
 // import ChoiseSection from "../ChoiceSection/ChoiseSection";
-import Footer from "../Footer/Footer";
-import FooterMobile from "../Footer/FooterMobile";
+// import Footer from "../Footer/Footer";
+// import FooterMobile from "../Footer/FooterMobile";
 
 import { SlideDown } from "react-slidedown";
 import "react-slidedown/lib/slidedown.css";
@@ -173,10 +173,10 @@ function ServiceTemplate({ match }) {
             className="container-fluid newheader"
           >
             <div className="newheading">
-              <p className="headService" style={{ color: "#ffffff" }}>{details.overall[0].title}</p>
+            <h2 className="headService" style={{ color: "#ffffff" }}>{details.overall[0].title} <span><img style={{width:"180px"}} src="/img/AnotherPic/safety.png" alt="safety.png"/></span> </h2> 
               {details.minidetail.map((item) => (
                 <ul>
-                  <li key={item.id}>{item.details}</li>
+                  <li key={item.id}> <img style={{width:"20px"}} src="/img/AnotherPic/checkmark.png" alt="icon"/> {item.details}</li>
                 </ul>
               ))}
             </div>
@@ -334,7 +334,7 @@ function ServiceTemplate({ match }) {
                 </Tabs>
               </div>
 
-              <div className="col-sm-4">
+              <div className="col-sm-4" style={{paddingBottom:"20px"}}>
               <div className="sidebox">
             <div className="sidebox1">
               <h4 style={{ color: "white" }}>{details.overall[0].thirdheading}</h4>
@@ -369,7 +369,7 @@ function ServiceTemplate({ match }) {
 
             </div>
           </div>
-              </div>
+              </div> 
             </div>
 
 
@@ -390,10 +390,10 @@ function ServiceTemplate({ match }) {
 
             <div className="newheadingMobile" style={{ paddingBottom: "50px", paddingTop: "50px", }} >
               <h3 style={{ color: "#ffffff" }}>
-                {details.overall[0].title}</h3>
+                {details.overall[0].title} <span><img style={{width:"100px"}} src="/img/AnotherPic/safety.png" alt="safety.png"/></span></h3>
               {details.minidetail.map((item) => (
                 <ul style={{ color: "white", margin: "0px", marginLeft: "20px", padding: "0px" }}>
-                  <li style={{ color: "white", fontWeight: "500", fontSize: "10px", margin: "0px", padding: "0px" }} key={item.id}>{item.details}</li>
+                  <li style={{ color: "white", fontWeight: "500", fontSize: "10px", margin: "0px", padding: "0px" }} key={item.id}> <img style={{width:"10px"}} src="/img/AnotherPic/checkmark.png" alt="icon"/>  {item.details}</li>
 
                 </ul>
               ))}
@@ -563,13 +563,13 @@ function ServiceTemplate({ match }) {
           </div>
         </div>
       }
-      {
+      {/* {
         isDesktopOrLaptop ?
 
           <Footer></Footer>
           :
           <FooterMobile></FooterMobile>
-      }
+      } */}
     </div >
   );
 }

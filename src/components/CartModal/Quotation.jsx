@@ -9,8 +9,8 @@ import { reactLocalStorage } from "reactjs-localstorage";
 import { Redirect, useHistory } from "react-router-dom";
 import DatePicker from 'react-date-picker';
 import SelectSearch from "react-select-search";
-import Footer from "../Footer/Footer";
-import FooterMobile from "../Footer/FooterMobile";
+// import Footer from "../Footer/Footer";
+// import FooterMobile from "../Footer/FooterMobile";
 import { useMediaQuery } from 'react-responsive';
 import "react-date-picker/dist/DatePicker.css";
 import QuotationModal from "./QuotationModal";
@@ -318,11 +318,11 @@ function Quotation({match}) {
 
         onHide={() => modalHide()}
       ></QuotationModal>
-      {isDesktopOrLaptop ?
+      {/* {isDesktopOrLaptop ?
         <Footer></Footer>
         :
         <FooterMobile></FooterMobile>
-      }
+      } */}
 
     </div>
   );

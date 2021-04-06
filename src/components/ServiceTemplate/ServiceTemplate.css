@@ -32,10 +32,7 @@
 }
 
 .thirdlayer {
-  background: linear-gradient(
-    330deg,#33669A 45%,
-    #8E55A2 99%
-  ); 
+  background-image: linear-gradient(130deg,#37948f,#11394b);
   margin-left: 10px;
   margin-right: 10px;
 
@@ -44,8 +41,15 @@
   padding: 10px;
   border-radius: 10px;
 }
+
+.thirdlayer:hover{
+  background-image: linear-gradient(130deg,#286c86,#29a07c);
+
+}
+
 .newheadingMobile li {
-  list-style: '✓ ';
+  /* list-style: '✓ '; */
+  list-style-type: none !important;
   padding:0;
   margin:0;
   color:"#ffffff";
@@ -62,7 +66,8 @@
  }
 
 .newheading li {
- list-style: '✓ ';
+  list-style-type: none !important;
+ /* list-style: '✓ '; */
  padding:0;
  margin:0;
  font-weight: "bold";
@@ -249,6 +254,8 @@
 .headService{
   font-family: 'a Astro Space';
   font-size: 45px;
+  margin-bottom: 40px;
+  margin-top: -51px;
 }
 
 /* .ServiceHover:hover{
@@ -340,3 +347,12 @@ a#controlled-tab-example-tab-FAQ:hover {
   padding: .5rem 25px;
   padding-left: 10px;
 }
+
+.nav-tabs .nav-link {
+  margin-bottom: -1px;
+  border: 1px solid transparent;
+  border-top-left-radius: .25rem;
+  border-top-right-radius: .25rem;
+  padding: 15px;
+}
+

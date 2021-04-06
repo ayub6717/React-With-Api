@@ -9,8 +9,8 @@ import { reactLocalStorage } from "reactjs-localstorage";
 import { Redirect, useHistory } from "react-router-dom";
 import DatePicker from 'react-date-picker';
 import SelectSearch from "react-select-search";
-import Footer from "../Footer/Footer";
-import FooterMobile from "../Footer/FooterMobile";
+// import Footer from "../Footer/Footer";
+// import FooterMobile from "../Footer/FooterMobile";
 import { useMediaQuery } from 'react-responsive';
 import "react-date-picker/dist/DatePicker.css";
 function Checkout(props) {
@@ -551,11 +551,11 @@ function Checkout(props) {
         userName={userInfo[0].name}
         onHide={() => modalHide()}
       ></ConfirmModal>
-      {isDesktopOrLaptop ?
+      {/* {isDesktopOrLaptop ?
         <Footer></Footer>
         :
         <FooterMobile></FooterMobile>
-      }
+      } */}
 
     </div>
   );

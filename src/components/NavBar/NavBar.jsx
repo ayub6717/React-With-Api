@@ -75,7 +75,8 @@ const NavBar = () => {
         <div className="container">
           <Navbar.Brand onClick={handleClick} style={{cursor:"pointer"}}>
             <div className="d-flex align-items-center">
-              <img src={navLogo} alt="" width="130" />
+              <a href="/#/">
+              <img src={navLogo} alt="" width="130" /></a>
               {/* <p
                 style={{
                   color: "#33669A",
@@ -99,11 +100,11 @@ const NavBar = () => {
                 className="d-inline-block align-top"
                 alt="React Bootstrap logo"
               />
-              <b style={{ color: "#33669A" }}>  Orders</b>
+              <b style={{ color: "#33669A" }}>  Orders</b> 
             </Nav.Link>
             
 
-              <Nav.Link style={{color:"#33669A"}}>
+              <Nav.Link style={{color:"#33669A"}}> 
 
 
                 
@@ -134,7 +135,7 @@ const NavBar = () => {
               ) : (
                 <Nav.Link
                   onClick={() => {
-                    history.push("/login");
+                    history.push("/login"); 
                   }}
                   style={{color:"#33669A"}}
                   eventKey={2}
@@ -167,14 +168,14 @@ const NavBar = () => {
       <NavDropdown title="Dropdown" id="basic-nav-dropdown">
         <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
         <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
-        <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
+        <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item> 
         <NavDropdown.Divider />
         <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
       </NavDropdown>
     </Nav>    
   </Navbar.Collapse>
 </Navbar>
-    </div>
+    </div> 
     </div>
     
       

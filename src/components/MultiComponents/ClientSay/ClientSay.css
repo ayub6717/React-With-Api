@@ -36,7 +36,9 @@
 }
 
 
-@media only screen and (max-width: 443px) {
+
+
+@media only screen and (max-width: 509px) {
 
 
     .rec-shadow {
@@ -47,8 +49,32 @@
         padding-top: 10px;
         text-align: center;
         margin-top: -34px !important;
+        height: 195px !important;
     }
     .call-mid{
         text-align: center;
     }
+  }
+
+
+  @media only screen and (max-width: 575px) {
+
+
+    .rec-shadow {
+       padding:0px !important;
+    }
+
+    .call-now{
+        padding-top: 10px;
+        text-align: center;
+        margin-top: -34px !important;
+        height: 135px;
+    }
+    .call-mid{
+        text-align: center;
+    }
+  }
+
+  .shadX{
+    box-shadow: 0 0px 9px 0 rgba(0, 0, 0, 0.2), 0 0px 18px 0 rgba(0, 0, 0, 0.034);
   }

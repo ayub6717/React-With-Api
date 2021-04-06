@@ -34,11 +34,10 @@ const Footer = () => {
             <div className="col-md-6" style={{ backgroundColor: "", height: "200px" }}>
               <p style={{ fontSize: "16px", fontWeight: "bold", color: "black", textAlign: "right" }}>DOWNLOAD OUR MOBILE APP</p>
               <p style={{ fontSize: "16px", color: "black", textAlign: "right", paddingLeft:"120px" }}>Tackle your to-do list wherever you are with our mobile app and make your life easy.</p>
-              <div className="row" style={{ paddingTop: "0", paddingBottom: "0", display:"flex", justifyContent:'flex-end', }}>
+              <div className="row" style={{ paddingTop: "0", paddingBottom: "0", display:"flex", justifyContent:'flex-end', }}> 
 
                 <div className="col-md-6" style={{}}>
                   <img src={play} alt="" style={{height:"60px", margin:"20px", marginLeft:"220px"}} />
-
                 </div>
 
                 <div className="col-md-6" style={{}}>

@@ -31,6 +31,8 @@
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.1",
     "react-scroll": "^1.8.1",
+    "react-scroll-to-top": "^1.0.5",
+    "react-scrollspy": "^3.4.3",
     "react-select-search": "^2.2.4",
     "react-slick": "^0.28.0",
     "react-slidedown": "^2.4.5",
