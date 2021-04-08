@@ -29,7 +29,9 @@ font-family:"a Astro Space";
   background: url("./../../back.jpg") no-repeat center center; 
   background-size: cover;
   height: 550px;
+  margin-top: 80px !important;
 }
+
     
 .head-font{
     font-family:"a Astro Space"; 
