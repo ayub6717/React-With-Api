@@ -1,0 +1,11 @@
+.pendingOrderlist {
+    margin-top:0; 
+    background:white;
+    color:black;
+}
+.pendingOrderlist :hover {
+    margin-top:0; 
+    background:#33669A;
+    color:white;
+
+}

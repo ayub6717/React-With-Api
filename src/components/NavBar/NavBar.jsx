@@ -156,7 +156,7 @@ const NavBar = () => {
       </Navbar>
 
     </div>
-    <div className="row">
+    {/* <div className="row">
 
     <Navbar bg="light" expand="lg">
   <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
@@ -175,7 +175,7 @@ const NavBar = () => {
     </Nav>    
   </Navbar.Collapse>
 </Navbar>
-    </div> 
+    </div>  */}
     </div>
     
       
