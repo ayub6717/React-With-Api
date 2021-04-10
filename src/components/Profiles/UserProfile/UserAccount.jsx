@@ -1,4 +1,3 @@
-import { Button } from "react-bootstrap";
 import React, { useEffect, useState } from "react";
 import NavBar from "../../NavBar/NavBar";
 import "../../Profiles/ProfileMain.css";
@@ -9,7 +8,7 @@ import { Redirect, useHistory } from "react-router-dom";
 import FooterMobile from "../../Footer/FooterMobile";
 import { useMediaQuery } from 'react-responsive';
 
-import { Tabs, Tab, Row, Col, Nav, Table } from 'react-bootstrap'
+import { Tabs, Tab, Row, Col, Nav, Table, Button, Form, Container } from 'react-bootstrap'
 import UserOrder from "./UserOrder";
 
 
@@ -93,14 +92,44 @@ const UserAccount = () => {
 
               </Nav>
             </Col>
-            <Col sm={9}>
-              <Tab.Content className="vll container">
+            <Col sm={9} className="vll">
+              <Container>
+                <Row>
+                  <Col className="notific notific1">
+                    <div>
+                      <h4>5</h4>
+                    </div> <hr style={{width:"90%", background: "white", padding:"1px", marginBottom:"3px"}} />
+                    <div>
+                      <h6>Completed Order</h6>
+                    </div>
+                  </Col>
+                  <Col className="notific notific2">
+                    <div>
+                      <h4>2</h4>
+                    </div> <hr style={{width:"90%", background: "white", padding:"1px", marginBottom:"3px"}} />
+
+                    <div>
+                      <h6>Pending order</h6>
+                    </div>
+                  </Col>
+                  <Col className="notific notific3">
+                    <div>
+                      <h4>2</h4>
+                    </div> <hr style={{width:"90%", background: "white", padding:"1px", marginBottom:"3px"}} />
+
+                    <div>
+                      <h6>Reward Points</h6>
+                    </div>
+                  </Col>
+                </Row>
+              </Container> <br/> <br/>
+              <Tab.Content className="container">
 
                 <Tab.Pane eventKey="one">
                   <div style={{ textAlign: "center" }}>
                     <h1>Personal Information</h1> <br />
                     <img src={profImage} alt="" />
-                  </div> <br/>
+                  </div> <br />
                   <Table striped responsive size="sm">
                     <tbody>
                       <tr>
@@ -124,6 +153,8 @@ const UserAccount = () => {
                       </tr>
                     </tbody>
                   </Table>
+                  <Button className="btn-danger" style={{ width: "120px", height: "40px", marginTop: "10px", marginBottom: "10px" }}>Edit</Button>
+
                 </Tab.Pane>
                 <Tab.Pane eventKey="two">
                   <UserOrder />
@@ -194,17 +225,48 @@ const UserAccount = () => {
                 </Tab.Pane>
 
                 <Tab.Pane eventKey="five">
-                  Apply Coupon Comming Soon...
-              </Tab.Pane>
+                  <div>
+                    <Form>
+                      <Form.Group controlId="formBasicEmail">
+                        <Form.Control style={{ borderRadius: "3.25rem", width: "90%", backgroundColor: "#E5ECF2", paddingLeft: "15px" }} type="email" placeholder="Enter your code here..." />
+                        <Button style={{ borderRadius: "12x", float: "right", marginTop: "-37px", backgroundColor: "#297A84", border: "none" }} >Apply</Button>
+                      </Form.Group>
+                    </Form> <br />
+
+                    <div>
+                      <p>Previously Applied Code</p>
+                      <Row >
+                        <Col style={{ backgroundColor: "#E5ECF2", borderTopLeftRadius: "15px", borderBottomLeftRadius: "15px", borderRight: "1px solid gray" }} xs={2}  >
+                          <div className="couponDate" style={{ textAlign: "center", lineHeight: "5px", padding: "15px" }}>
+                            <h1>29</h1>
+                            <p>March</p>
+                            <p>2021</p>
+                          </div>
+                        </Col>
+
+                        <Col style={{ backgroundColor: "#E5ECF2", borderTopRightRadius: "15px", borderBottomRightRadius: "15px" }} xs lg="5">
+                          <div className="couponText">
+                            <h5>Coupon Code: 2ABQ88C</h5>
+                            <p>AC Basic Service 20% Off Applied</p>
+                          </div>
+                        </Col>
+
+                      </Row>
+                    </div>
+                  </div>
+                </Tab.Pane>
 
                 <Tab.Pane eventKey="six">
-                  Reward Points Comming Soon...
-              </Tab.Pane>
+                  <div style={{ textAlign: "center" }}>
+                    <img style={{ width: "200px", marginBottom: "20px" }} src="img/AnotherPic/reward.png" alt="reward.png" />
+                    <h1>Comming Soon</h1>
+                  </div>
+                </Tab.Pane>
 
               </Tab.Content>
             </Col>
           </Row>
-        </Tab.Container> <br/> <br/>
+        </Tab.Container> <br /> <br />
 
       </div>
     </div>
