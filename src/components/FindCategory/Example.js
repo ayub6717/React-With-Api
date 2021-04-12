@@ -11,7 +11,7 @@ function Example() {
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
     return (
-        <>
+        <div>
           <Button variant="primary" onClick={handleShow}>
             Launch demo modal
           </Button>
@@ -30,7 +30,7 @@ function Example() {
               </Button>
             </Modal.Footer>
           </Modal>
-        </>
+        </div>
       );
 }
 

@@ -155,13 +155,232 @@ tr {
   margin-bottom: -2px;
 }
 
+.modal-content {
+  border-radius: 1px !important;
+}
+
+.modbody{
+  background-color: rgba(221, 221, 221, 0.918);
+  padding-top: 5px ;
+  padding-left: 15px ;
+  padding-right: 15px ;
+  padding-bottom: 5px;
 
 
+}
+.conBac{
+  background-color: white;
+  /* padding: 5px !important; */
+
+}
+
+.d{
+  background-color: #67c4ade7;
+  background-color: #e6aab7e3;
+
+}
+
+.OrderSpan{
+  background-color: #e7d6da81;
+  padding: 3px;
+  border: 1px solid #e6aab7e3;
+  color: red;
+}
+
+.OrderSpanTwo{
+  background-color: #67c4ade7;
+  color: white;
+  border-radius: 10px;
+  padding: 3px;
+}
+
+.OrderSpanTree{
+  background-color: #67c4ade7;
+  color: white;
+  padding: 3px;
+}
+
+.ModButton{
+  width: 140px;
+  height: 40px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: teal;
+  border: none;
+}
+
+.ModButtonTwo{
+  width: 170px;
+  height: 40px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+}
+
+.Modimg{
+  width: 110px;
+}
+
+.ModButtonImg{
+  width: 60px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: teal;
+  border: none;
+  font-size: 10px;
+}
+
+.ModButtonTwoImg{
+  width: 50px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  font-size: 10px;
+}
+
+.ModAction{
+  background-color: rgba(221, 221, 221, 0.918);
+  padding: 10px;
+}
+
+.ModAction p{
+margin-bottom: -5px;
+}
+
+.ModServ{
+  border: 1px solid rgb(209, 204, 204);
+}
+
+.ModP{
+  float: right;
+  margin-top: 10px !important;
+}
+
+.ModP span{
+  padding: 4px;
+  font-size: 12px;
+  cursor: pointer;
+
+}
+
+.ModPP{
+  margin-top: 10px !important;
+  font-size: 14px;
+
+}
+
+.DueSpan{
+  background-color: red;
+  padding: 5px;
+  color: white;
+  font-size: 12px;
+  font-weight: 80px;
+}
+
+.DueSpanTwo{
+  background-color: rgb(108, 163, 201);
+  padding: 5px;
+  color: white;
+  font-size: 12px;
+  font-weight: 80px;
+  float: right;
+}
+.HumanTab{
+  text-align: center;
+  box-shadow: 0 5px 9px 0 rgba(0, 0, 0, 0.2), 0 2px 18px 0 rgba(0, 0, 0, 0.034);
+  padding: 10px;
+  margin-bottom: 10px;
+
+}
+
+.HumanMain{
+  margin: auto;
+  width: 23%;
+  text-align: center;
+
+}
+.HumanTab p{
+  line-height: 8px;
+}
+
+.HumanTabImg{
+  width: 100px;
+  border-radius: 50%;
+}
+
+.DueSpanHu{
+  background-color: rgb(58, 167, 148);
+  padding: 5px;
+  color: white;
+  font-size: 12px;
+  font-weight: 80px;
+}
+
+.DueSpanHuTwo{
+  background-color: red;
+  padding: 5px;
+  color: white;
+  font-size: 12px;
+  font-weight: 80px;
+}
 
 
+.Vennotific{
+  margin: 30px;
+  border-radius: 10px;
+  box-shadow: 0 5px 9px 0 rgba(0, 0, 0, 0.2), 0 2px 18px 0 rgba(0, 0, 0, 0.034);
+  color: white;
+  padding: 10px;
+}
 
+.Vennotific h4{
+  font-family: 'Bauhaus Md BT';
+}
 
+.Vennotific h6{
+  text-align: center;
+}
 
+.Vennotific small{
+  float: right;
+  margin-right: 30px;
+}
+
+.Vennotific1{
+  background-color: rgb(67, 169, 172);
+}
+.Vennotific2{
+  background-color: rgb(255, 145, 117);
+}
+.Vennotific3{
+  background-color: rgb(204, 57, 81);
+}
+
+.CurrentBalance{
+  float: right;
+}
+
+.CurrentBalance h1 {
+  font-family: 'Bauhaus Md BT';
+
+}
+
+.CurrentBalance p {
+  color: #E74F5B;
+  margin-bottom: -5px;
+
+}
+
+.CurrentBalance h5 {
+  color: #E74F5B;
+  margin-top: -15px;
+
+}
+
+.CurrentBalanceWithdraw h2{
+  font-family: 'Bauhaus Md BT';
+
+}
 
 
 
