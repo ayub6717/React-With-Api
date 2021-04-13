@@ -95,6 +95,17 @@ tr {
   background-color: rgb(204, 57, 81);
 }
 
+.ReffarText{
+  font-family: 'Bauhaus Md BT';
+  border: 6px solid rgb(99, 194, 86);
+  border-radius: 7px;
+  width: 35%;
+  padding: 17px;
+  margin-left: 34%;
+
+}
+
+
 
 /* *******************Vendor part css*************** */
 
@@ -382,7 +393,31 @@ margin-bottom: -5px;
 
 }
 
+.hub .select-search__input {
+  display: block;
+  height: 40px;
+  width: 100%;
+  padding: 0 16px;
+  background: #fff;
+  border: 1px solid transparent;
+  box-shadow: 0 .0625rem .125rem rgba(0, 0, 0, 0.15);
+  border-radius: 20px !important;
+  outline: none;
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 14px;
+  text-align: left;
+  text-overflow: ellipsis;
+  line-height: 60px;
+  -webkit-appearance: none;
+}
 
+.hub{
+  padding-left: 150px;
+  padding-right: 150px;
+}
 
+.mub .input.form-control {
+  width: -1px !important;
+}
 
 /* *******************Vendor part css End*************** */

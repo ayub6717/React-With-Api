@@ -87,6 +87,10 @@ const UserAccount = () => {
                 </Nav.Item>
 
                 <Nav.Item>
+                  <Nav.Link eventKey="seven">Reffar & Win</Nav.Link>
+                </Nav.Item>
+
+                <Nav.Item>
                   <Button className="btn-danger" style={{ width: "120px", height: "40px", marginTop: "10px", marginBottom: "10px" }} onClick={logOut}>Log Out</Button>
                 </Nav.Item>
 
@@ -260,6 +264,17 @@ const UserAccount = () => {
                   <div style={{ textAlign: "center" }}>
                     <img style={{ width: "200px", marginBottom: "20px" }} src="img/AnotherPic/reward.png" alt="reward.png" />
                     <h1>Comming Soon</h1>
+                  </div>
+                </Tab.Pane>
+
+                <Tab.Pane eventKey="seven">
+                  <div style={{ textAlign: "center" }}>
+                    <img style={{ width: "70%", marginBottom: "20px" }} src="img/AnotherPic/Referrals.png" alt="Referrals.png" />
+                    <h1 className="ReffarText">AS190490</h1>
+                    <h2>Share Your Referral Code</h2>
+                    <p>Share Your Referral Code & get discount for next orders!</p>
+                    <Button style={{color:"white"}} variant="info">Share</Button> <Button variant="success">Copy</Button>
+                    
                   </div>
                 </Tab.Pane>
 

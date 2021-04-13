@@ -12,9 +12,9 @@ import { GrServices } from "react-icons/gr";
 import { MdCreditCard } from "react-icons/md";
 import { ImDownload, ImHome } from "react-icons/im";
 import { BiPaperPlane } from "react-icons/bi";
+import SelectSearch from "react-select-search";
 
-
-
+import VendorServiceAdd from "../../Profiles/VendorProfile/VendorServiceAdd";
 
 
 
@@ -53,6 +53,168 @@ const VendorAccount = () => {
     setVendorInfo(res);
     setLoading(false);
   };
+
+
+
+
+
+
+
+  // ************************Add Service Api start************************
+  useEffect(() => {
+    fetchItemCountry();
+    fetchItemCategory();
+  }, []);
+  const [countrys, setCountrys] = useState();
+  const [cities, setCities] = useState();
+  const [zones, setZones] = useState([]);
+  const [category, setCategory] = useState();
+  const [service, setService] = useState();
+  const [finalService, setFinalService] = useState();
+  const [finalFinal, setFinalFinal] = useState();
+  const [zoneArray, setZoneArray] = useState([]);
+  const [serviceValue, setServiceValue] = useState();
+  const [subServiceValue, setSubServiceValue] = useState();
+
+  const fetchItemCountry = async () => {
+    const country = await fetch(
+      `https://kentradigital.com/api/showCountry`
+    );
+    const itemCountry = await country.json();
+    const newArray = itemCountry.map(({ id, country_name }) => ({
+      value: id,
+      name: country_name,
+    }));
+    setCountrys(newArray);
+  };
+  const fetchItemCity = async (countryId) => {
+    const link =
+      "https://kentradigital.com/api/city?countryid=" + countryId;
+
+    const citiess = await fetch(link);
+    const itemCity = await citiess.json();
+    const newArrayCity = itemCity.map(({ id, city_name }) => ({
+      value: id,
+      name: city_name,
+    }));
+    setCities(newArrayCity);
+  };
+  const fetchItemZone = async (cityId) => {
+    const citiess = await fetch(
+      `https://kentradigital.com/api/serviceZone?cityid=` + cityId
+    );
+    const itemCity = await citiess.json();
+    setZones(itemCity);
+  };
+
+  //service fetching starts here
+
+  const fetchItemCategory = async () => {
+    const country = await fetch(
+      `https://kentradigital.com/api/showservice`
+    );
+    const itemCountry = await country.json();
+    const newArray = itemCountry.map(({ id, category_name }) => ({
+      value: id,
+      name: category_name,
+    }));
+    setCategory(newArray);
+  };
+  const fetchItemService = async (cat) => {
+    const citiess = await fetch(
+      `https://kentradigital.com/api/subcatagory?maincatagoryid=` +
+      cat
+    );
+    const itemCity = await citiess.json();
+    const newArrayCity = itemCity.map(({ id, service_type_name }) => ({
+      value: id,
+      name: service_type_name,
+    }));
+    setService(newArrayCity);
+  };
+  const fetchItemFinalService = async (subCat) => {
+    const citiess = await fetch(
+      `https://kentradigital.com/api/servicelist?subcatagoryid=` +
+      subCat
+    );
+    const itemCity = await citiess.json();
+    const newArrayCity = itemCity.map(({ id, service_name }) => ({
+      value: id,
+      name: service_name,
+    }));
+    setFinalService(newArrayCity);
+  };
+
+  const fetchItemFinalFinal = async (serviceId) => {
+    const link =
+      "https://kentradigital.com/api/finalServiceList?serviceid=" +
+      serviceId;
+    console.log("this is fetch city link:" + link);
+    const country = await fetch(link);
+    const itemCountry = await country.json();
+    const newArray = itemCountry.map(({ id, service_name }) => ({
+      value: id,
+      name: service_name,
+    }));
+    setFinalFinal(newArray);
+  };
+
+  const handleCheckboxChange = (event) => {
+    let newArray = [...zoneArray, event.target.id];
+    if (zoneArray.includes(event.target.id)) {
+      newArray = newArray.filter((day) => day !== event.target.id);
+    }
+    setZoneArray(newArray);
+  };
+
+  const handleCountryValue = (id) => {
+    fetchItemCity(id);
+  };
+
+  const handleCityValue = (id) => {
+    fetchItemZone(id);
+  };
+
+  const handleCategoryValue = (id) => {
+    fetchItemService(id);
+  };
+
+  const handleSubCatValue = (id) => {
+    fetchItemFinalService(id);
+  };
+
+  const handleServiceValue = (id) => {
+    setServiceValue(id);
+    fetchItemFinalFinal(id);
+  };
+
+  const submitService = async () => {
+    fetch("https://kentradigital.com/api/registerService", {
+      method: "POST",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        zoneid: zoneArray,
+        servicecatagoryid: serviceValue,
+        vendorid: vendorInfo.id,
+        finalserviceid: subServiceValue,
+      }),
+    })
+      .then((res) => res.json())
+      .then((response) => alert("Success!"))
+      .catch((error) => console.error("Error:", error));
+  };
+
+  // ************************Add Service Api start end************************
+
+
+
+
+
+
+
 
   return (
     <div>
@@ -342,8 +504,13 @@ const VendorAccount = () => {
                 <Nav.Item>
                   <Nav.Link eventKey="one">Dashboard</Nav.Link>
                 </Nav.Item>
+
                 <Nav.Item>
                   <Nav.Link eventKey="two">Company Profile</Nav.Link>
+                </Nav.Item>
+
+                <Nav.Item>
+                  <Nav.Link eventKey="six">Service List</Nav.Link>
                 </Nav.Item>
 
                 <Nav.Item>
@@ -359,8 +526,14 @@ const VendorAccount = () => {
                 </Nav.Item>
 
                 <Nav.Item>
+                  <Nav.Link eventKey="seven">Rattings & Reviews</Nav.Link>
+                </Nav.Item>
+
+                <Nav.Item>
                   <Button className="btn-danger" style={{ width: "120px", height: "40px", marginTop: "10px", marginBottom: "10px" }} onClick={logOut}>Log Out</Button>
                 </Nav.Item>
+
+
 
               </Nav>
             </Col>
@@ -375,6 +548,13 @@ const VendorAccount = () => {
 
                   <Container>
                     <Row>
+                      <div>
+                        <div className="CurrentBalance">
+                          <p>Wallet Status</p>
+                          <h1>2947 ৳</h1>
+                          <h5 style={{ marginBottom: "30px" }}>Currernt Balance</h5>
+                        </div>
+                      </div>
                       <Col className="vendorDash vendorDash1">
                         <div>
                           <h1>25</h1>
@@ -452,11 +632,12 @@ const VendorAccount = () => {
                     <Tab eventKey="one" title="Basic"> <br /> <br />
                       <div>
                         <InputGroup size="sm" className="mb-3">
-                          <InputGroup.Prepend>
+                          <InputGroup.Prepend >
                             <InputGroup.Text id="inputGroup-sizing-sm" style={{ border: "none", backgroundColor: "white" }}> <b>Company Name</b> </InputGroup.Text>
                           </InputGroup.Prepend>
-                          <FormControl aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder="Enter Company Name..." style={{ borderRadius: "3.25rem", paddingLeft: "15px" }} />
+                          <FormControl aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder="Enter Company Name..." style={{ borderRadius: "3.25rem", paddingLeft: "15px", width:"-1px" }} />
                         </InputGroup>
+                        
 
                         <InputGroup size="sm" className="mb-3">
                           <InputGroup.Prepend>
@@ -566,7 +747,7 @@ const VendorAccount = () => {
                     <Tab eventKey="three" title="Admin" >
                       <div style={{ textAlign: "center" }}> <br />
                         <h2>Saiem Bijoy Jony</h2> <br />
-                        <img src={profImage} alt="" />
+                        <img style={{width:"20%"}} src={profImage} alt="" />
                       </div> <br />
                       <Table striped responsive size="sm">
                         <tbody>
@@ -591,7 +772,7 @@ const VendorAccount = () => {
                           </tr>
                         </tbody>
                       </Table>
-                      <Button className="btn-danger" style={{ float: "right", width: "120px", height: "40px", marginTop: "10px", marginBottom: "10px" }}>Edit</Button>
+                      <Button className="btn-success" style={{ float: "right", width: "120px", height: "40px", marginTop: "10px", marginBottom: "10px" }}>Edit</Button>
                     </Tab>
                     <Tab eventKey="four" title="Operation" >
                       <Container> <br /> <br />
@@ -600,7 +781,6 @@ const VendorAccount = () => {
                             <h3>Service Areas</h3>
                           </Col>
                           <Col sm={8}>
-
                             <Button className="btn-danger" style={{ height: "40px", marginTop: "10px", marginBottom: "10px" }}>View the request areas <BiSearchAlt2 /></Button> <br /> <br />
                           </Col>
 
@@ -645,13 +825,20 @@ const VendorAccount = () => {
                               </InputGroup.Prepend>
                             </InputGroup> <br />
 
-                            <InputGroup>
+                            <InputGroup> <br />
                               <Form.Check type="checkbox" label="Thusday" />
                               <InputGroup.Prepend>
                                 <input type="time" id="appt" name="appt" style={{ marginLeft: "68px" }} /> <span style={{ marginLeft: "10px" }}>To</span> <input type="time" id="appt" name="appt" style={{ marginLeft: "10px" }} />
                               </InputGroup.Prepend>
-                            </InputGroup>
-                            <Button className="btn-danger" style={{ float: "right", height: "40px", marginTop: "10px", marginBottom: "10px" }}>Submit</Button>
+                            </InputGroup> <br />
+
+                            <InputGroup>
+                              <Form.Check type="checkbox" label="Friday" />
+                              <InputGroup.Prepend>
+                                <input type="time" id="appt" name="appt" style={{ marginLeft: "85px" }} /> <span style={{ marginLeft: "10px" }}>To</span> <input type="time" id="appt" name="appt" style={{ marginLeft: "10px" }} />
+                              </InputGroup.Prepend>
+                            </InputGroup> <br />
+                            <Button className="btn-success" style={{ float: "right", height: "40px", marginTop: "10px", marginBottom: "10px" }}>Submit</Button>
 
                           </Col>
 
@@ -872,6 +1059,7 @@ const VendorAccount = () => {
                         </tbody>
                       </Table>
                     </Tab>
+
                     <Tab eventKey="History" title="History"> <br />
                       <Table striped bordered hover>
                         <thead>
@@ -967,9 +1155,47 @@ const VendorAccount = () => {
                       </div>
                     </Tab>
                     <Tab eventKey="Transactions" title="Transactions">
-                     <div> <br/> <br/>
-                       <h1>Comming</h1>
-                     </div>
+                      <div> <br /> <br />
+                        <Form>
+                          <Form.Group controlId="exampleForm.ControlInput1">
+                            <Form.Control style={{ width: "15%", float: "right", padding: "0px" }} type="email" />  <span style={{ float: "right", marginRight: "10px" }}>Search: </span>
+                          </Form.Group>
+                        </Form>
+                        <Table bordered hover responsive="md">
+                          <thead><br />
+                            <tr>
+                              <th>Trans.ID</th>
+                              <th>Date</th>
+                              <th>Order Id</th>
+                              <th >Description</th>
+                              <th>Cash Out</th>
+                              <th>Cash In</th>
+                              <th>Balance</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>20410060</td>
+                              <td>11th Apr, 2021 11:36 AM</td>
+                              <td>D-50219-18013</td>
+                              <td >2625.00 Credited for order ID:D-500219-18013</td>
+                              <td></td>
+                              <td>2625.00</td>
+                              <td>388.02</td>
+                            </tr>
+
+                            <tr>
+                              <td>20410060</td>
+                              <td>1th Apr, 2021 11:40 AM</td>
+                              <td >D-50219-18014</td>
+                              <td >2625.00 Credited for order ID:D-50219-18014</td>
+                              <td>3000.00</td>
+                              <td></td>
+                              <td>-2236.98</td>
+                            </tr>
+                          </tbody>
+                        </Table>
+                      </div>
                     </Tab>
                     <Tab eventKey="Withdraw" title="Withdraw">
                       <div className="CurrentBalanceWithdraw"> <br />
@@ -1000,8 +1226,122 @@ const VendorAccount = () => {
                 </Tab.Pane>
 
                 <Tab.Pane eventKey="six">
-                  <div style={{ textAlign: "center" }}>
-                    <img style={{ width: "200px", marginBottom: "20px" }} src="img/AnotherPic/reward.png" alt="reward.png" />
+                  <Tabs variant="pills" defaultActiveKey="AddNew" id="uncontrolled-tab-example">
+                    <Tab eventKey="AddNew" title="Add New">
+                      <div className="text-center"> <br />
+                        <h2>Select Area</h2> <br />
+                        <div className="container hub">
+                          <SelectSearch
+                            id="test-id"
+                            options={countrys}
+                            onChange={handleCountryValue}
+                            placeholder="Select Country"
+                          />{" "}
+                          <br />
+                          <SelectSearch
+                            id="test-id"
+                            options={cities}
+                            onChange={handleCityValue}
+                            placeholder="Select City"
+                          />{" "}
+                          <br />
+                          {zones.map((area) => (
+                            <div className="d-flex align-items-center pb-2 mb-2">
+                              <input
+                                type="checkbox"
+                                className="custom-control-input me-3 ms-3"
+                                id={area.id}
+                                value={area.id}
+                                onChange={handleCheckboxChange}
+                              />
+                              <label className="custom-control-label" htmlFor="monday">
+                                {area.zone}
+                              </label>
+                            </div>
+                          ))}
+                          <h2>Select Service</h2> <br />
+                          <SelectSearch
+                            id="test-id"
+                            options={category}
+                            onChange={handleCategoryValue}
+                            placeholder="Select Category"
+                          />{" "}
+                          <br />
+                          <SelectSearch
+                            id="test-id"
+                            options={service}
+                            onChange={handleSubCatValue}
+                            placeholder="Select Sub Category"
+                          />{" "}
+                          <br />
+                          <SelectSearch
+                            id="test-id"
+                            options={finalService}
+                            onChange={handleServiceValue}
+                            placeholder="Select Service"
+                          />{" "}
+                          <br />
+                          <SelectSearch
+                            id="test-id"
+                            options={finalFinal}
+                            onChange={setSubServiceValue}
+                            placeholder="Select Sub Service"
+                          />{" "}
+                          <br />
+                          <button className="btn btn-success mb-5" onClick={submitService}>Submit</button>  <button className="btn btn-danger mb-5">Delete</button>
+                        </div>
+                      </div>
+                    </Tab>
+
+
+                    <Tab eventKey="ViewList" title="View List">
+
+                      <div className="hub"> <br /> <br />
+                        <SelectSearch
+                          id="test-id"
+                          options={countrys}
+                          onChange={handleCountryValue}
+                          placeholder="Select Country"
+                        />{" "}
+                      </div> <br />
+
+                      <Table bordered hover responsive="md">
+                        <thead><br />
+                          <tr>
+                            <th>No</th>
+                            <th>City</th>
+                            <th>Main Category</th>
+                            <th>Sub Category</th>
+                            <th>Service</th>
+                            <th>Sub Service</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>1</td>
+                            <td>Dhaka</td>
+                            <td>Painting Renovation</td>
+                            <td >Renovation & Interior Designs</td>
+                            <td>Wallpaper Pasting</td>
+                            <td>Test Quotation</td>
+                          </tr>
+
+                          <tr>
+                            <td>2</td>
+                            <td>Khulna</td>
+                            <td>Painting Renovation</td>
+                            <td >Renovation & Interior Designs</td>
+                            <td>Wallpaper Pasting</td>
+                            <td>Test Quotation</td>
+                          </tr>
+                        </tbody>
+                      </Table>
+                    </Tab>
+                  </Tabs>
+                </Tab.Pane>
+
+                <Tab.Pane eventKey="seven">
+                  <div style={{ textAlign: "center" }}> <br /> <br />
                     <h1>Comming Soon</h1>
                   </div>
                 </Tab.Pane>
