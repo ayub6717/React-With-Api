@@ -285,7 +285,7 @@ const VendorAccount = () => {
                 </Col> <hr style={{ width: "100%", padding: "1px" }} />
 
                 <Col sm={6}> <br />
-                  <Table style={{ border: "1px solid rgb(209, 204, 204)", padding: "15px" }} hover>
+                  <Table style={{ border: "1px solid rgb(209, 204, 204)", padding: "15px" }} hover responsive="md">
                     <tbody>
                       <tr>
                         <td>Job Additional Info: </td>
@@ -319,11 +319,11 @@ const VendorAccount = () => {
                         <option>5</option>
                       </Form.Control>
                     </Form.Group>
-                  </Form>
+                  </Form><br /> 
 
 
                 </Col>
-              </Row> <br />
+              </Row> <br />  
 
 
               <Row className="conBac">
@@ -333,7 +333,7 @@ const VendorAccount = () => {
                 </Col> <hr style={{ width: "100%", padding: "1px" }} />
 
                 <Col sm={12}> <br />
-                  <Table bordered hover>
+                  <Table bordered hover responsive="md">
                     <thead>
                       <tr>
                         <th>#</th>
@@ -364,7 +364,7 @@ const VendorAccount = () => {
 
 
                 <Col sm={6}>
-                  <Table hover>
+                  <Table hover responsive="md">
                     <thead>
                       <tr>
                         <th style={{ textAlign: "center" }} colSpan="4">Cost & Profit </th>
@@ -418,7 +418,7 @@ const VendorAccount = () => {
 
 
                 <Col sm={6}>
-                  <Table hover>
+                  <Table hover responsive="md">
                     <thead>
                       <tr>
                         <th colSpan="4" style={{ textAlign: "center" }}>Payment Info </th>
@@ -630,57 +630,28 @@ const VendorAccount = () => {
                 <Tab.Pane eventKey="two">
                   <Tabs variant="pills" defaultActiveKey="one" transition={false} id="noanim-tab-example">
                     <Tab eventKey="one" title="Basic"> <br /> <br />
-                      <div>
-                        <InputGroup size="sm" className="mb-3">
-                          <InputGroup.Prepend >
-                            <InputGroup.Text id="inputGroup-sizing-sm" style={{ border: "none", backgroundColor: "white" }}> <b>Company Name</b> </InputGroup.Text>
-                          </InputGroup.Prepend>
-                          <FormControl aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder="Enter Company Name..." style={{ borderRadius: "3.25rem", paddingLeft: "15px", width:"-1px" }} />
-                        </InputGroup>
-                        
+                      <div className="Basic">
 
-                        <InputGroup size="sm" className="mb-3">
-                          <InputGroup.Prepend>
-                            <InputGroup.Text id="inputGroup-sizing-sm" style={{ border: "none", backgroundColor: "white" }}> <b>Company Mobile No</b> </InputGroup.Text>
-                          </InputGroup.Prepend>
-                          <FormControl aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder="Enter Company Name..." style={{ borderRadius: "3.25rem", paddingLeft: "15px" }} />
-                        </InputGroup>
+                        <p><b>Company Name</b></p>
+                        <FormControl className="BasicForm" aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder="Enter Company Name..." /> <br />
 
 
-                        <InputGroup size="sm" className="mb-3">
-                          <InputGroup.Prepend>
-                            <InputGroup.Text id="inputGroup-sizing-sm" style={{ border: "none", backgroundColor: "white" }}> <b>Company Bkash No</b> </InputGroup.Text>
-                          </InputGroup.Prepend>
-                          <FormControl aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder="Enter Company Bkash No..." style={{ borderRadius: "3.25rem", paddingLeft: "15px" }} />
-                        </InputGroup>
+                        <p><b>Company Mobile No</b></p>
+                        <FormControl className="BasicForm" aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder="Enter Company Name..." /> <br />
+                        <p><b>Company Bkash No</b></p>
+                        <FormControl className="BasicForm" aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder="Enter Company Bkash No..." /> <br />
 
-                        <InputGroup size="sm" className="mb-3">
-                          <InputGroup.Prepend>
-                            <InputGroup.Text id="inputGroup-sizing-sm" style={{ border: "none", backgroundColor: "white" }}> <b>Company Email Address</b> </InputGroup.Text>
-                          </InputGroup.Prepend>
-                          <FormControl aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder="Enter Company Email Address..." style={{ borderRadius: "3.25rem", paddingLeft: "15px" }} />
-                        </InputGroup>
+                        <p><b>Company Email Address</b></p>
+                        <FormControl className="BasicForm" aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder="Enter Company Email Address..." /> <br />
 
-                        <InputGroup size="sm" className="mb-3">
-                          <InputGroup.Prepend>
-                            <InputGroup.Text id="inputGroup-sizing-sm" style={{ border: "none", backgroundColor: "white" }}> <b>Company Address</b> </InputGroup.Text>
-                          </InputGroup.Prepend>
-                          <FormControl aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder="Enter Company Address..." style={{ borderRadius: "3.25rem", paddingLeft: "15px" }} />
-                        </InputGroup>
+                        <p><b>Company Address</b></p>
+                        <FormControl className="BasicForm" aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder="Enter Company Address..." /> <br />
 
-                        <InputGroup size="sm" className="mb-3">
-                          <InputGroup.Prepend>
-                            <InputGroup.Text id="inputGroup-sizing-sm" style={{ border: "none", backgroundColor: "white" }}> <b>Business Type</b> </InputGroup.Text>
-                          </InputGroup.Prepend>
-                          <FormControl aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder="Enter Business Type..." style={{ borderRadius: "3.25rem", paddingLeft: "15px" }} />
-                        </InputGroup>
+                        <p><b>Business Type</b></p>
+                        <FormControl className="BasicForm" aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder="Enter Business Type..." /> <br />
 
-                        <InputGroup>
-                          <InputGroup.Prepend>
-                            <InputGroup.Text style={{ border: "none", backgroundColor: "white" }}> <b>Description</b> </InputGroup.Text>
-                          </InputGroup.Prepend>
-                          <FormControl as="textarea" aria-label="With textarea" placeholder="Enter Description..." style={{ borderRadius: "5px", paddingLeft: "15px" }} />
-                        </InputGroup> <br />
+                        <p><b>Description</b></p>
+                        <FormControl className="BasicForm" as="textarea" aria-label="With textarea" placeholder="Enter Description..." style={{ borderRadius: "5px", paddingLeft: "15px" }} /> <br />
 
                         <span> <Button style={{ borderColor: "#eee", backgroundColor: "#14C299", height: "40px", marginTop: "10px", marginBottom: "10px", marginLeft: "15px", float: "right" }}>Edit</Button></span> <Button className="btn-danger" style={{ height: "40px", marginTop: "10px", marginBottom: "10px", float: "right" }}>Account Delete Request</Button>
 
@@ -690,64 +661,38 @@ const VendorAccount = () => {
 
                     <Tab eventKey="two" title="Financial"> <br /> <br />
 
-                      <InputGroup size="sm" className="mb-3">
-                        <InputGroup.Prepend>
-                          <InputGroup.Text id="inputGroup-sizing-sm" style={{ border: "none", backgroundColor: "white" }}> <b>Bank Name</b> </InputGroup.Text>
-                        </InputGroup.Prepend>
-                        <FormControl aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder="Enter Bank Name..." style={{ borderRadius: "3.25rem", paddingLeft: "15px" }} />
-                      </InputGroup>
+                      <div className="Basic">
+                        <p><b>Bank Name</b></p>
+                        <FormControl className="BasicForm" aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder="Enter Bank Name..." /> <br />
 
-                      <InputGroup size="sm" className="mb-3">
-                        <InputGroup.Prepend>
-                          <InputGroup.Text id="inputGroup-sizing-sm" style={{ border: "none", backgroundColor: "white" }}> <b>Branch</b> </InputGroup.Text>
-                        </InputGroup.Prepend>
-                        <FormControl aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder="Enter Branch..." style={{ borderRadius: "3.25rem", paddingLeft: "15px" }} />
-                      </InputGroup>
+                        <p><b>Branch</b></p>
+                        <FormControl className="BasicForm" aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder="Enter Branch..." /> <br />
 
+                        <p><b>Account Name</b></p>
+                        <FormControl className="BasicForm" aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder="Enter Account Name..." /><br />
 
-                      <InputGroup size="sm" className="mb-3">
-                        <InputGroup.Prepend>
-                          <InputGroup.Text id="inputGroup-sizing-sm" style={{ border: "none", backgroundColor: "white" }}> <b>Account Name</b> </InputGroup.Text>
-                        </InputGroup.Prepend>
-                        <FormControl aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder="Enter Account Name..." style={{ borderRadius: "3.25rem", paddingLeft: "15px" }} />
-                      </InputGroup>
+                        <p> <b>Account No</b></p>
+                        <FormControl className="BasicForm" aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder="Enter Account No..." /><br />
 
-                      <InputGroup size="sm" className="mb-3">
-                        <InputGroup.Prepend>
-                          <InputGroup.Text id="inputGroup-sizing-sm" style={{ border: "none", backgroundColor: "white" }}> <b>Account No</b> </InputGroup.Text>
-                        </InputGroup.Prepend>
-                        <FormControl aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder="Enter Account No..." style={{ borderRadius: "3.25rem", paddingLeft: "15px" }} />
-                      </InputGroup>
+                        <p><b>Routing No</b></p>
+                        <FormControl className="BasicForm" aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder="Enter Routing No..." /><br />
 
-                      <InputGroup size="sm" className="mb-3">
-                        <InputGroup.Prepend>
-                          <InputGroup.Text id="inputGroup-sizing-sm" style={{ border: "none", backgroundColor: "white" }}> <b>Routing No</b> </InputGroup.Text>
-                        </InputGroup.Prepend>
-                        <FormControl aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder="Enter Routing No..." style={{ borderRadius: "3.25rem", paddingLeft: "15px" }} />
-                      </InputGroup>
+                        <p><b>Account Type</b></p>
+                        <FormControl className="BasicForm" aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder="Enter Account Type..." /><br />
 
-                      <InputGroup size="sm" className="mb-3">
-                        <InputGroup.Prepend>
-                          <InputGroup.Text id="inputGroup-sizing-sm" style={{ border: "none", backgroundColor: "white" }}> <b>Account Type</b> </InputGroup.Text>
-                        </InputGroup.Prepend>
-                        <FormControl aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder="Enter Account Type..." style={{ borderRadius: "3.25rem", paddingLeft: "15px" }} />
-                      </InputGroup>
-
-                      <InputGroup>
-                        <InputGroup.Prepend>
-                          <InputGroup.Text style={{ border: "none", backgroundColor: "white" }}> <b>Addtional Notes</b> </InputGroup.Text>
-                        </InputGroup.Prepend>
-                        <FormControl as="textarea" aria-label="With textarea" placeholder="Enter Description..." style={{ borderRadius: "5px", paddingLeft: "15px" }} />
-                      </InputGroup> <br />
-
-                      <Button className="btn-danger" style={{ height: "40px", marginTop: "10px", marginBottom: "10px", float: "right" }}>Submit</Button>
+                        <p><b>Addtional Notes</b></p>
+                        <FormControl as="textarea" aria-label="With textarea" placeholder="Enter Description..." style={{ borderRadius: "5px", paddingLeft: "15px" }} /><br /><br />
 
 
+                        <Button className="btn-danger" style={{ height: "40px", marginTop: "10px", marginBottom: "10px", float: "right" }}>Submit</Button>
+
+                      </div>
                     </Tab>
+
                     <Tab eventKey="three" title="Admin" >
                       <div style={{ textAlign: "center" }}> <br />
                         <h2>Saiem Bijoy Jony</h2> <br />
-                        <img style={{width:"20%"}} src={profImage} alt="" />
+                        <img style={{ width: "20%" }} src={profImage} alt="" />
                       </div> <br />
                       <Table striped responsive size="sm">
                         <tbody>
@@ -774,6 +719,8 @@ const VendorAccount = () => {
                       </Table>
                       <Button className="btn-success" style={{ float: "right", width: "120px", height: "40px", marginTop: "10px", marginBottom: "10px" }}>Edit</Button>
                     </Tab>
+
+
                     <Tab eventKey="four" title="Operation" >
                       <Container> <br /> <br />
                         <Row>
@@ -784,60 +731,54 @@ const VendorAccount = () => {
                             <Button className="btn-danger" style={{ height: "40px", marginTop: "10px", marginBottom: "10px" }}>View the request areas <BiSearchAlt2 /></Button> <br /> <br />
                           </Col>
 
+
                           <Col sm={4}>
                             <h3>Working Days</h3>
                           </Col>
+
                           <Col sm={8}>
 
-                            <InputGroup>
-                              <Form.Check type="checkbox" label="Saturday" />
-                              <InputGroup.Prepend>
-                                <input type="time" id="appt" name="appt" style={{ marginLeft: "60px" }} /> <span style={{ marginLeft: "10px" }}>To</span> <input type="time" id="appt" name="appt" style={{ marginLeft: "10px" }} />
-                              </InputGroup.Prepend>
-                            </InputGroup> <br />
+                            <Form.Check type="checkbox" label="Saturday" />
+                            <InputGroup.Prepend>
+                              <input type="time" id="appt" name="appt" /> <span style={{ marginLeft: "10px" }}>To</span> <input type="time" id="appt" name="appt" style={{ marginLeft: "10px" }} />
+                            </InputGroup.Prepend> <br />
 
 
-                            <InputGroup>
-                              <Form.Check type="checkbox" label="Sunday" />
-                              <InputGroup.Prepend>
-                                <input type="time" id="appt" name="appt" style={{ marginLeft: "72px" }} />  <span style={{ marginLeft: "10px" }}>To</span> <input type="time" id="appt" name="appt" style={{ marginLeft: "10px" }} />
-                              </InputGroup.Prepend>
-                            </InputGroup> <br />
+                            <Form.Check type="checkbox" label="Sunday" />
+                            <InputGroup.Prepend>
+                              <input type="time" id="appt" name="appt" />  <span style={{ marginLeft: "10px" }}>To</span> <input type="time" id="appt" name="appt" style={{ marginLeft: "10px" }} />
+                            </InputGroup.Prepend>
+                            <br />
 
-                            <InputGroup>
-                              <Form.Check type="checkbox" label="Monday" />
-                              <InputGroup.Prepend>
-                                <input type="time" id="appt" name="appt" style={{ marginLeft: "68px" }} /> <span style={{ marginLeft: "10px" }}>To</span> <input type="time" id="appt" name="appt" style={{ marginLeft: "10px" }} />
-                              </InputGroup.Prepend>
-                            </InputGroup> <br />
 
-                            <InputGroup>
-                              <Form.Check type="checkbox" label="Tuesday" />
-                              <InputGroup.Prepend>
-                                <input type="time" id="appt" name="appt" style={{ marginLeft: "66px" }} /> <span style={{ marginLeft: "10px" }}>To</span> <input type="time" id="appt" name="appt" style={{ marginLeft: "10px" }} />
-                              </InputGroup.Prepend>
-                            </InputGroup> <br />
+                            <Form.Check type="checkbox" label="Monday" />
+                            <InputGroup.Prepend>
+                              <input type="time" id="appt" name="appt" /> <span style={{ marginLeft: "10px" }}>To</span> <input type="time" id="appt" name="appt" style={{ marginLeft: "10px" }} />
+                            </InputGroup.Prepend><br />
 
-                            <InputGroup>
-                              <Form.Check type="checkbox" label="Wednesday" />
-                              <InputGroup.Prepend>
-                                <input type="time" id="appt" name="appt" style={{ marginLeft: "40px" }} /> <span style={{ marginLeft: "10px" }}>To</span> <input type="time" id="appt" name="appt" style={{ marginLeft: "10px" }} />
-                              </InputGroup.Prepend>
-                            </InputGroup> <br />
 
-                            <InputGroup> <br />
-                              <Form.Check type="checkbox" label="Thusday" />
-                              <InputGroup.Prepend>
-                                <input type="time" id="appt" name="appt" style={{ marginLeft: "68px" }} /> <span style={{ marginLeft: "10px" }}>To</span> <input type="time" id="appt" name="appt" style={{ marginLeft: "10px" }} />
-                              </InputGroup.Prepend>
-                            </InputGroup> <br />
 
-                            <InputGroup>
-                              <Form.Check type="checkbox" label="Friday" />
-                              <InputGroup.Prepend>
-                                <input type="time" id="appt" name="appt" style={{ marginLeft: "85px" }} /> <span style={{ marginLeft: "10px" }}>To</span> <input type="time" id="appt" name="appt" style={{ marginLeft: "10px" }} />
-                              </InputGroup.Prepend>
-                            </InputGroup> <br />
+                            <Form.Check type="checkbox" label="Tuesday" />
+                            <InputGroup.Prepend>
+                              <input type="time" id="appt" name="appt" /> <span style={{ marginLeft: "10px" }}>To</span> <input type="time" id="appt" name="appt" style={{ marginLeft: "10px" }} />
+                            </InputGroup.Prepend><br />
+
+
+                            <Form.Check type="checkbox" label="Wednesday" />
+                            <InputGroup.Prepend>
+                              <input type="time" id="appt" name="appt" /> <span style={{ marginLeft: "10px" }}>To</span> <input type="time" id="appt" name="appt" style={{ marginLeft: "10px" }} />
+                            </InputGroup.Prepend><br />
+
+                            <Form.Check type="checkbox" label="Thusday" />
+                            <InputGroup.Prepend>
+                              <input type="time" id="appt" name="appt" /> <span style={{ marginLeft: "10px" }}>To</span> <input type="time" id="appt" name="appt" style={{ marginLeft: "10px" }} />
+                            </InputGroup.Prepend><br />
+
+                            <Form.Check type="checkbox" label="Friday" />
+                            <InputGroup.Prepend>
+                              <input type="time" id="appt" name="appt" /> <span style={{ marginLeft: "10px" }}>To</span> <input type="time" id="appt" name="appt" style={{ marginLeft: "10px" }} />
+                            </InputGroup.Prepend><br />
+
                             <Button className="btn-success" style={{ float: "right", height: "40px", marginTop: "10px", marginBottom: "10px" }}>Submit</Button>
 
                           </Col>
@@ -863,7 +804,7 @@ const VendorAccount = () => {
                       <Container>
 
                         <Row>
-                          <Col xs={4}>
+                          <Col xs={6} xl={4}>
                             <div className="HumanTab">
                               <img className="HumanTabImg" src="img/AnotherPic/Ayub.jpg" alt="Ayub.jpg" />  <br /> <br />
                               <p>MD AYUB </p>
@@ -873,7 +814,7 @@ const VendorAccount = () => {
 
                           </Col>
 
-                          <Col xs={4}>
+                          <Col xs={6} xl={4}>
                             <div className="HumanTab">
                               <img className="HumanTabImg" src="img/AnotherPic/Ayub.jpg" alt="Ayub.jpg" />  <br /> <br />
                               <p>MD AYUB </p>
@@ -883,7 +824,7 @@ const VendorAccount = () => {
 
                           </Col>
 
-                          <Col xs={4}>
+                          <Col xs={6} xl={4}>
                             <div className="HumanTab">
                               <img className="HumanTabImg" src="img/AnotherPic/Ayub.jpg" alt="Ayub.jpg" />  <br /> <br />
                               <p>MD AYUB </p>
@@ -896,7 +837,7 @@ const VendorAccount = () => {
 
 
 
-                          <Col xs={4}>
+                          <Col xs={6} xl={4}>
                             <div className="HumanTab">
                               <img className="HumanTabImg" src="img/AnotherPic/Ayub.jpg" alt="Ayub.jpg" />  <br /> <br />
                               <p>MD AYUB </p>
@@ -906,7 +847,7 @@ const VendorAccount = () => {
 
                           </Col>
 
-                          <Col xs={4}>
+                          <Col xs={6} xl={4}>
                             <div className="HumanTab">
                               <img className="HumanTabImg" src="img/AnotherPic/Ayub.jpg" alt="Ayub.jpg" />  <br /> <br />
                               <p>MD AYUB </p>
@@ -916,7 +857,7 @@ const VendorAccount = () => {
 
                           </Col>
 
-                          <Col xs={4}>
+                          <Col xs={6} xl={4}>
                             <div className="HumanTab">
                               <img className="HumanTabImg" src="img/AnotherPic/Ayub.jpg" alt="Ayub.jpg" />  <br /> <br />
                               <p>MD AYUB </p>
@@ -933,63 +874,31 @@ const VendorAccount = () => {
 
 
                     <Tab eventKey="AddNew" title="Add New">
-                      <div> <br />
-                        <InputGroup size="sm" className="mb-3">
-                          <InputGroup.Prepend>
-                            <InputGroup.Text id="inputGroup-sizing-sm" style={{ border: "none", backgroundColor: "white" }}> <b>Name</b> </InputGroup.Text>
-                          </InputGroup.Prepend>
-                          <FormControl aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder="Enter Name..." style={{ borderRadius: "3.25rem", paddingLeft: "15px" }} />
-                        </InputGroup>
+                      <div className="Basic"> <br />
+                      <p><b>Name</b></p>
+                      <FormControl className="BasicForm" aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder="Enter Name..." /> <br/>
+                      
+                      <p> <b>Gender</b> </p>
+                      <FormControl className="BasicForm" aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder="Enter Gender..." /> <br/>
+                      
+                      <p><b>Mobile No</b></p>
+                      <FormControl className="BasicForm" aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder="Enter Mobile No..." /> <br/>
+                      
+                      <p><b>Alternate No</b></p>
+                      <FormControl className="BasicForm" aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder="Enter Alternate No..." /> <br/>
+                      
+                      <p><b>Date Of Birth</b></p>
+                      <FormControl className="BasicForm" aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder="Enter Date Of Birth..." /> <br/>
+                      
+                      <p><b>Address</b></p>
+                      <FormControl className="BasicForm" aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder="Enter Address..." /><br/>
+                      
+                      <p><b>Role</b></p>
+                      <FormControl className="BasicForm" aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder="Enter Role..." /><br/>
+                      
+                      <p><b>Categories</b></p>
+                      <FormControl className="BasicForm" as="textarea" aria-label="With textarea" placeholder="Enter Categories..." style={{ borderRadius: "5px", paddingLeft: "15px" }} /> <br/>
 
-                        <InputGroup size="sm" className="mb-3">
-                          <InputGroup.Prepend>
-                            <InputGroup.Text id="inputGroup-sizing-sm" style={{ border: "none", backgroundColor: "white" }}> <b>Gender</b> </InputGroup.Text>
-                          </InputGroup.Prepend>
-                          <FormControl aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder="Enter Gender..." style={{ borderRadius: "3.25rem", paddingLeft: "15px" }} />
-                        </InputGroup>
-
-
-                        <InputGroup size="sm" className="mb-3">
-                          <InputGroup.Prepend>
-                            <InputGroup.Text id="inputGroup-sizing-sm" style={{ border: "none", backgroundColor: "white" }}> <b>Mobile No</b> </InputGroup.Text>
-                          </InputGroup.Prepend>
-                          <FormControl aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder="Enter Mobile No..." style={{ borderRadius: "3.25rem", paddingLeft: "15px" }} />
-                        </InputGroup>
-
-                        <InputGroup size="sm" className="mb-3">
-                          <InputGroup.Prepend>
-                            <InputGroup.Text id="inputGroup-sizing-sm" style={{ border: "none", backgroundColor: "white" }}> <b>Alternate No</b> </InputGroup.Text>
-                          </InputGroup.Prepend>
-                          <FormControl aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder="Enter Alternate No..." style={{ borderRadius: "3.25rem", paddingLeft: "15px" }} />
-                        </InputGroup>
-
-                        <InputGroup size="sm" className="mb-3">
-                          <InputGroup.Prepend>
-                            <InputGroup.Text id="inputGroup-sizing-sm" style={{ border: "none", backgroundColor: "white" }}> <b>Date Of Birth</b> </InputGroup.Text>
-                          </InputGroup.Prepend>
-                          <FormControl aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder="Enter Date Of Birth..." style={{ borderRadius: "3.25rem", paddingLeft: "15px" }} />
-                        </InputGroup>
-
-                        <InputGroup size="sm" className="mb-3">
-                          <InputGroup.Prepend>
-                            <InputGroup.Text id="inputGroup-sizing-sm" style={{ border: "none", backgroundColor: "white" }}> <b>Address</b> </InputGroup.Text>
-                          </InputGroup.Prepend>
-                          <FormControl aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder="Enter Address..." style={{ borderRadius: "3.25rem", paddingLeft: "15px" }} />
-                        </InputGroup>
-
-                        <InputGroup size="sm" className="mb-3">
-                          <InputGroup.Prepend>
-                            <InputGroup.Text id="inputGroup-sizing-sm" style={{ border: "none", backgroundColor: "white" }}> <b>Role</b> </InputGroup.Text>
-                          </InputGroup.Prepend>
-                          <FormControl aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder="Enter Role..." style={{ borderRadius: "3.25rem", paddingLeft: "15px" }} />
-                        </InputGroup>
-
-                        <InputGroup>
-                          <InputGroup.Prepend>
-                            <InputGroup.Text style={{ border: "none", backgroundColor: "white" }}> <b>Categories</b> </InputGroup.Text>
-                          </InputGroup.Prepend>
-                          <FormControl as="textarea" aria-label="With textarea" placeholder="Enter Categories..." style={{ borderRadius: "5px", paddingLeft: "15px" }} />
-                        </InputGroup> <br />
 
                         <Form>
                           <Form.Group>
@@ -1018,7 +927,7 @@ const VendorAccount = () => {
                 <Tab.Pane eventKey="four">
                   <Tabs variant="pills" defaultActiveKey="Pending" id="uncontrolled-tab-example">
                     <Tab eventKey="Pending" title="Pending"> <br />
-                      <Table striped bordered hover>
+                      <Table striped bordered hover responsive="md">
                         <thead>
                           <tr>
                             <th>Order Id</th>
@@ -1060,8 +969,8 @@ const VendorAccount = () => {
                       </Table>
                     </Tab>
 
-                    <Tab eventKey="History" title="History"> <br />
-                      <Table striped bordered hover>
+                    <Tab eventKey="History" title="History" responsive="md"> <br />
+                      <Table striped bordered hover responsive="md">
                         <thead>
                           <tr>
                             <th>Order Id</th>

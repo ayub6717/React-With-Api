@@ -306,7 +306,7 @@ margin-bottom: -5px;
 
 .HumanMain{
   margin: auto;
-  width: 23%;
+  width: 28%;
   text-align: center;
 
 }
@@ -420,4 +420,45 @@ margin-bottom: -5px;
   width: -1px !important;
 }
 
+
+@media only screen and (max-width: 1000px) {
+
+  .hub{
+    padding-left: 1px;
+    padding-right: 1px;
+  }
+  input#appt {
+    font-size: small !important;
+  }
+
+
+}
+
+
+
+@media only screen and (max-width: 500px) {
+
+  .HumanMain{
+    width: 40%;
+  }
+  .HumanTab p {
+    font-size: 10px;
+}
+
+.HumanTabImg {
+  width: 70px;
+  border-radius: 50%;
+}
+
+}
+
+.Basic p{
+  line-height: 4px;
+}
+
+.BasicForm{
+  padding-left:15px;
+  border-radius: 3.25rem;
+  font-size: 13px;
+}
 /* *******************Vendor part css End*************** */
