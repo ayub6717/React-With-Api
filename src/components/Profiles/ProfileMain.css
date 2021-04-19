@@ -75,8 +75,12 @@ tr {
   font-size: 15px;
 }
 
+.notific h4{
+  font-family: 'Bauhaus Md BT';
+}
 
 .notific{
+  
   text-align: center;
   margin: 10px;
   border-radius: 10px;

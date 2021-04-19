@@ -319,11 +319,11 @@ const VendorAccount = () => {
                         <option>5</option>
                       </Form.Control>
                     </Form.Group>
-                  </Form><br /> 
+                  </Form><br />
 
 
                 </Col>
-              </Row> <br />  
+              </Row> <br />
 
 
               <Row className="conBac">
@@ -691,29 +691,34 @@ const VendorAccount = () => {
 
                     <Tab eventKey="three" title="Admin" >
                       <div style={{ textAlign: "center" }}> <br />
-                        <h2>Saiem Bijoy Jony</h2> <br />
+                        <h2>{loading ? "Name" : vendorInfo.vendor_name}</h2> <br />
                         <img style={{ width: "20%" }} src={profImage} alt="" />
                       </div> <br />
                       <Table striped responsive size="sm">
                         <tbody>
                           <tr>
                             <td>Name</td>
-                            <td colSpan="2"> Saiem Bijoy Jony</td>
+                            <td colSpan="2"> {loading ? "Name" : vendorInfo.vendor_name}</td>
                           </tr>
 
                           <tr>
                             <td>Email</td>
-                            <td colSpan="2">jonnyjonny32@gmail.com</td>
+                            <td colSpan="2">{loading ? "Email" : vendorInfo.email}</td>
                           </tr>
 
                           <tr>
                             <td>Contact Number</td>
-                            <td colSpan="2">0234679123</td>
+                            <td colSpan="2">null</td>
                           </tr>
 
                           <tr>
                             <td>Location</td>
-                            <td colSpan="2">Dhaka</td>
+                            <td colSpan="2">{loading ? "Address" : vendorInfo.address}</td>
+                          </tr>
+
+                          <tr>
+                            <td>Vendor ID</td>
+                            <td>{loading ? "ID" : vendorInfo.id}</td>
                           </tr>
                         </tbody>
                       </Table>
@@ -875,29 +880,29 @@ const VendorAccount = () => {
 
                     <Tab eventKey="AddNew" title="Add New">
                       <div className="Basic"> <br />
-                      <p><b>Name</b></p>
-                      <FormControl className="BasicForm" aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder="Enter Name..." /> <br/>
-                      
-                      <p> <b>Gender</b> </p>
-                      <FormControl className="BasicForm" aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder="Enter Gender..." /> <br/>
-                      
-                      <p><b>Mobile No</b></p>
-                      <FormControl className="BasicForm" aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder="Enter Mobile No..." /> <br/>
-                      
-                      <p><b>Alternate No</b></p>
-                      <FormControl className="BasicForm" aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder="Enter Alternate No..." /> <br/>
-                      
-                      <p><b>Date Of Birth</b></p>
-                      <FormControl className="BasicForm" aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder="Enter Date Of Birth..." /> <br/>
-                      
-                      <p><b>Address</b></p>
-                      <FormControl className="BasicForm" aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder="Enter Address..." /><br/>
-                      
-                      <p><b>Role</b></p>
-                      <FormControl className="BasicForm" aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder="Enter Role..." /><br/>
-                      
-                      <p><b>Categories</b></p>
-                      <FormControl className="BasicForm" as="textarea" aria-label="With textarea" placeholder="Enter Categories..." style={{ borderRadius: "5px", paddingLeft: "15px" }} /> <br/>
+                        <p><b>Name</b></p>
+                        <FormControl className="BasicForm" aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder="Enter Name..." /> <br />
+
+                        <p> <b>Gender</b> </p>
+                        <FormControl className="BasicForm" aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder="Enter Gender..." /> <br />
+
+                        <p><b>Mobile No</b></p>
+                        <FormControl className="BasicForm" aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder="Enter Mobile No..." /> <br />
+
+                        <p><b>Alternate No</b></p>
+                        <FormControl className="BasicForm" aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder="Enter Alternate No..." /> <br />
+
+                        <p><b>Date Of Birth</b></p>
+                        <FormControl className="BasicForm" aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder="Enter Date Of Birth..." /> <br />
+
+                        <p><b>Address</b></p>
+                        <FormControl className="BasicForm" aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder="Enter Address..." /><br />
+
+                        <p><b>Role</b></p>
+                        <FormControl className="BasicForm" aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder="Enter Role..." /><br />
+
+                        <p><b>Categories</b></p>
+                        <FormControl className="BasicForm" as="textarea" aria-label="With textarea" placeholder="Enter Categories..." style={{ borderRadius: "5px", paddingLeft: "15px" }} /> <br />
 
 
                         <Form>
@@ -1283,7 +1288,7 @@ const VendorAccount = () => {
 
 
 
-      <div className="container pt-5">
+      {/* <div className="container pt-5">
         <h4>
           Home <span className="homeSpan">.</span> Vendor Account
         </h4>{" "}
@@ -1385,7 +1390,7 @@ const VendorAccount = () => {
             </Button>
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };

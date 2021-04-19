@@ -8,7 +8,7 @@ import { Redirect, useHistory } from "react-router-dom";
 import FooterMobile from "../../Footer/FooterMobile";
 import { useMediaQuery } from 'react-responsive';
 
-import { Tabs, Tab, Row, Col, Nav, Table, Button, Form, Container } from 'react-bootstrap'
+import { Tabs, Tab, Row, Col, Nav, Table, Button, Form, Container, FormControl } from 'react-bootstrap'
 import UserOrder from "./UserOrder";
 
 
@@ -102,7 +102,7 @@ const UserAccount = () => {
                   <Col className="notific notific1">
                     <div>
                       <h4>5</h4>
-                    </div> <hr style={{width:"90%", background: "white", padding:"1px", marginBottom:"3px"}} />
+                    </div> <hr style={{ width: "90%", background: "white", padding: "1px", marginBottom: "3px" }} />
                     <div>
                       <h6>Completed Order</h6>
                     </div>
@@ -110,7 +110,7 @@ const UserAccount = () => {
                   <Col className="notific notific2">
                     <div>
                       <h4>2</h4>
-                    </div> <hr style={{width:"90%", background: "white", padding:"1px", marginBottom:"3px"}} />
+                    </div> <hr style={{ width: "90%", background: "white", padding: "1px", marginBottom: "3px" }} />
 
                     <div>
                       <h6>Pending order</h6>
@@ -119,14 +119,14 @@ const UserAccount = () => {
                   <Col className="notific notific3">
                     <div>
                       <h4>2</h4>
-                    </div> <hr style={{width:"90%", background: "white", padding:"1px", marginBottom:"3px"}} />
+                    </div> <hr style={{ width: "90%", background: "white", padding: "1px", marginBottom: "3px" }} />
 
                     <div>
                       <h6>Reward Points</h6>
                     </div>
                   </Col>
                 </Row>
-              </Container> <br/> <br/>
+              </Container> <br /> <br />
               <Tab.Content className="container">
 
                 <Tab.Pane eventKey="one">
@@ -160,72 +160,54 @@ const UserAccount = () => {
                   <Button className="btn-danger" style={{ width: "120px", height: "40px", marginTop: "10px", marginBottom: "10px" }}>Edit</Button>
 
                 </Tab.Pane>
-                <Tab.Pane eventKey="two">
-                  <UserOrder />
+                <Tab.Pane eventKey="two"> <br /> <br /> <br />
+                  <h1>You have no order history yet</h1>
                 </Tab.Pane>
 
                 <Tab.Pane eventKey="three">
-                  <Table striped bordered hover>
-                    <thead>
-                      <tr>
-                        <th>#</th>
-                        <th>First Name</th>
-                        <th>Last Name</th>
-                        <th>Username</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>1</td>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
-                      </tr>
-                      <tr>
-                        <td>2</td>
-                        <td>Jacob</td>
-                        <td>Thornton</td>
-                        <td>@fat</td>
-                      </tr>
-                      <tr>
-                        <td>3</td>
-                        <td colSpan="2">Larry the Bird</td>
-                        <td>@twitter</td>
-                      </tr>
-                    </tbody>
-                  </Table>
+                  <UserOrder />
                 </Tab.Pane>
 
                 <Tab.Pane eventKey="four">
-                  <Table striped bordered hover>
-                    <thead>
-                      <tr>
-                        <th>#</th>
-                        <th>First Name</th>
-                        <th>Last Name</th>
-                        <th>Username</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>1</td>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
-                      </tr>
-                      <tr>
-                        <td>2</td>
-                        <td>Jacob</td>
-                        <td>Thornton</td>
-                        <td>@fat</td>
-                      </tr>
-                      <tr>
-                        <td>3</td>
-                        <td colSpan="2">Larry the Bird</td>
-                        <td>@twitter</td>
-                      </tr>
-                    </tbody>
-                  </Table>
+                  <div className="Basic">
+                    <p><b>Bank Name</b></p>
+                    <FormControl className="BasicForm" aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder="Enter Bank Name..." /> <br />
+
+                    <p><b>Branch</b></p>
+                    <FormControl className="BasicForm" aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder="Enter Branch..." /> <br />
+
+                    <p><b>Account Name</b></p>
+                    <FormControl className="BasicForm" aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder="Enter Account Name..." /><br />
+
+                    <p> <b>Account No</b></p>
+                    <FormControl className="BasicForm" aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder="Enter Account No..." /><br />
+
+                    <p><b>Routing No</b></p>
+                    <FormControl className="BasicForm" aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder="Enter Routing No..." /><br />
+
+                    <p><b>Account Type</b></p>
+                    <FormControl className="BasicForm" aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder="Enter Account Type..." /><br />
+
+                    <p><b>Bkash No</b></p>
+                    <FormControl className="BasicForm" aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder="Enter Bkash no..." /><br />
+                    
+                    <p><b>Rocket No</b></p>
+                    <FormControl className="BasicForm" aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder="Enter Rocket no..." /><br />
+
+                    <p><b>Nogod No</b></p>
+                    <FormControl className="BasicForm" aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder="Enter Nogod No..." /><br />
+
+                    <p><b>Billing Address</b></p>
+                    <FormControl className="BasicForm" aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder="Enter Billing Address..." /><br />
+
+
+                    <p><b>Addtional Notes</b></p>
+                    <FormControl as="textarea" aria-label="With textarea" placeholder="Enter Description..." style={{ borderRadius: "5px", paddingLeft: "15px" }} /><br /><br />
+
+
+                    <Button className="btn-success" style={{ height: "40px", marginTop: "10px", marginBottom: "10px", float: "right", marginLeft:"10px" }}>Submit</Button> <Button className="btn-success" style={{ height: "40px", marginTop: "10px", marginBottom: "10px", float: "right" }}>Edit</Button>
+
+                  </div>
                 </Tab.Pane>
 
                 <Tab.Pane eventKey="five">
@@ -273,8 +255,8 @@ const UserAccount = () => {
                     <h1 className="ReffarText">AS190490</h1>
                     <h2>Share Your Referral Code</h2>
                     <p>Share Your Referral Code & get discount for next orders!</p>
-                    <Button style={{color:"white"}} variant="info">Share</Button> <Button variant="success">Copy</Button>
-                    
+                    <Button style={{ color: "white" }} variant="info">Share</Button> <Button variant="success">Copy</Button>
+
                   </div>
                 </Tab.Pane>
 

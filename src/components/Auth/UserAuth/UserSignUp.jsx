@@ -230,8 +230,8 @@ const UserSignUp = () => {
                 />
               </div>
               <div className="form-floation mb-3 text-center">
-                <p className="link-p" onClick={() => history.push(`/login/vendor`)}>
-                  Are You a Vendor? Switch to Vendor!
+              <p className="link-p">
+                  <a  href="http://expert.amaderservice.com/"target="_blank"> <span style={{color:"#1700FF"}}>Are you a Vendor? Switch to Vendor!</span></a>
                 </p>
               </div>
             </form>
