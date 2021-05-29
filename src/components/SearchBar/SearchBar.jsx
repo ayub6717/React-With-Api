@@ -43,7 +43,7 @@ const SearchBar = () => {
 
   const fetchItem = async () => {
     const options = await fetch(
-      `https://kentradigital.com/api/subcatagory?typename=`
+      `https://backend.amaderservice.com/api/subcatagory?typename=`
     );
     const item = await options.json();
     const newArray = item.map(({ id, service_type_name }) => ({
@@ -55,7 +55,7 @@ const SearchBar = () => {
 
   const fetchZones = async () => {
     const options = await fetch(
-      `https://kentradigital.com/api/serviceZone`
+      `https://backend.amaderservice.com/api/serviceZone`
     );
     const item = await options.json();
     const newArray = item.map(({ id, zone }) => ({

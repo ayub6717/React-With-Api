@@ -93,7 +93,7 @@ function ServiceTemplate({ match }) {
 
   const fetchItem = async () => {
     const link =
-      "https://kentradigital.com/api/findservice?servicetypenameid=" +
+      "https://backend.amaderservice.com/api/findservice?servicetypenameid=" +
       match.params.id +
       "&zoneid=" +
       userZone;
@@ -107,7 +107,7 @@ function ServiceTemplate({ match }) {
 
   const fetchServiceDetails = async () => {
     const data = await fetch(
-      `https://kentradigital.com/api/getServiceDetails?servicetypeID=${match.params.id}`
+      `https://backend.amaderservice.com/api/getServiceDetails?servicetypeID=${match.params.id}`
     );
     const item = await data.json();
     //console.log("this is details" + JSON.stringify(item));

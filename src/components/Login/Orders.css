@@ -1,0 +1,25 @@
+.log-bt{
+    font-size: 20px;
+    color: #10865d;
+    cursor: pointer;
+}
+
+.placeStyle{
+    background-color: rgb(218, 218, 218) !important;
+    color: black !important;
+    /* border-radius: 15px !important; */
+    border-bottom-right-radius: 15px !important;
+    border-top-right-radius: 15px !important;
+
+    /* padding:  20px 0px 20px 10px !important; */
+}
+
+.placeStyleOne{
+    border-bottom-left-radius: 15px !important;
+    border-top-left-radius: 15px !important;
+
+}
+
+.JMod.modal-content {
+    border-radius: 20px !important;
+}

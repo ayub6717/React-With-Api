@@ -17,7 +17,7 @@ const AdminRegUsers = () => {
         history.push(`/admin/a6b1q35/pendingorderdetails/${id}`);
     };
     const fetchItem = async () => {
-        fetch("https://kentradigital.com/api/registeredusers")
+        fetch("https://backend.amaderservice.com/api/registeredusers")
             .then((response) => response.json())
             .then((data) => SetServiceHistorys(data))
             .then(() => setLoading(true));

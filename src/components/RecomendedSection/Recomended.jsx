@@ -31,7 +31,7 @@ const RecomendedSection = () => {
 
   const fetchItem = async () => {
     const link =
-      "https://kentradigital.com/api/getrecomanded";
+      "http://backend.amaderservice.com/api/getrecomanded";
     const data = await fetch(link);
     const item = await data.json();
     setItem(item);

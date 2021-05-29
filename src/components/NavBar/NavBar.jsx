@@ -9,6 +9,7 @@ import { FaUser } from 'react-icons/fa';
 import { FaShoppingCart } from 'react-icons/fa';
 import "./NavBar.css";
 import navLogo from "./navLogo.png";
+
 const NavBar = () => {
   //local storage data read START
   const userLilnk = "/user/account";
@@ -76,7 +77,7 @@ const NavBar = () => {
           <Navbar.Brand onClick={handleClick} style={{cursor:"pointer"}}>
             <div className="d-flex align-items-center">
               <a href="/#/">
-              <img src={navLogo} alt="" width="130" /></a>
+              <img src="img/amaderLogo.png" alt="" width="150" /></a>
               {/* <p
                 style={{
                   color: "#33669A",
@@ -101,6 +102,7 @@ const NavBar = () => {
                 alt="React Bootstrap logo"
               />
               <b style={{ color: "#33669A" }}>  Orders</b> 
+
             </Nav.Link>
             
 
@@ -146,11 +148,18 @@ const NavBar = () => {
                 style={{marginTop:"3px", color:"#33669a"}}
                 className="d-inline-block align-top"
                 alt="React Bootstrap logo"
-              /><b> Login{loggedInHere}</b>
+              />
+             {/* <Login />  This is final pop user login */}
+              
+              <b> Login{loggedInHere}</b>
                 </Nav.Link>
               )}
+
+
             </Nav>
           </Navbar.Collapse>
+
+          
         </div>
         
       </Navbar>

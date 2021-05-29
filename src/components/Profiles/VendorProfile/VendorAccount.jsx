@@ -78,7 +78,7 @@ const VendorAccount = () => {
 
   const fetchItemCountry = async () => {
     const country = await fetch(
-      `https://kentradigital.com/api/showCountry`
+      `https://backend.amaderservice.com/api/showCountry`
     );
     const itemCountry = await country.json();
     const newArray = itemCountry.map(({ id, country_name }) => ({
@@ -89,7 +89,7 @@ const VendorAccount = () => {
   };
   const fetchItemCity = async (countryId) => {
     const link =
-      "https://kentradigital.com/api/city?countryid=" + countryId;
+      "https://backend.amaderservice.com/api/city?countryid=" + countryId;
 
     const citiess = await fetch(link);
     const itemCity = await citiess.json();
@@ -101,7 +101,7 @@ const VendorAccount = () => {
   };
   const fetchItemZone = async (cityId) => {
     const citiess = await fetch(
-      `https://kentradigital.com/api/serviceZone?cityid=` + cityId
+      `https://backend.amaderservice.com/api/serviceZone?cityid=` + cityId
     );
     const itemCity = await citiess.json();
     setZones(itemCity);
@@ -111,7 +111,7 @@ const VendorAccount = () => {
 
   const fetchItemCategory = async () => {
     const country = await fetch(
-      `https://kentradigital.com/api/showservice`
+      `https://backend.amaderservice.com/api/showservice`
     );
     const itemCountry = await country.json();
     const newArray = itemCountry.map(({ id, category_name }) => ({
@@ -122,7 +122,7 @@ const VendorAccount = () => {
   };
   const fetchItemService = async (cat) => {
     const citiess = await fetch(
-      `https://kentradigital.com/api/subcatagory?maincatagoryid=` +
+      `https://backend.amaderservice.com/api/subcatagory?maincatagoryid=` +
       cat
     );
     const itemCity = await citiess.json();
@@ -134,7 +134,7 @@ const VendorAccount = () => {
   };
   const fetchItemFinalService = async (subCat) => {
     const citiess = await fetch(
-      `https://kentradigital.com/api/servicelist?subcatagoryid=` +
+      `https://backend.amaderservice.com/api/servicelist?subcatagoryid=` +
       subCat
     );
     const itemCity = await citiess.json();
@@ -147,7 +147,7 @@ const VendorAccount = () => {
 
   const fetchItemFinalFinal = async (serviceId) => {
     const link =
-      "https://kentradigital.com/api/finalServiceList?serviceid=" +
+      "https://backend.amaderservice.com/api/finalServiceList?serviceid=" +
       serviceId;
     console.log("this is fetch city link:" + link);
     const country = await fetch(link);
@@ -189,7 +189,7 @@ const VendorAccount = () => {
   };
 
   const submitService = async () => {
-    fetch("https://kentradigital.com/api/registerService", {
+    fetch("https://backend.amaderservice.com/api/registerService", {
       method: "POST",
       headers: {
         Accept: "application/json",

@@ -17,7 +17,7 @@ const AdminRegVendors = () => {
         history.push(`/admin/a6b1q35/pendingorderdetails/${id}`);
     };
     const fetchItem = async () => {
-        fetch("https://kentradigital.com/api/vendorlist")
+        fetch("https://backend.amaderservice.com/api/vendorlist")
             .then((response) => response.json())
             .then((data) => SetServiceHistorys(data.slice(1)))
             .then(() => setLoading(true));

@@ -36,7 +36,7 @@ function PersonalCare() {
 
     const fetchItem = async () => {
         const link =
-            "https://kentradigital.com/api/getpersonalcare";
+            "https://backend.amaderservice.com/api/getpersonalcare";
         const data = await fetch(link);
         const item = await data.json();
         setItem(item);
@@ -51,15 +51,17 @@ function PersonalCare() {
                             <div className="rec-shadow">
                                 <Link
                                     style={{ textDecoration: "none", color: "33669A", margin: 0, }}
-                                    to={item.link_id}
+                                    to={item.link_id.toString()}
                                 >
                                     <img className="rec-img" src={item.image} alt="" />
                                     <h5 className="rec-text">{item.name}</h5>
                                 </Link>
                             </div>
+                            
                         </div>
                     ))}
                 </Carousel>
+                
             </div>
         </div>
     )

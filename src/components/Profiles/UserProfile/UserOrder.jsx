@@ -27,16 +27,16 @@ const UserOrder = () => {
       };
     const history = useHistory();
     const handleRowClick = async (id) => {
-        const link = "https://kentradigital.com/api/completeOrder?userid="+ userInfo[0].id + "&orderid=" + id;
+        const link = "https://backend.amaderservice.com/api/completeOrder?userid="+ userInfo[0].id + "&orderid=" + id;
         const data = await fetch(link);
-        const link2 = "https://kentradigital.com/api/userorders?userid="+ userInfo[0].id;
+        const link2 = "https://backend.amaderservice.com/api/userorders?userid="+ userInfo[0].id;
         const data2 = await fetch(link2);
         const dataJSON2 = await data2.json();
         SetServiceHistorys(dataJSON2);
         setResHead(Object.keys(dataJSON2));    
     };
     const fetchItem = async () => {
-        const link = "https://kentradigital.com/api/userorders?userid="+ userInfo[0].id;
+        const link = "https://backend.amaderservice.com/api/userorders?userid="+ userInfo[0].id;
         const data = await fetch(link);
         const dataJSON = await data.json();
         SetServiceHistorys(dataJSON);

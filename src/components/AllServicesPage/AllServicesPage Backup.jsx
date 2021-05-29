@@ -18,7 +18,7 @@ const AllServicesPage = () => {
 
   const fetchItem = async () => {
     const link =
-      "https://kentradigital.com/api/allservice";
+      "https://backend.amaderservice.com/api/allservice";
     const data = await fetch(link);
     const dataJSON = await data.json();
     setItem(dataJSON);

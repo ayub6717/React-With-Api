@@ -151,31 +151,31 @@ const ServiceModal = (props) => {
 
   useEffect(() => {
     fetch(
-      "https://kentradigital.com/api/subcatagory?typename=Appliance%20Repair"
+      "https://backend.amaderservice.com/api/subcatagory?typename=Appliance%20Repair"
     )
       .then((response) => response.json())
       .then((data) => setSubCategory1(data));
 
     fetch(
-      "https://kentradigital.com/api/subcatagory?typename=Painting Renovation"
+      "https://backend.amaderservice.com/api/subcatagory?typename=Painting Renovation"
     )
       .then((response) => response.json())
       .then((data) => setSubCategory2(data));
 
     fetch(
-      "https://kentradigital.com/api/subcatagory?typename=Shifting"
+      "https://backend.amaderservice.com/api/subcatagory?typename=Shifting"
     )
       .then((response) => response.json())
       .then((data) => setSubCategory3(data));
 
     fetch(
-      "https://kentradigital.com/api/subcatagory?typename=Cleaning"
+      "https://backend.amaderservice.com/api/subcatagory?typename=Cleaning"
     )
       .then((response) => response.json())
       .then((data) => setSubCategory4(data));
 
     fetch(
-      "https://kentradigital.com/api/subcatagory?typename=Trip and Travel"
+      "https://backend.amaderservice.com/api/subcatagory?typename=Trip and Travel"
     )
       .then((response) => response.json())
       .then((data) => setSubCategory5(data));
@@ -183,14 +183,14 @@ const ServiceModal = (props) => {
       
 
     fetch(
-      "https://kentradigital.com/api/subcatagory?typename=Beauty and Saloon"
+      "https://backend.amaderservice.com/api/subcatagory?typename=Beauty and Saloon"
     )
       .then((response) => response.json())
       .then((data) => setSubCategory6(data));
     
 
       fetch(
-        "https://kentradigital.com/api/subcatagory?typename=Pest"
+        "https://backend.amaderservice.com/api/subcatagory?typename=Pest"
       )
         .then((response) => response.json())
         .then((data) => setSubCategory7(data));

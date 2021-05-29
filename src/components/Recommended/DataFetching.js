@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
  
 function DataFetching() {
-    const url = 'https://kentradigital.com/api/gettrending'
+    const url = 'https://backend.amaderservice.com/api/gettrending'
 
     const [data, setData] = useState([])
   

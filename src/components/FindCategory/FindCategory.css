@@ -36,6 +36,14 @@
         padding-right:0px;
         padding-left: 0px;
         padding-bottom: 20px;
+       
+}
+
+@media only screen and (min-width: 768px) {
+    .Bg-a.col-sm-5 {
+        height: 495px;
+        border-bottom-left-radius: 20px;
+}
 }
 
 .Bg-b.col-sm-7 {

@@ -40,7 +40,7 @@ function Recommended() {
 
     const fetchItem = async () => {
         const link =
-            "https://kentradigital.com/api/getrecomanded";
+            "https://backend.amaderservice.com/api/getrecomanded"; 
         const data = await fetch(link);
         const item = await data.json();
         setItem(item);
@@ -55,7 +55,7 @@ function Recommended() {
                             <div className="rec-shadow">
                                 <Link
                                     style={{ textDecoration: "none", color: "33669A", margin: 0, }}
-                                    to={item.link_id}
+                                    to={item.link_id.toString()}
                                 >
                                     <img className="rec-img" src={item.image} alt="" />
                                     <h5 className="rec-text">{item.name}</h5>

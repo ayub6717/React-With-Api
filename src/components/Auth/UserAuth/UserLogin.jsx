@@ -2,7 +2,9 @@ import React, { useEffect, useState } from "react";
 import NavBar from "../../NavBar/NavBar";
 import { reactLocalStorage } from "reactjs-localstorage";
 import { Redirect, useHistory } from "react-router-dom";
-import { Modal, Button } from "react-bootstrap";
+import { Modal, Button, Form, FormControl, InputGroup } from 'react-bootstrap'
+import { FaLock, FaUser, FaUserAlt } from "react-icons/fa";
+
 
 import "./UserLogin.css"
 const UserLogin = () => {
@@ -36,7 +38,7 @@ const UserLogin = () => {
   const login = async () => {
     try {
       const link =
-        "https://kentradigital.com/api/userLogin?email=" +
+        "https://backend.amaderservice.com/api/userLogin?email=" +
         email +
         "&password=" +
         password;
@@ -63,84 +65,90 @@ const UserLogin = () => {
     <div>
       <div className="mb-5">
         <NavBar></NavBar>
-      </div>
+      </div> <br />
       <Modal
         show={modalShowFailure}
         size="lg"
         aria-labelledby="contained-modal-title-vcenter"
         centered
-        onHide={()=>setModalShowFailure(false)}
+        onHide={() => setModalShowFailure(false)}
       >
         <Modal.Body>
-          <h1 className="text-danger" style={{textAlign:"center"}}>
-            
+          <h1 className="text-danger" style={{ textAlign: "center" }}>
+
             Login Failed!
           </h1>
-        </Modal.Body>        
+        </Modal.Body>
       </Modal>
-      <div className="container pt-5" style={{ marginTop: "150px" }}>
-        <h1 className="text-center">User Login</h1> <br />
-        <div className="row d-flex justify-content-center">
-          <div className="col-md-6">
-            <h2>{userInfo[0].name}</h2>
-            <form action="" onSubmit={handleClick}>
-              <div class="form-floating mb-3">
-                <input
-                  type="text"
-                  class="form-control"
-                  id=""
-                  placeholder="email or phone"
-                  value={email}
-                  onChange={(event) => setEmail(event.target.value)}
-                ></input>
-                <label for="floatingInput">Email or Phone</label>
-              </div>
-              
-              <div class="form-floating mb-3">
-                <input
-                  type="password"
-                  class="form-control"
-                  id=""
-                  placeholder="Password"
-                  value={password}
-                  minLength={8}
-                  onChange={(event) => setPassword(event.target.value)}
-                  required
-                ></input>
-                <label for="floatingPassword">Password</label>
-              </div>
-              <div className="form-floation mb-3">
-                <input
-                  className="btn btn-primary form-control"
-                  type="submit"
-                  value="Login"
-                />
-              </div>
-              <div className="form-floation mb-3 text-center">
-                <p className="link-p" onClick={() => history.push(`/signup`)}>
-                  Haven't Registered Yet? Register Now!
-                </p>
-              </div>
-              <div className="form-floation mb-3 text-center">
-                {/* <p className="link-p" onClick={() => history.push(`/login/vendor`)}>
-                  <a href="http://expert.amaderservice.com/"target="_blank"> Are you a Vendor? Switch to Vendor!</a>
-                </p> */}
 
-                <p className="link-p">
-                  <a  href="http://expert.amaderservice.com/"target="_blank"> <span style={{color:"#1700FF"}}>Are you a Vendor? Switch to Vendor!</span></a>
+      <div className="container">
+        <div className="row">
+          <div className="col-sm-6">
+            <img src="img/AnotherPic/usersign.png" alt="usersign.png" style={{ width: "100%" }} />
+          </div>
+          <div className="col-sm-6"> <br /> <br /> <br />
+
+            <div style={{ backgroundColor: "#FAEFDC", borderRadius: "20px", padding: "20px" }}>
+              {/* <h4 style={{ textAlign: "center", }}>WELCOME</h4>
+            <h6 style={{ textAlign: "center" }}>USER LOGIN</h6> <br /> */}
+
+              <h2>{userInfo[0].name}</h2>
+              <Form action="" onSubmit={handleClick} style={{ padding: "10px" }}> <br /> <br /> <br />
+                <Form.Label>Email address</Form.Label>
+                <InputGroup className="mb-3">
+                  <InputGroup.Prepend>
+                    <InputGroup.Text id="basic-addon1" className="placeStyleOne"> <FaUser style={{ fontSize: "19px", height: "25px" }} /> </InputGroup.Text>
+                  </InputGroup.Prepend>
+                  <FormControl className="placeStyle"
+                    placeholder="Enter Email or Mobile no"
+
+                    aria-describedby="basic-addon1"
+                    value={email}
+                    onChange={(event) => setEmail(event.target.value)}
+                  />
+                </InputGroup>
+
+                <Form.Label>Password </Form.Label>
+                <InputGroup className="mb-3">
+                  <InputGroup.Prepend>
+                    <InputGroup.Text id="basic-addon1" className="placeStyleOne"> <FaLock style={{ fontSize: "17px", height: "25px" }} /> </InputGroup.Text>
+                  </InputGroup.Prepend>
+                  <FormControl className="placeStyle"
+                    placeholder="Enter Password"
+                    type="password"
+                    aria-describedby="basic-addon1"
+                    value={password}
+                    minLength={8}
+                    onChange={(event) => setPassword(event.target.value)}
+                    required
+                  />
+                </InputGroup>
+
+
+                {/* <Form.Group controlId="formBasicCheckbox">
+                            <Form.Check type="checkbox" label="Check me out" />
+                        </Form.Group> <br /> */}
+                <div style={{ textAlign: "center" }}>
+                  <button class="btn btn-success"
+                    type="submit"
+                    value="Login"><b> Login</b></button>
+                </div>
+
+              </Form>
+              <div style={{ padding: "20px" }}>
+                {/* <span className="log-bt">Forgot Password</span>  */}
+                <span className="log-bt" style={{ float: "right", fontSize: "20px" }}>
+                  <p style={{cursor:"pointer"}} onClick={() => history.push(`/signup`)}>
+                    Create Account
                 </p>
-                
+                </span>
               </div>
-              {/*<div className="form-floation mb-3 text-center">
-                <p className="link-p" onClick={() => history.push(`/admin/account`)}>
-                  Are you an Admin? Switch to Admin!
-                </p>
-              </div>
-              */}
-            </form>
+            </div>
           </div>
         </div>
       </div>
+
+
     </div>
   );
 };

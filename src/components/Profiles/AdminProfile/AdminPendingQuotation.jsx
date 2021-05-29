@@ -30,7 +30,7 @@ const AdminPendingOrder = () => {
     history.push(`/admin/a6b1q35/pendingorderdetails/${id}`);
   };
   const fetchItem = async () => {
-    fetch("https://kentradigital.com/api/pendingquotations")
+    fetch("https://backend.amaderservice.com/api/pendingquotations")
       .then((response) => response.json())
       .then((data) => SetServiceHistorys(data))
       .then(() => setLoading(true));
@@ -40,7 +40,7 @@ const AdminPendingOrder = () => {
 
   const sendEmail = async (userId, serviceId) => {
     
-    fetch("https://kentradigital.com/api/sentquota_email", {
+    fetch("https://backend.amaderservice.com/api/sentquota_email", {
       method: "POST",
       headers: {
         Accept: "application/json",

@@ -54,7 +54,7 @@ function AdminPendingOrderDetails({ match }) {
     setClicked(pendingId);
     setLoadingVendor(true)
 
-    const link = "https://kentradigital.com/api/eligibleVendor?serviceid=" + serviceID + "&zoneid=" + zoneId;
+    const link = "https://backend.amaderservice.com/api/eligibleVendor?serviceid=" + serviceID + "&zoneid=" + zoneId;
     const data = await fetch(link);
     const item = await data.json();
     setVendors(item);
@@ -69,7 +69,7 @@ function AdminPendingOrderDetails({ match }) {
 
   const assignVendor = async (vendorId) => {
     const link =
-      "https://kentradigital.com/api/placeOrdertoVendor?id=" + pendingId + "&vendorid=" + vendorId;
+      "https://backend.amaderservice.com/api/placeOrdertoVendor?id=" + pendingId + "&vendorid=" + vendorId;
     const data = await fetch(link);
     const item = await data.json();
     if(item == 1){
@@ -84,7 +84,7 @@ function AdminPendingOrderDetails({ match }) {
 
   const fetchItem = async () => {
     setVendors([]);
-    const link = "https://kentradigital.com/api/assignedServices?orderid=" + match.params.id;
+    const link = "https://backend.amaderservice.com/api/assignedServices?orderid=" + match.params.id;
     
   const data = await fetch(link);
   const item = await data.json();

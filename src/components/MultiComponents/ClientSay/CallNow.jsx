@@ -83,12 +83,12 @@ function CallNow() {
                         <div className="col-sm-5">
                             <div className="call-mid" style={{ padding: "20px" }}>
                                 <h1>Did not find what you are looking? </h1>
-                                <p>Please submit your desired request</p>
+                                <p>Please request your desire service </p>
                             </div>
                         </div>
                         <div className="col-sm-7" >
                             <div className="call-now">
-                                <span><button className="call-btn"> <img src="img/AnotherPic/headset.svg" style={{ width: "20px", marginLeft: "23px" }} alt="" /> <b>Call Now</b></button> <button className="call-btn" onClick={handleShow}><b style={{ marginLeft: "20px" }}>Request a service</b></button></span>
+                                <span><button className="call-btn"> <img src="img/AnotherPic/headset.svg" style={{ width: "20px", marginLeft: "23px" }} alt="" /> <b >Call Now</b></button> <button className="call-btn" onClick={handleShow}><b style={{ marginLeft: "20px" }}>Request a service</b></button></span>
                             </div>
                         </div>
                     </div>

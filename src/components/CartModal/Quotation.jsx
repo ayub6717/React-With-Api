@@ -119,7 +119,7 @@ function Quotation({match}) {
 
       const completeDate = date.getDate() + "-" + correctDateMonth + "-" + date.getFullYear();
 
-      fetch("https://kentradigital.com/api/setquotations", {
+      fetch("https://backend.amaderservice.com/api/setquotations", {
         method: "POST",
         headers: {
           Accept: "application/json",

@@ -22,7 +22,7 @@ const VendorLogin = () => {
   const login = async () => {
     try {
       const link =
-        "https://kentradigital.com/api/Vendor_Login?email=" +
+        "https://backend.amaderservice.com/api/Vendor_Login?email=" +
         email +
         "&password=" +
         password;

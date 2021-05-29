@@ -284,7 +284,7 @@ const showConfirmboxSecondLayer = (id) => {
     //console.log(JSON.stringify(newArray));
 
     /*const data = await fetch(
-      `https://kentradigital.com/api/getServiceDetailsadmin?servicetypeID=` + subCategoryId
+      `https://backend.amaderservice.com/api/getServiceDetailsadmin?servicetypeID=` + subCategoryId
     );
     const item = await data.json();*/
   }
@@ -292,7 +292,7 @@ const showConfirmboxSecondLayer = (id) => {
 
   const fetchSubCategoryDetails = async () => {
     const data = await fetch(
-      `https://kentradigital.com/api/getServiceDetailsadmin?servicetypeID=` + subCategoryId
+      `https://backend.amaderservice.com/api/getServiceDetailsadmin?servicetypeID=` + subCategoryId
     );
     const item = await data.json();
     setNightShifting(item.nightshifting)
@@ -383,14 +383,14 @@ const showConfirmboxSecondLayer = (id) => {
 
 
   const createCategory = async () => {
-    const optionsCatagory = await fetch("https://kentradigital.com/api/addMainCatagory?catagoryName="
+    const optionsCatagory = await fetch("https://backend.amaderservice.com/api/addMainCatagory?catagoryName="
       + categoryName);
     fetchItemCatagory();
 
   };
 
   const createSubCategory = async (id) => {
-    const link = "https://kentradigital.com/api/addServiceType?servicetypename=" + subCategory
+    const link = "https://backend.amaderservice.com/api/addServiceType?servicetypename=" + subCategory
       + "&maincatagoryid="
       + categoryId;
     const optionsCatagory = await fetch(link);
@@ -400,7 +400,7 @@ const showConfirmboxSecondLayer = (id) => {
 
   const createService = async (id) => {
 
-    const link = "https://kentradigital.com/api/addService?servicename=" + serviceName
+    const link = "https://backend.amaderservice.com/api/addService?servicename=" + serviceName
       + "&servicetypeid="
       + subCategoryId;
     fetch(link)
@@ -410,7 +410,7 @@ const showConfirmboxSecondLayer = (id) => {
   };
 
   const createFinalService = async () => {
-    const link = "https://kentradigital.com/api/addFinalService?servicename="
+    const link = "https://backend.amaderservice.com/api/addFinalService?servicename="
       + finalName
       + "&servicesid="
       + serviceId
@@ -427,7 +427,7 @@ const showConfirmboxSecondLayer = (id) => {
   };
 /*delete functions START*/
 const deleteCategory = async (id) => {
-  const link = "https://kentradigital.com/api/mainservice?msid=" + id;
+  const link = "https://backend.amaderservice.com/api/mainservice?msid=" + id;
   fetch(link)
     .then((res) => res.json())
     .then((result) => alert("Main Category Deleted!") );
@@ -435,7 +435,7 @@ const deleteCategory = async (id) => {
 };
 
 const deleteSubCategory = async (id) => {
-  const link = "https://kentradigital.com/api/servicetype?servicetypeID=" + id;
+  const link = "https://backend.amaderservice.com/api/servicetype?servicetypeID=" + id;
   fetch(link)
     .then((res) => res.json())
     .then((result) => alert("Sub Category Deleted!") );
@@ -443,14 +443,14 @@ const deleteSubCategory = async (id) => {
 };
 
 const deleteService = async (id) => {
-  const link = "https://kentradigital.com/api/service?sid=" + id;
+  const link = "https://backend.amaderservice.com/api/service?sid=" + id;
   fetch(link)
     .then((res) => res.json())
     .then((result) => alert("Service Deleted!") );
   };
 
 const deleteFinalService = async (id) => {
-  const link = "https://kentradigital.com/api/deletefinalservice?fsid=" + id;
+  const link = "https://backend.amaderservice.com/api/deletefinalservice?fsid=" + id;
   fetch(link)
     .then((res) => res.json())
     .then((result) => alert("Sub Service Deleted!") );
@@ -475,7 +475,7 @@ const deleteFinalService = async (id) => {
 
   const fetchItemCatagory = async () => {
     const optionsCatagory = await fetch(
-      `https://kentradigital.com/api/showservice`
+      `https://backend.amaderservice.com/api/showservice`
     );
     const itemCatagory = await optionsCatagory.json();
     const newArrayCatagory = itemCatagory.map(({ id, category_name }) => ({
@@ -487,7 +487,7 @@ const deleteFinalService = async (id) => {
 
   const fetchItemSubCatagory = async (id) => {
     const optionsCatagory = await fetch(
-      `https://kentradigital.com/api/subcatagory?maincatagoryid=` + id
+      `https://backend.amaderservice.com/api/subcatagory?maincatagoryid=` + id
     );
     const itemCatagory = await optionsCatagory.json();
     const newArrayCatagory = itemCatagory.map(({ id, service_type_name }) => ({
@@ -498,7 +498,7 @@ const deleteFinalService = async (id) => {
   };
 
   const fetchItemService = async (id) => {
-    const link = `https://kentradigital.com/api/servicelist?subcatagoryid=` + id;
+    const link = `https://backend.amaderservice.com/api/servicelist?subcatagoryid=` + id;
     const optionsCatagory = await fetch(link);
     const itemCatagory = await optionsCatagory.json();
     const newArrayCatagory = itemCatagory.map(({ id, service_name }) => ({
@@ -511,7 +511,7 @@ const deleteFinalService = async (id) => {
   };
 
   const fetchItemFinalService = async (id) => {
-    const link = `https://kentradigital.com/api/finalServiceList?serviceid=` + id;
+    const link = `https://backend.amaderservice.com/api/finalServiceList?serviceid=` + id;
     const optionsCatagory = await fetch(link);
     const itemCatagory = await optionsCatagory.json();
     
@@ -592,7 +592,7 @@ const deleteFinalService = async (id) => {
 
   const onFormSubmitThirdDiscount=async()=>{
     const data = await fetch(
-      `https://kentradigital.com/api/setdiscount?serviceid=` + serviceId + "&amount=" + inputDiscountThird
+      `https://backend.amaderservice.com/api/setdiscount?serviceid=` + serviceId + "&amount=" + inputDiscountThird
     );
     const item = await data.json();
     if(item.status == "success"){
@@ -658,7 +658,7 @@ const deleteFinalService = async (id) => {
         });
       
     }
-    const url = "https://kentradigital.com/api/updateservice";
+    const url = "https://backend.amaderservice.com/api/updateservice";
     
     try {
       post(url,  
@@ -680,7 +680,7 @@ const deleteFinalService = async (id) => {
     
 
     const link = 
-    "https://kentradigital.com/api/updateservice?serviceid="
+    "https://backend.amaderservice.com/api/updateservice?serviceid="
     +serviceId
     +"&description="
     +inputDetailsThird
@@ -742,7 +742,7 @@ const deleteFinalService = async (id) => {
       alert("Success!");
 
     }
-    const url = "https://kentradigital.com/api/addservicedetails";
+    const url = "https://backend.amaderservice.com/api/addservicedetails";
     const arr = [{includeHeading:"good service quality"},{includeHeading:"best behaviour"}];
     const arrFaq=[{question:"question 1 new",answer:"answer 1"},{question:"question 2",answer:"answer 2"}];
     const arrexclude=[{excludeHeading:"new price refund"},{excludeHeading:"gifts"}];

@@ -14,7 +14,7 @@ const VendorServiceList = () => {
   }, []);
 
   const fetchItem = async () => {
-    fetch("https://kentradigital.com/api/Vendor_Dash?vendorid=" + vendorInfo.id)
+    fetch("https://backend.amaderservice.com/api/Vendor_Dash?vendorid=" + vendorInfo.id)
       .then((response) => response.json())
       .then((data) => SetServiceHistorys(data.given_service))
       .then(() => setLoading(true));

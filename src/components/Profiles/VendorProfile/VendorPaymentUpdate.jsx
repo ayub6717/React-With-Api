@@ -35,7 +35,7 @@ const VendorPaymentUpdate = () => {
 
 
   const fetchItem = async () => {
-    fetch("https://kentradigital.com/api/Vendor_Dash?vendorid=" + vendorInfo.id)
+    fetch("https://backend.amaderservice.com/api/Vendor_Dash?vendorid=" + vendorInfo.id)
       .then((response) => response.json())
       .then((data) => doneFetching(data))
 
@@ -60,7 +60,7 @@ const VendorPaymentUpdate = () => {
   }
 
   const submitService = async () => {
-    const link = "https://kentradigital.com/api/paymentdetails?vendorid="
+    const link = "https://backend.amaderservice.com/api/paymentdetails?vendorid="
     + vendorInfo.id
     + "&bank_name="
     + bank

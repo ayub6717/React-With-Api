@@ -23,7 +23,7 @@ const TrendingSection = () => {
   const [item, setItem] = useState([]);
   const fetchItem = async () => {
     const link =
-      "https://kentradigital.com/api/gettrending";
+      "http://backend.amaderservice.com/api/gettrending";
     const data = await fetch(link);
     const item = await data.json();
     setItem(item);

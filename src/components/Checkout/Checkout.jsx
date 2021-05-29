@@ -21,7 +21,7 @@ function Checkout(props) {
   const [checkouts, setCheckouts] = useState([]);
   const [modalShow, setModalShow] = React.useState(false);
   useEffect(() => {
-    const link = "https://kentradigital.com/api/ViewCart?userid=" + userInfo[0].id;
+    const link = "https://backend.amaderservice.com/api/ViewCart?userid=" + userInfo[0].id;
 
     trackPromise(
       fetch(link)
@@ -132,7 +132,7 @@ function Checkout(props) {
   const placeorder = async () => {
     try {
       const link =
-        "https://kentradigital.com/api/update?userid=" +
+        "https://backend.amaderservice.com/api/update?userid=" +
         userInfo[0].id +
         "&contact_person=" +
         name +
@@ -155,7 +155,7 @@ function Checkout(props) {
         .then(async (data) => {
           if (data.status == "success") {
             const link =
-              "https://kentradigital.com/api/ConfirmCart?userid=" +
+              "https://backend.amaderservice.com/api/ConfirmCart?userid=" +
               userInfo[0].id +
               "&zoneid=" +
               userZoneId +
@@ -183,13 +183,13 @@ function Checkout(props) {
 
   return (
     <div>
-      <NavBar></NavBar>
+      <NavBar></NavBar> <br /> <br /> <br />
 
 
-      <div className="container-fluid grey">
+      <div className="container-fluid " style={{ backgroundColor: "#e9e9e9" }}>
 
-        <div className="checkout-container">
-          <div style={{ backgroundColor: "#d1d1d150", width: "100%", height: "2px", marginTop: "10px" }}></div>
+        <div className="checkout-container" >
+          <div style={{ width: "100%", height: "2px", marginTop: "10px" }}></div>
           <Container>
 
             <Row>
@@ -206,11 +206,13 @@ function Checkout(props) {
                           <p style={{ color: "grey" }}>
                             Expert will deliver on the following day and time
                         </p>
-                          <Row>
+                          <Row style={{ backgroundColor: "#FFFFFF", padding: "15px", borderRadius: "10px" }}>
 
-
-
-                            <Col >
+                            <h4 style={{ color: "black", marginBottom: "15px", marginLeft: "-20px" }}>
+                              <img style={{ width: "60px", height: "56px" }} src="img/AnotherPic/cal.png" alt="" /> Expected Time
+                            </h4>
+                            {/* <img style={{width:"70px", height:"56px"}} src="img/AnotherPic/cal.png" alt=""/> */}
+                            <Col sm={6} >
                               <DatePicker
                                 onChange={onChangeDate}
                                 value={date}
@@ -220,10 +222,10 @@ function Checkout(props) {
 
 
                             </Col>
-                            <Col >
+                            <Col sm={3}>
 
                               <div>
-                                <div style={{ backgroundColor: timeEmpty ? "red" : "white", padding: timeEmpty ? 2 : 0, width:"16rem" }}>
+                                <div style={{ backgroundColor: timeEmpty ? "red" : "white", padding: timeEmpty ? 2 : 0, width: "10rem", marginTop: "10px" }}>
                                   <SelectSearch
                                     options={timeZone}
                                     onChange={handleTimeZone}
@@ -253,7 +255,7 @@ function Checkout(props) {
 
 
 
-                          
+
 
                           <Col style={{ marginBottom: "20px" }}>
                             <DatePicker
@@ -269,7 +271,7 @@ function Checkout(props) {
                           <Col >
 
                             <div>
-                            <div style={{ backgroundColor: timeEmpty ? "red" : "white", padding: timeEmpty ? 2 : 0, width:"16rem" }}>
+                              <div style={{ backgroundColor: timeEmpty ? "red" : "white", padding: timeEmpty ? 2 : 0, width: "16rem" }}>
                                 <SelectSearch
                                   options={timeZone}
                                   onChange={handleTimeZone}
@@ -289,7 +291,7 @@ function Checkout(props) {
                       </Row>
                     }
 
-                    <Row>
+                    {/* <Row>
                       <div className="checkout-heading">
                         <h3 style={{ color: "33669A" }}>Type of Payment</h3>
                         <p style={{ color: "grey" }}>
@@ -318,19 +320,22 @@ function Checkout(props) {
 
 
                       </div>
-                    </Row>
+                    </Row> */}
 
                     <Row>
                       <div className="checkout-heading">
-                        <h3 style={{ color: "33669A" }}>Contact Person</h3>
+                        {/* <h3 style={{ color: "33669A" }}> <img src="img/AnotherPic/userrr.png" style={{width:"70px"}} alt=""/> Contact Person</h3>
                         <p style={{ color: "grey" }}>
                           Expert will contact with the following person
-                        </p>
+                        </p> */}
                         <form action="" onSubmit={handleClick}>
-                          <div style={{ backgroundColor: "#d3d3d350", margin: "-10px", padding: "10px", marginBottom: "10px", borderRadius: "10px" }}>
-                            <h4 style={{ color: "black", textAlign: "center", marginBottom: "15px" }}>
-                              Enter Contact Information
+                          <div style={{ backgroundColor: "#FFFFFF", margin: "-10px", padding: "10px", marginTop: "-50px", borderRadius: "10px" }}>
+                            <h4 style={{ color: "black", marginBottom: "15px" }}>
+                              <img src="img/AnotherPic/userrr.png" style={{ width: "70px" }} alt="" />  Contact Person
                         </h4>
+                            <p style={{ color: "grey" }}>
+                              Expert will contact with the following person
+                        </p>
                             <div class="form-floating mb-3">
                               <input
                                 class="form-control"
@@ -354,9 +359,10 @@ function Checkout(props) {
                               <label for="floatingPassword">Contact Number</label>
                             </div>
                           </div>
-                          <div style={{ backgroundColor: "#d3d3d350", margin: "-10px", padding: "10px", marginTop: "10px", borderRadius: "10px" }}>
-                            <h4 style={{ color: "black", textAlign: "center", marginBottom: "15px" }}>
-                              Enter Address {address}
+
+                          <div style={{ backgroundColor: "#FFFFFF", margin: "-10px", padding: "10px", marginTop: "20px", borderRadius: "10px" }}>
+                            <h4 style={{ color: "black", marginBottom: "15px" }}>
+                              <img src="img/AnotherPic/homeAddress.png" alt="" style={{ width: "80px" }} /> Address {address}
                             </h4>
                             <div className="row">
 
@@ -446,13 +452,13 @@ function Checkout(props) {
                             </div>
                           </div>
 
-                          <div className="form-floation mb-3">
+                          {/* <div className="form-floation mb-3">
                             <input
                               className="btn btn-primary form-control"
                               type="submit"
                               value="Place Order"
                             />
-                          </div>
+                          </div> */}
 
                         </form>
                       </div>
@@ -470,7 +476,7 @@ function Checkout(props) {
                   <Container>
                     <Row>
                       <div className="checkout-heading">
-                        <h3 style={{ color: "black" }}>Your Cart</h3>
+                        <h3 style={{ color: "black" }}>Order Summary</h3>
                         <p style={{ color: "grey" }}>
                           Our service provider will contact you to confirm the
                           following service
@@ -483,49 +489,49 @@ function Checkout(props) {
                             </Row>
                           </div>
                         ) : (
-                            checkouts.map((checkout) => (
-                              <div className="checkout-item">
-                                <Row>
-                                  <Col xs={9}>
-                                    <p
-                                      style={{ margin: "0px", fontSize: "14px", fontWeight:'500' }}
-                                      key={checkout.id}
-                                    >
-                                      {checkout.service}
-                                    </p>
-                                    <p
-                                      style={{ margin: "0px", fontSize: "14px",  fontWeight:'500' }}
-                                      key={checkout.id}
-                                    >
-                                      {checkout.service_name}
-                                    </p>
-                                  </Col>
-                                  <Col xs={3}>
+                          checkouts.map((checkout) => (
+                            <div className="checkout-item">
+                              <Row>
+                                <Col xs={9}>
+                                  <p
+                                    style={{ margin: "0px", fontSize: "14px", fontWeight: '500' }}
+                                    key={checkout.id}
+                                  >
+                                    {checkout.service}
+                                  </p>
+                                  <p
+                                    style={{ margin: "0px", fontSize: "14px", fontWeight: '500' }}
+                                    key={checkout.id}
+                                  >
+                                    {checkout.service_name}
+                                  </p>
+                                </Col>
+                                <Col xs={3}>
 
-                                    <p
-                                      style={{ margin: "0px", textAlign: "center", fontSize: "14px",  fontWeight:'500' }}
-                                      key={checkout.id}
-                                    >
-                                      BDT {checkout.price}
-                                    </p>
-                                  </Col>
-                                </Row>
+                                  <p
+                                    style={{ margin: "0px", textAlign: "center", fontSize: "14px", fontWeight: '500' }}
+                                    key={checkout.id}
+                                  >
+                                    BDT {checkout.price}
+                                  </p>
+                                </Col>
+                              </Row>
 
-                              </div>
-                            ))
+                            </div>
+                          ))
 
-                          )}
+                        )}
                         <Row>
                           <Col xs={9} style={{ backgroundColor: "" }}>
                             <p
-                              style={{ margin: "0px", fontSize: "14px", textAlign: "right", fontWeight:'500' }}
+                              style={{ margin: "0px", fontSize: "14px", textAlign: "right", fontWeight: '500' }}
                             >
                               Total Amount:
                                   </p>
                           </Col>
                           <Col xs={3} style={{ backgroundColor: "" }}>
                             <p
-                              style={{ margin: "0px", textAlign: "center", fontSize: "14px", fontWeight:'500' }}
+                              style={{ margin: "0px", textAlign: "center", fontSize: "14px", fontWeight: '500' }}
                             >
                               BDT  {checkouts.reduce(
                               (a, v) => (a = a + parseFloat(v.price)),
@@ -535,10 +541,71 @@ function Checkout(props) {
 
                           </Col>
                         </Row>
+                      </div>
+                    </Row>
+
+                    <from>
+                      <div class="form-group">
+                        <label for="exampleFormControlTextarea1"> <img src="img/AnotherPic/notes.png" style={{ width: "60px" }} alt="" /> Do you want to add any notes with your order?</label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Type here…" rows="3"></textarea>
+                      </div>
+                    </from>
+                    <Row>
+                      <div className="checkout-heading">
+                        <h3 style={{ color: "33669A" }}>Type of Payment</h3>
+                        <p style={{ color: "grey" }}>
+                          Would you like to pay by cash or through digital payment?
+                        </p>
+                        <Row>
+
+                          <label>
+                            <input type="radio"
+                              defaultChecked={true}
+                            //onChange={this.toggleChange}
+                            />
+                            {" "}Cash on Service Completion
+                        </label>
+
+                          <label style={{ marginTop: "10px" }}>
+                            <input type="radio"
+                              defaultChecked={false}
+                              disabled={true}
+                            //onChange={this.toggleChange}
+                            />
+                            {" "}Digital Payment <span> <img src="img/AnotherPic/ssl_logo.png" alt="ssl_logo.png" style={{width:"30%"}} /> </span>
+                        </label>
+
+
+                        </Row> <br />
+
+                        <Row>
+
+                          <label>
+                            <input type="checkbox"
+                              defaultChecked={true}
+                            //onChange={this.toggleChange}
+                            />
+                            {" "} <a href="privacy_policy.html" target="_blank">I have read privacy policy,</a> <a href="term_condition.html" target="_blank"> terms and condition</a> &  <a href="refund_return_policy.html" target="_blank">refund and return policy.</a>
+                          </label>
+                         
+                         
+                        </Row>
+
+
 
                       </div>
                     </Row>
+
+
+                    <div className="form-floation mb-3"><br />
+                      <input
+                        className="btn btn-success form-control"
+                        type="submit"
+                        value="Place Order"
+                      />
+                    </div>
                   </Container>
+
                 </div>
               </Col>
             </Row>

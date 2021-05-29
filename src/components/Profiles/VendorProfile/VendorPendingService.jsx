@@ -20,7 +20,7 @@ const VendorPendingService = () => {
   }, []);
 const fetchArray = async () => {
   console.log("posting Array -------------------------");
-  fetch('https://kentradigital.com/api/registerService', {
+  fetch('https://backend.amaderservice.com/api/registerService', {
   method: 'POST',
   headers: {
     'Accept': 'application/json',
@@ -41,7 +41,7 @@ const fetchArray = async () => {
 })
 }
   const fetchItem = async () => {
-    fetch("https://kentradigital.com/api/Vendor_Dash?vendorid=" + vendorInfo.id)
+    fetch("https://backend.amaderservice.com/api/Vendor_Dash?vendorid=" + vendorInfo.id)
       .then((response) => response.json())
       .then((data) => SetServiceHistorys(data.pending_service))
       .then(() => setLoading(true));

@@ -38,7 +38,7 @@ function ForYourHome() {
 
     const fetchItem = async () => {
         const link =
-            "https://kentradigital.com/api/gethome";
+            "https://backend.amaderservice.com/api/gethome";
         const data = await fetch(link);
         const item = await data.json();
         setItem(item);
@@ -49,11 +49,11 @@ function ForYourHome() {
                 <span className="rec-shadow1" style={{ marginBottom: "20px", display: "inline-block" }}> <b>For Your Home</b> </span>
                 <Carousel responsive={responsive}>
                     {item.map((item) => (
-                        <div key={item.id} className="rec-pad" >
+                        <div key={item.id} className="rec-pad" >    
                             <div className="rec-shadow">
                                 <Link
                                     style={{ textDecoration: "none", color: "33669A", margin: 0, }}
-                                    to={item.link_id}
+                                    to={item.link_id.toString()}
                                 >
                                     <img className="rec-img" src={item.image} alt="" />
                                     <h5 className="rec-text">{item.name}</h5>

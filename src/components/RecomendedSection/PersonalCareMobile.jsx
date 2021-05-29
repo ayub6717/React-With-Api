@@ -22,7 +22,7 @@ const ForYourHome = () => {
 
   const fetchItem = async () => {
     const link =
-      "https://kentradigital.com/api/getpersonalcare";
+      "http://backend.amaderservice.com/api/getpersonalcare";
     const data = await fetch(link);
     const item = await data.json();
     setItem(item);

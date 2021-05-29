@@ -4,6 +4,7 @@ import { reactLocalStorage } from "reactjs-localstorage";
 import { Redirect, useHistory } from "react-router-dom";
 import SelectSearch from "react-select-search";
 import { Modal, Button } from "react-bootstrap";
+import "./UserLogin.css"
 
 const UserSignUp = () => {
   useEffect(() => {
@@ -56,7 +57,7 @@ const UserSignUp = () => {
 
   const fetchZones = async () => {
     const options = await fetch(
-      `https://kentradigital.com/api/serviceZone`
+      `https://backend.amaderservice.com/api/serviceZone`
     );
     const item = await options.json();
     const newArray = item.map(({ id, zone }) => ({
@@ -75,7 +76,7 @@ const UserSignUp = () => {
   const register = async () => {
     try {
       const link =
-        "https://kentradigital.com/api/userRegistration?name=" +
+        "https://backend.amaderservice.com/api/userRegistration?name=" +
         username +
         "&email=" +
         email +
@@ -111,7 +112,7 @@ const UserSignUp = () => {
   };
 
   return (
-    <div>
+    <div className="userback">
       <div className="mb-5">
         <NavBar></NavBar>
       </div>
@@ -148,11 +149,13 @@ const UserSignUp = () => {
           </h1>
         </Modal.Body>        
       </Modal>
-      <div className="container pt-5" style={{ marginTop: "150px" }}>
+      <div className="container pt-5" style={{ marginTop: "20px" }}>
         <h1 className="text-center">User Registration</h1> <br />
         <div className="row d-flex justify-content-center">
-          <div className="col-md-6">
+          <div className="col-md-6 uback">
             <form action="" onSubmit={handleClick}>
+            <label> <span style={{color:"red"}}>*</span> Please enter an username</label>
+
               <div class="form-floating mb-3">
                 <input
                   type="name"
@@ -163,8 +166,10 @@ const UserSignUp = () => {
                   onChange={(event) => setUsername(event.target.value)}
                   required
                 ></input>
-                <label for="floatingInput">Username</label>
-              </div>              
+                <label style={{color:"#6F7174"}} for="floatingInput">Ex: John</label>
+              </div>  
+
+              <label> <span style={{color:"red"}}>*</span> Please enter mobile number</label>            
               <div class="form-floating mb-3">
                 <input
                   type="tel"
@@ -175,8 +180,10 @@ const UserSignUp = () => {
                   onChange={(event) => setContact(event.target.value)}
                   required
                 ></input>
-                <label for="floatingInput">Mobile Number</label>
+                <label for="floatingInput" style={{color:"#6F7174"}}>Ex: 01xxxxxxxxx</label>
               </div>
+
+              <label> <span style={{color:"red"}}>*</span> Must be select your location</label>            
               <div class="form-floating mb-3">
                 <SelectSearch
                   options={locationZones}
@@ -186,6 +193,8 @@ const UserSignUp = () => {
                 />
                 <label for="location">Location</label>
               </div>
+
+              <label>Please enter email address (Optional) </label>            
               <div class="form-floating mb-3">
                 <input
                   type="email"
@@ -195,9 +204,10 @@ const UserSignUp = () => {
                   value={email}
                   onChange={(event) => setEmail(event.target.value)}
                 ></input>
-                <label for="floatingInput">Email Address (Optional)</label>
+                <label for="floatingInput" style={{color:"#6F7174"}}>Ex: john99@gmail.com</label>
               </div>
 
+              <label> <span style={{color:"red"}}>*</span> Please enter password (Minimum 8 digit)</label>            
               <div class="form-floating mb-3">
                 <input
                   type="password"
@@ -208,8 +218,10 @@ const UserSignUp = () => {
                   onChange={(event) => setPassword(event.target.value)}
                   required
                 ></input>
-                <label for="floatingPassword">Password</label>
+                <label for="floatingPassword" style={{color:"#6F7174"}}>********</label>
               </div>
+
+              <label> <span style={{color:"red"}}>*</span> Please enter your confirm password</label>            
               <div class="form-floating mb-3">
                 <input
                   type="password"
@@ -220,23 +232,19 @@ const UserSignUp = () => {
                   onChange={(event) => setRePassword(event.target.value)}
                   required
                 ></input>
-                <label for="floatingPassword">Confirm Password</label>
+                <label for="floatingPassword" style={{color:"#6F7174"}}>********</label>
               </div>
-              <div className="form-floation mb-3">
+              <div className="form-floation mb-3" style={{textAlign:"center"}}>
                 <input
-                  className="btn btn-primary form-control"
+                  className="btn btn-success "
                   type="submit"
                   value="Register"
                 />
               </div>
-              <div className="form-floation mb-3 text-center">
-              <p className="link-p">
-                  <a  href="http://expert.amaderservice.com/"target="_blank"> <span style={{color:"#1700FF"}}>Are you a Vendor? Switch to Vendor!</span></a>
-                </p>
-              </div>
+        
             </form>
           </div>
-        </div>
+        </div> <br /> <br />
       </div>
     </div>
   );

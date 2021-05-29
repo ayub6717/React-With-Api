@@ -116,7 +116,7 @@ const AdminCreateUser = () => {
     setCartModalVisible(true);
     fetchItemCatagory();
     const link =
-      "https://kentradigital.com/api/ViewCart?userid=" +
+      "https://backend.amaderservice.com/api/ViewCart?userid=" +
       userInfo.id;
     const data = await fetch(link);
     const dataJSON = await data.json();
@@ -133,7 +133,7 @@ const AdminCreateUser = () => {
 
   const addToCart = async (finalServiceId, unitPrice) => {
     const link =
-      "https://kentradigital.com/api/addCart?userid=" +
+      "https://backend.amaderservice.com/api/addCart?userid=" +
       userInfo.id +
       "&serviceid=" +
       finalServiceId
@@ -147,7 +147,7 @@ const AdminCreateUser = () => {
 
   const removeFromCart = async (orderId) => {
     const link =
-      "https://kentradigital.com/api/removeCart?userid=" +
+      "https://backend.amaderservice.com/api/removeCart?userid=" +
       userInfo.id +
       "&id=" +
       orderId;
@@ -163,7 +163,7 @@ const AdminCreateUser = () => {
 
   const viewCart = async () => {
     const link =
-      "https://kentradigital.com/api/ViewCart?userid=" +
+      "https://backend.amaderservice.com/api/ViewCart?userid=" +
       userInfo.id;
     const data = await fetch(link);
     const dataJSON = await data.json();
@@ -194,7 +194,7 @@ const AdminCreateUser = () => {
       const completeDate = date.getDate() + "-" + correctDateMonth + "-" + date.getFullYear();
       
             const link =
-              "https://kentradigital.com/api/ConfirmCart?userid=" +
+              "https://backend.amaderservice.com/api/ConfirmCart?userid=" +
               userInfo.id +
               "&zoneid=" +
               userInfo.zone_id +
@@ -221,7 +221,7 @@ const AdminCreateUser = () => {
 
 
   const fetchUser = async () => {
-    fetch("https://kentradigital.com/api/finduser?info=" + query)
+    fetch("https://backend.amaderservice.com/api/finduser?info=" + query)
       .then((response) => response.json())
       .then((data) => setUserList(data))
       .then(() => setLoading(false));
@@ -229,7 +229,7 @@ const AdminCreateUser = () => {
 
   const fetchItemCatagory = async () => {
     const optionsCatagory = await fetch(
-      `https://kentradigital.com/api/showservice`
+      `https://backend.amaderservice.com/api/showservice`
     );
     const itemCatagory = await optionsCatagory.json();
     const newArrayCatagory = itemCatagory.map(({ id, category_name }) => ({
@@ -244,7 +244,7 @@ const AdminCreateUser = () => {
 
   const fetchItemSubCatagory = async (id) => {
     const optionsCatagory = await fetch(
-      `https://kentradigital.com/api/subcatagory?maincatagoryid=` + id
+      `https://backend.amaderservice.com/api/subcatagory?maincatagoryid=` + id
     );
     const itemCatagory = await optionsCatagory.json();
     const newArrayCatagory = itemCatagory.map(({ id, service_type_name }) => ({
@@ -257,7 +257,7 @@ const AdminCreateUser = () => {
   };
 
   const fetchItemService = async (id) => {
-    const link = `https://kentradigital.com/api/servicelist?subcatagoryid=` + id;
+    const link = `https://backend.amaderservice.com/api/servicelist?subcatagoryid=` + id;
     const optionsCatagory = await fetch(link);
     const itemCatagory = await optionsCatagory.json();
     const newArrayCatagory = itemCatagory.map(({ id, service_name }) => ({
@@ -271,7 +271,7 @@ const AdminCreateUser = () => {
   };
 
   const fetchItemFinalService = async (id) => {
-    const link = `https://kentradigital.com/api/finalServiceList?serviceid=` + id;
+    const link = `https://backend.amaderservice.com/api/finalServiceList?serviceid=` + id;
     const optionsCatagory = await fetch(link);
     const itemCatagory = await optionsCatagory.json();
 

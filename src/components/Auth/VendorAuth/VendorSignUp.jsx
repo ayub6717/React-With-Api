@@ -23,7 +23,7 @@ const VendorSignUp = () => {
 
   const register = async () => {
     try {
-      const link = "https://kentradigital.com/api/registerVendor?vendor_name="
+      const link = "https://backend.amaderservice.com/api/registerVendor?vendor_name="
         + username +
         "&address=" +
         address +
@@ -39,7 +39,7 @@ const VendorSignUp = () => {
 
       if (item == "1") {
         const link =
-        "https://kentradigital.com/api/Vendor_Login?email=" +
+        "https://backend.amaderservice.com/api/Vendor_Login?email=" +
         email +
         "&password=" +
         password;

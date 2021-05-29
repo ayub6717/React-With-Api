@@ -53,7 +53,7 @@ function SelectItem() {
 
     const fetchItem = async () => {
         const options = await fetch(
-            `https://kentradigital.com/api/subcatagory?typename=`
+            `https://backend.amaderservice.com/api/subcatagory?typename=`
         );
         const item = await options.json();
         const newArray = item.map(({ id, service_type_name }) => ({
@@ -65,7 +65,7 @@ function SelectItem() {
 
     const fetchZones = async () => {
         const options = await fetch(
-            `https://kentradigital.com/api/serviceZone`
+            `https://backend.amaderservice.com/api/serviceZone`
         );
         const item = await options.json();
         const newArray = item.map(({ id, zone }) => ({
@@ -89,7 +89,7 @@ function SelectItem() {
                                 <h2 >Service Partner</h2>
                             </div>
                             <p>Get all servicies you need in one place <br /> from professional expart, at home!</p>
-                            <span><img className="img-width" src="/img/app-store.png" alt="app-store.png" />  <img className="img-width" src="/img/play-store.png" alt="play-store" /></span>
+                            <span><img className="img-width" src="/img/app-store.png" alt="app-store.png" /> <a href="https://play.google.com/store/apps/details?id=com.amaderserviceclient" target="_blank"> <img className="img-width" src="/img/play-store.png" alt="play-store" /></a> </span>
                         </div>
                         <div className="col-sm-6">
                             <div className="select-one">

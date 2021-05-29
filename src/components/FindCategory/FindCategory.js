@@ -58,7 +58,7 @@ function FindCategory() {
 
 
     const fetchItem = async () => {
-        const link = "https://kentradigital.com/api/subcatagory?typename=Appliance%20Repair";
+        const link = "https://backend.amaderservice.com/api/subcatagory?typename=Appliance%20Repair";
         const data = await fetch(link);
         const item = await data.json();
         setItem(item);
@@ -67,7 +67,7 @@ function FindCategory() {
 
 
     const fetchItemB = async () => {
-        const link = "https://kentradigital.com/api/subcatagory?typename=Beauty%20and%20Saloon";
+        const link = "https://backend.amaderservice.com/api/subcatagory?typename=Beauty%20and%20Saloon";
         const data = await fetch(link);
         const itemB = await data.json();
         setItemB(itemB);
@@ -75,7 +75,7 @@ function FindCategory() {
 
 
     const fetchItemC = async () => {
-        const link = "https://kentradigital.com/api/subcatagory?typename=Cleaning";
+        const link = "https://backend.amaderservice.com/api/subcatagory?typename=Cleaning";
         const data = await fetch(link);
         const itemC = await data.json();
         setItemC(itemC);
@@ -83,7 +83,7 @@ function FindCategory() {
 
 
     const fetchItemE = async () => {
-        const link = "https://kentradigital.com/api/subcatagory?typename=Shifting";
+        const link = "https://backend.amaderservice.com/api/subcatagory?typename=Shifting";
         const data = await fetch(link);
         const itemE = await data.json();
         setItemE(itemE);
@@ -91,14 +91,14 @@ function FindCategory() {
 
 
     const fetchItemF = async () => {
-        const link = "https://kentradigital.com/api/subcatagory?typename=Trip%20and%20Travel";
+        const link = "https://backend.amaderservice.com/api/subcatagory?typename=Trip%20and%20Travel";
         const data = await fetch(link);
         const itemF = await data.json();
         setItemF(itemF);
     };
 
     const fetchItemG = async () => {
-        const link = "https://kentradigital.com/api/subcatagory?typename=Painting%20Renovation";
+        const link = "https://backend.amaderservice.com/api/subcatagory?typename=Painting%20Renovation";
         const data = await fetch(link);
         const itemG = await data.json();
         setItemG(itemG);
@@ -106,14 +106,14 @@ function FindCategory() {
 
 
     const fetchItemH = async () => {
-        const link = "https://kentradigital.com/api/subcatagory?typename=Pest";
+        const link = "https://backend.amaderservice.com/api/subcatagory?typename=Pest";
         const data = await fetch(link);
         const itemH = await data.json();
         setItemH(itemH);
     };
 
     const fetchItemI = async () => {
-        const link = "https://kentradigital.com/api/gethome";
+        const link = "https://backend.amaderservice.com/api/gethome";
         const data = await fetch(link);
         const itemI = await data.json();
         setItemI(itemI);
@@ -135,7 +135,7 @@ function FindCategory() {
                         <Modal.Title>Select Your Item</Modal.Title>
                     </Modal.Header>
                     <Modal.Body>
-                        <Tab.Container id="left-tabs-example" defaultActiveKey="second">
+                        <Tab.Container  id="left-tabs-example" defaultActiveKey="second">
                             <Row>
                                 <Col sm={5} className="Bg-a">
                                     <Nav variant="pills" className="flex-column">
@@ -179,31 +179,31 @@ function FindCategory() {
                                 <Col sm={7} className="Bg-b">
 
 
-                                    {/* ************For Appliance Api https://kentradigital.com/api/subcatagory?typename=Appliance%20Repair********** */}
+                                    {/* ************For Appliance Api https://backend.amaderservice.com/api/subcatagory?typename=Appliance%20Repair********** */}
                                     {item.map((item) => (
                                         <Tab.Content>
-                                            <Tab.Pane eventKey="second" key={item.id} className="content-border">
+                                            <Tab.Pane eventKey="second" key={item.id} className="hvr-shrink hvr-sweep-to-right">
                                                 <Link
                                                     style={{ textDecoration: "none", color: "33669A", margin: 0, }}
-                                                    to={item.id}
+                                                    to={item.id.toString()}
                                                 >
                                                     <span className="mid" style={{ padding: "5px", paddingLeft: "15px", display: "inline-block" }}><img style={{ width: "30px" }} src={item.service_type_icon} /> <span className="cate-name"> <b>{item.service_type_name}</b> </span></span>
                                                 </Link>
                                             </Tab.Pane>
                                         </Tab.Content>
-                                    ))}
+                                    ))} 
 
                                     {/* ************For Appliance Api End********** */}
 
 
-                                    {/* ************For Pest Control Api https://kentradigital.com/api/subcatagory?typename=Pest********** */}
+                                    {/* ************For Pest Control Api https://backend.amaderservice.com/api/subcatagory?typename=Pest********** */}
 
                                     {itemB.map((itemB) => (
                                         <Tab.Content >
-                                            <Tab.Pane eventKey="third" key={itemB.id} className="content-border">
+                                            <Tab.Pane eventKey="third" key={itemB.id} className="hvr-shrink hvr-sweep-to-right">
                                                 <Link
                                                     style={{ textDecoration: "none", color: "33669A", margin: 0, }}
-                                                    to={itemB.id}
+                                                    to={itemB.id.toString()}
                                                 >
                                                     <span className="mid" style={{ padding: "5px", paddingLeft: "15px", display: "inline-block" }}><img style={{ width: "30px" }} src={itemB.service_type_icon} /> <span className="cate-name"> <b>{itemB.service_type_name}</b> </span> </span>
                                                 </Link>
@@ -212,13 +212,13 @@ function FindCategory() {
                                     ))}
                                     {/* ************For Pest Control Api End********** */}
 
-                                    {/* ************For Cleaning Api https://kentradigital.com/api/subcatagory?typename=Cleaning */}
+                                    {/* ************For Cleaning Api https://backend.amaderservice.com/api/subcatagory?typename=Cleaning */}
                                     {itemC.map((itemC) => (
                                         <Tab.Content>
-                                            <Tab.Pane eventKey="fourth" key={itemC.id} className="content-border">
+                                            <Tab.Pane eventKey="fourth" key={itemC.id} className="hvr-shrink hvr-sweep-to-right">
                                                 <Link
                                                     style={{ textDecoration: "none", color: "33669A", margin: 0, }}
-                                                    to={itemC.id}
+                                                    to={itemC.id.toString()}
                                                 >
                                                     <span className="mid" style={{ padding: "5px", paddingLeft: "15px", display: "inline-block" }}><img style={{ width: "30px" }} src={itemC.service_type_icon} /> <span className="cate-name"> <b>{itemC.service_type_name}</b> </span></span>
                                                 </Link>
@@ -233,14 +233,14 @@ function FindCategory() {
 
 
 
-                                    {/* ************For Cleanning https://kentradigital.com/api/subcatagory?typename=Shifting********** */}
+                                    {/* ************For Cleanning https://backend.amaderservice.com/api/subcatagory?typename=Shifting********** */}
 
                                     {itemE.map((itemE) => (
                                         <Tab.Content>
-                                            <Tab.Pane eventKey="six" key={itemE.id} className="content-border">
+                                            <Tab.Pane eventKey="six" key={itemE.id} className="hvr-shrink hvr-sweep-to-right">
                                                 <Link
                                                     style={{ textDecoration: "none", color: "33669A", margin: 0, }}
-                                                    to={itemE.id}
+                                                    to={itemE.id.toString()}
                                                 >
                                                     <span className="mid" style={{ padding: "5px", paddingLeft: "15px", display: "inline-block" }}><img style={{ width: "30px" }} src={itemE.service_type_icon} /> <span className="cate-name"> <b>{itemE.service_type_name}</b> </span></span>
                                                 </Link>
@@ -254,14 +254,14 @@ function FindCategory() {
 
 
 
-                                    {/* ************For Trip And Travel Api https://kentradigital.com/api/subcatagory?typename=Trip%20and%20Travel********** */}
+                                    {/* ************For Trip And Travel Api https://backend.amaderservice.com/api/subcatagory?typename=Trip%20and%20Travel********** */}
 
                                     {itemF.map((itemF) => (
                                         <Tab.Content>
-                                            <Tab.Pane eventKey="five" key={itemF.id} className="content-border">
+                                            <Tab.Pane eventKey="five" key={itemF.id} className="hvr-shrink hvr-sweep-to-right">
                                                 <Link
                                                     style={{ textDecoration: "none", color: "33669A", margin: 0, }}
-                                                    to={itemF.id}
+                                                    to={itemF.id.toString()}
                                                 >
                                                     <span className="mid" style={{ padding: "5px", paddingLeft: "15px", display: "inline-block" }}><img style={{ width: "30px" }} src={itemF.service_type_icon} /> <span className="cate-name"> <b>{itemF.service_type_name}</b> </span></span>
                                                 </Link>
@@ -270,14 +270,14 @@ function FindCategory() {
                                     ))}
                                     {/* ************For Pest Control Api End********** */}
 
-                                    {/* ************For Pest Control Api https://kentradigital.com/api/subcatagory?typename=Pest********** */}
+                                    {/* ************For Pest Control Api https://backend.amaderservice.com/api/subcatagory?typename=Pest********** */}
 
                                     {itemG.map((itemG) => (
                                         <Tab.Content>
-                                            <Tab.Pane eventKey="eight" key={itemG.id} className="content-border">
+                                            <Tab.Pane eventKey="eight" key={itemG.id} className="hvr-shrink hvr-sweep-to-right">
                                                 <Link
                                                     style={{ textDecoration: "none", color: "33669A", margin: 0, }}
-                                                    to={itemG.id}
+                                                    to={itemG.id.toString()}
                                                 >
                                                     <span className="mid" style={{ padding: "5px", paddingLeft: "15px", display: "inline-block" }}><img style={{ width: "30px" }} src={itemG.service_type_icon} /> <span className="cate-name"> <b>{itemG.service_type_name}</b> </span></span>
                                                 </Link>
@@ -291,14 +291,14 @@ function FindCategory() {
 
 
 
-                                    {/* ************For Pest Control Api https://kentradigital.com/api/subcatagory?typename=Pest********** */}
+                                    {/* ************For Pest Control Api https://backend.amaderservice.com/api/subcatagory?typename=Pest********** */}
 
                                     {itemH.map((itemH) => (
                                         <Tab.Content>
-                                            <Tab.Pane eventKey="nine" key={itemH.id} className="content-border">
+                                            <Tab.Pane eventKey="nine" key={itemH.id} className="hvr-shrink hvr-sweep-to-right">
                                                 <Link
                                                     style={{ textDecoration: "none", color: "33669A", margin: 0, }}
-                                                    to={itemH.id}
+                                                    to={itemH.id.toString()}
                                                 >
                                                     <span className="mid" style={{ padding: "5px", paddingLeft: "15px", display: "inline-block" }}><img style={{ width: "30px" }} src={itemH.service_type_icon} /> <span className="cate-name"> <b>{itemH.service_type_name}</b> </span></span>
                                                 </Link>
@@ -363,11 +363,11 @@ function FindCategory() {
                                 <Col sm={7} className="Bg-b">
 
 
-                                    {/* ************For Appliance Api https://kentradigital.com/api/subcatagory?typename=Appliance%20Repair********** */}
+                                    {/* ************For Appliance Api https://backend.amaderservice.com/api/subcatagory?typename=Appliance%20Repair********** */}
                                     {item.map((item) => (
-                                        <Tab.Content>
-                                            <Tab.Pane eventKey="second" key={item.id} className="content-border">
-                                                <Link
+                                        <Tab.Content  >
+                                            <Tab.Pane eventKey="second" key={item.id}  className="hvr-shrink hvr-sweep-to-right">
+                                                <Link  
                                                     style={{ textDecoration: "none", color: "33669A", margin: 0, }}
                                                     to={item.id}
                                                 >
@@ -380,14 +380,14 @@ function FindCategory() {
                                     {/* ************For Appliance Api End********** */}
 
 
-                                    {/* ************For Pest Control Api https://kentradigital.com/api/subcatagory?typename=Pest********** */}
+                                    {/* ************For Pest Control Api https://backend.amaderservice.com/api/subcatagory?typename=Pest********** */}
 
                                     {itemB.map((itemB) => (
                                         <Tab.Content >
-                                            <Tab.Pane eventKey="third" key={itemB.id} className="content-border">
+                                            <Tab.Pane eventKey="third" key={itemB.id}  className="hvr-shrink hvr-sweep-to-right">
                                                 <Link
                                                     style={{ textDecoration: "none", color: "33669A", margin: 0, }}
-                                                    to={itemB.id}
+                                                    to={itemB.id.toString()}
                                                 >
                                                     <span className="mid" style={{ padding: "5px", paddingLeft: "15px", display: "inline-block" }}><img style={{ width: "30px" }} src={itemB.service_type_icon} /> <span className="cate-name"> <b>{itemB.service_type_name}</b> </span> </span>
                                                 </Link>
@@ -396,13 +396,13 @@ function FindCategory() {
                                     ))}
                                     {/* ************For Pest Control Api End********** */}
 
-                                    {/* ************For Cleaning Api https://kentradigital.com/api/subcatagory?typename=Cleaning */}
+                                    {/* ************For Cleaning Api https://backend.amaderservice.com/api/subcatagory?typename=Cleaning */}
                                     {itemC.map((itemC) => (
                                         <Tab.Content>
-                                            <Tab.Pane eventKey="fourth" key={itemC.id} className="content-border">
+                                            <Tab.Pane eventKey="fourth" key={itemC.id}  className="hvr-shrink hvr-sweep-to-right">
                                                 <Link
                                                     style={{ textDecoration: "none", color: "33669A", margin: 0, }}
-                                                    to={itemC.id}
+                                                    to={itemC.id.toString()}
                                                 >
                                                     <span className="mid" style={{ padding: "5px", paddingLeft: "15px", display: "inline-block" }}><img style={{ width: "30px" }} src={itemC.service_type_icon} /> <span className="cate-name"> <b>{itemC.service_type_name}</b> </span></span>
                                                 </Link>
@@ -417,14 +417,14 @@ function FindCategory() {
 
 
 
-                                    {/* ************For Cleanning https://kentradigital.com/api/subcatagory?typename=Shifting********** */}
+                                    {/* ************For Cleanning https://backend.amaderservice.com/api/subcatagory?typename=Shifting********** */}
 
                                     {itemE.map((itemE) => (
                                         <Tab.Content>
-                                            <Tab.Pane eventKey="six" key={itemE.id} className="content-border">
+                                            <Tab.Pane eventKey="six" key={itemE.id} className="hvr-shrink hvr-sweep-to-right">
                                                 <Link
                                                     style={{ textDecoration: "none", color: "33669A", margin: 0, }}
-                                                    to={itemE.id}
+                                                    to={itemE.id.toString()}
                                                 >
                                                     <span className="mid" style={{ padding: "5px", paddingLeft: "15px", display: "inline-block" }}><img style={{ width: "30px" }} src={itemE.service_type_icon} /> <span className="cate-name"> <b>{itemE.service_type_name}</b> </span></span>
                                                 </Link>
@@ -438,14 +438,14 @@ function FindCategory() {
 
 
 
-                                    {/* ************For Trip And Travel Api https://kentradigital.com/api/subcatagory?typename=Trip%20and%20Travel********** */}
+                                    {/* ************For Trip And Travel Api https://backend.amaderservice.com/api/subcatagory?typename=Trip%20and%20Travel********** */}
 
                                     {itemF.map((itemF) => (
                                         <Tab.Content>
-                                            <Tab.Pane eventKey="five" key={itemF.id} className="content-border">
+                                            <Tab.Pane eventKey="five" key={itemF.id} className="hvr-shrink hvr-sweep-to-right">
                                                 <Link
                                                     style={{ textDecoration: "none", color: "33669A", margin: 0, }}
-                                                    to={itemF.id}
+                                                    to={itemF.id.toString()}
                                                 >
                                                     <span className="mid" style={{ padding: "5px", paddingLeft: "15px", display: "inline-block" }}><img style={{ width: "30px" }} src={itemF.service_type_icon} /> <span className="cate-name"> <b>{itemF.service_type_name}</b> </span></span>
                                                 </Link>
@@ -454,14 +454,14 @@ function FindCategory() {
                                     ))}
                                     {/* ************For Pest Control Api End********** */}
 
-                                    {/* ************For Pest Control Api https://kentradigital.com/api/subcatagory?typename=Pest********** */}
+                                    {/* ************For Pest Control Api https://backend.amaderservice.com/api/subcatagory?typename=Pest********** */}
 
                                     {itemG.map((itemG) => (
                                         <Tab.Content>
-                                            <Tab.Pane eventKey="eight" key={itemG.id} className="content-border">
+                                            <Tab.Pane eventKey="eight" key={itemG.id} className="hvr-shrink hvr-sweep-to-right">
                                                 <Link
                                                     style={{ textDecoration: "none", color: "33669A", margin: 0, }}
-                                                    to={itemG.id}
+                                                    to={itemG.id.toString()}
                                                 >
                                                     <span className="mid" style={{ padding: "5px", paddingLeft: "15px", display: "inline-block" }}><img style={{ width: "30px" }} src={itemG.service_type_icon} /> <span className="cate-name"> <b>{itemG.service_type_name}</b> </span></span>
                                                 </Link>
@@ -475,14 +475,14 @@ function FindCategory() {
 
 
 
-                                    {/* ************For Pest Control Api https://kentradigital.com/api/subcatagory?typename=Pest********** */}
+                                    {/* ************For Pest Control Api https://backend.amaderservice.com/api/subcatagory?typename=Pest********** */}
 
                                     {itemH.map((itemH) => (
                                         <Tab.Content>
-                                            <Tab.Pane eventKey="nine" key={itemH.id} className="content-border">
+                                            <Tab.Pane eventKey="nine" key={itemH.id} className="hvr-shrink hvr-sweep-to-right">
                                                 <Link
                                                     style={{ textDecoration: "none", color: "33669A", margin: 0, }}
-                                                    to={itemH.id}
+                                                    to={itemH.id.toString()}
                                                 >
                                                     <span className="mid" style={{ padding: "5px", paddingLeft: "15px", display: "inline-block" }}><img style={{ width: "30px" }} src={itemH.service_type_icon} /> <span className="cate-name"> <b>{itemH.service_type_name}</b> </span></span>
                                                 </Link>
@@ -548,10 +548,10 @@ function FindCategory() {
                                 <Col sm={7} className="Bg-b">
 
 
-                                    {/* ************For Appliance Api https://kentradigital.com/api/subcatagory?typename=Appliance%20Repair********** */}
+                                    {/* ************For Appliance Api https://backend.amaderservice.com/api/subcatagory?typename=Appliance%20Repair********** */}
                                     {item.map((item) => (
                                         <Tab.Content>
-                                            <Tab.Pane eventKey="second" key={item.id} className="content-border">
+                                            <Tab.Pane eventKey="second" key={item.id} className="hvr-shrink hvr-sweep-to-right">
                                                 <Link
                                                     style={{ textDecoration: "none", color: "33669A", margin: 0, }}
                                                     to={item.id}
@@ -565,14 +565,14 @@ function FindCategory() {
                                     {/* ************For Appliance Api End********** */}
 
 
-                                    {/* ************For Pest Control Api https://kentradigital.com/api/subcatagory?typename=Pest********** */}
+                                    {/* ************For Pest Control Api https://backend.amaderservice.com/api/subcatagory?typename=Pest********** */}
 
                                     {itemB.map((itemB) => (
                                         <Tab.Content >
-                                            <Tab.Pane eventKey="third" key={itemB.id} className="content-border">
+                                            <Tab.Pane eventKey="third" key={itemB.id} className="hvr-shrink hvr-sweep-to-right">
                                                 <Link
                                                     style={{ textDecoration: "none", color: "33669A", margin: 0, }}
-                                                    to={itemB.id}
+                                                    to={itemB.id.toString()}
                                                 >
                                                     <span className="mid" style={{ padding: "5px", paddingLeft: "15px", display: "inline-block" }}><img style={{ width: "30px" }} src={itemB.service_type_icon} /> <span className="cate-name"> <b>{itemB.service_type_name}</b> </span> </span>
                                                 </Link>
@@ -581,13 +581,13 @@ function FindCategory() {
                                     ))}
                                     {/* ************For Pest Control Api End********** */}
 
-                                    {/* ************For Cleaning Api https://kentradigital.com/api/subcatagory?typename=Cleaning */}
+                                    {/* ************For Cleaning Api https://backend.amaderservice.com/api/subcatagory?typename=Cleaning */}
                                     {itemC.map((itemC) => (
                                         <Tab.Content>
-                                            <Tab.Pane eventKey="fourth" key={itemC.id} className="content-border">
+                                            <Tab.Pane eventKey="fourth" key={itemC.id} className="hvr-shrink hvr-sweep-to-right">
                                                 <Link
                                                     style={{ textDecoration: "none", color: "33669A", margin: 0, }}
-                                                    to={itemC.id}
+                                                    to={itemC.id.toString()}
                                                 >
                                                     <span className="mid" style={{ padding: "5px", paddingLeft: "15px", display: "inline-block" }}><img style={{ width: "30px" }} src={itemC.service_type_icon} /> <span className="cate-name"> <b>{itemC.service_type_name}</b> </span></span>
                                                 </Link>
@@ -602,14 +602,14 @@ function FindCategory() {
 
 
 
-                                    {/* ************For Cleanning https://kentradigital.com/api/subcatagory?typename=Shifting********** */}
+                                    {/* ************For Cleanning https://backend.amaderservice.com/api/subcatagory?typename=Shifting********** */}
 
                                     {itemE.map((itemE) => (
                                         <Tab.Content>
-                                            <Tab.Pane eventKey="six" key={itemE.id} className="content-border">
+                                            <Tab.Pane eventKey="six" key={itemE.id} className="hvr-shrink hvr-sweep-to-right">
                                                 <Link
                                                     style={{ textDecoration: "none", color: "33669A", margin: 0, }}
-                                                    to={itemE.id}
+                                                    to={itemE.id.toString()}
                                                 >
                                                     <span className="mid" style={{ padding: "5px", paddingLeft: "15px", display: "inline-block" }}><img style={{ width: "30px" }} src={itemE.service_type_icon} /> <span className="cate-name"> <b>{itemE.service_type_name}</b> </span></span>
                                                 </Link>
@@ -623,14 +623,14 @@ function FindCategory() {
 
 
 
-                                    {/* ************For Trip And Travel Api https://kentradigital.com/api/subcatagory?typename=Trip%20and%20Travel********** */}
+                                    {/* ************For Trip And Travel Api https://backend.amaderservice.com/api/subcatagory?typename=Trip%20and%20Travel********** */}
 
                                     {itemF.map((itemF) => (
                                         <Tab.Content>
-                                            <Tab.Pane eventKey="five" key={itemF.id} className="content-border">
+                                            <Tab.Pane eventKey="five" key={itemF.id} className="hvr-shrink hvr-sweep-to-right">
                                                 <Link
                                                     style={{ textDecoration: "none", color: "33669A", margin: 0, }}
-                                                    to={itemF.id}
+                                                    to={itemF.id.toString()}
                                                 >
                                                     <span className="mid" style={{ padding: "5px", paddingLeft: "15px", display: "inline-block" }}><img style={{ width: "30px" }} src={itemF.service_type_icon} /> <span className="cate-name"> <b>{itemF.service_type_name}</b> </span></span>
                                                 </Link>
@@ -639,14 +639,14 @@ function FindCategory() {
                                     ))}
                                     {/* ************For Pest Control Api End********** */}
 
-                                    {/* ************For Pest Control Api https://kentradigital.com/api/subcatagory?typename=Pest********** */}
+                                    {/* ************For Pest Control Api https://backend.amaderservice.com/api/subcatagory?typename=Pest********** */}
 
                                     {itemG.map((itemG) => (
                                         <Tab.Content>
-                                            <Tab.Pane eventKey="eight" key={itemG.id} className="content-border">
+                                            <Tab.Pane eventKey="eight" key={itemG.id} className="hvr-shrink hvr-sweep-to-right">
                                                 <Link
                                                     style={{ textDecoration: "none", color: "33669A", margin: 0, }}
-                                                    to={itemG.id}
+                                                    to={itemG.id.toString()}
                                                 >
                                                     <span className="mid" style={{ padding: "5px", paddingLeft: "15px", display: "inline-block" }}><img style={{ width: "30px" }} src={itemG.service_type_icon} /> <span className="cate-name"> <b>{itemG.service_type_name}</b> </span></span>
                                                 </Link>
@@ -660,14 +660,14 @@ function FindCategory() {
 
 
 
-                                    {/* ************For Pest Control Api https://kentradigital.com/api/subcatagory?typename=Pest********** */}
+                                    {/* ************For Pest Control Api https://backend.amaderservice.com/api/subcatagory?typename=Pest********** */}
 
                                     {itemH.map((itemH) => (
                                         <Tab.Content>
-                                            <Tab.Pane eventKey="nine" key={itemH.id} className="content-border">
+                                            <Tab.Pane eventKey="nine" key={itemH.id} className="hvr-shrink hvr-sweep-to-right">
                                                 <Link
                                                     style={{ textDecoration: "none", color: "33669A", margin: 0, }}
-                                                    to={itemH.id}
+                                                    to={itemH.id.toString()}
                                                 >
                                                     <span className="mid" style={{ padding: "5px", paddingLeft: "15px", display: "inline-block" }}><img style={{ width: "30px" }} src={itemH.service_type_icon} /> <span className="cate-name"> <b>{itemH.service_type_name}</b> </span></span>
                                                 </Link>
@@ -734,10 +734,10 @@ function FindCategory() {
                                 <Col sm={7} className="Bg-b">
 
 
-                                    {/* ************For Appliance Api https://kentradigital.com/api/subcatagory?typename=Appliance%20Repair********** */}
+                                    {/* ************For Appliance Api https://backend.amaderservice.com/api/subcatagory?typename=Appliance%20Repair********** */}
                                     {item.map((item) => (
                                         <Tab.Content>
-                                            <Tab.Pane eventKey="second" key={item.id} className="content-border">
+                                            <Tab.Pane eventKey="second" key={item.id} className="hvr-shrink hvr-sweep-to-right">
                                                 <Link
                                                     style={{ textDecoration: "none", color: "33669A", margin: 0, }}
                                                     to={item.id}
@@ -751,14 +751,14 @@ function FindCategory() {
                                     {/* ************For Appliance Api End********** */}
 
 
-                                    {/* ************For Pest Control Api https://kentradigital.com/api/subcatagory?typename=Pest********** */}
+                                    {/* ************For Pest Control Api https://backend.amaderservice.com/api/subcatagory?typename=Pest********** */}
 
                                     {itemB.map((itemB) => (
                                         <Tab.Content >
-                                            <Tab.Pane eventKey="third" key={itemB.id} className="content-border">
+                                            <Tab.Pane eventKey="third" key={itemB.id} className="hvr-shrink hvr-sweep-to-right">
                                                 <Link
                                                     style={{ textDecoration: "none", color: "33669A", margin: 0, }}
-                                                    to={itemB.id}
+                                                    to={itemB.id.toString()}
                                                 >
                                                     <span className="mid" style={{ padding: "5px", paddingLeft: "15px", display: "inline-block" }}><img style={{ width: "30px" }} src={itemB.service_type_icon} /> <span className="cate-name"> <b>{itemB.service_type_name}</b> </span> </span>
                                                 </Link>
@@ -767,13 +767,13 @@ function FindCategory() {
                                     ))}
                                     {/* ************For Pest Control Api End********** */}
 
-                                    {/* ************For Cleaning Api https://kentradigital.com/api/subcatagory?typename=Cleaning */}
+                                    {/* ************For Cleaning Api https://backend.amaderservice.com/api/subcatagory?typename=Cleaning */}
                                     {itemC.map((itemC) => (
                                         <Tab.Content>
-                                            <Tab.Pane eventKey="fourth" key={itemC.id} className="content-border">
+                                            <Tab.Pane eventKey="fourth" key={itemC.id} className="hvr-shrink hvr-sweep-to-right">
                                                 <Link
                                                     style={{ textDecoration: "none", color: "33669A", margin: 0, }}
-                                                    to={itemC.id}
+                                                    to={itemC.id.toString()}
                                                 >
                                                     <span className="mid" style={{ padding: "5px", paddingLeft: "15px", display: "inline-block" }}><img style={{ width: "30px" }} src={itemC.service_type_icon} /> <span className="cate-name"> <b>{itemC.service_type_name}</b> </span></span>
                                                 </Link>
@@ -788,14 +788,14 @@ function FindCategory() {
 
 
 
-                                    {/* ************For Cleanning https://kentradigital.com/api/subcatagory?typename=Shifting********** */}
+                                    {/* ************For Cleanning https://backend.amaderservice.com/api/subcatagory?typename=Shifting********** */}
 
                                     {itemE.map((itemE) => (
                                         <Tab.Content>
-                                            <Tab.Pane eventKey="six" key={itemE.id} className="content-border">
+                                            <Tab.Pane eventKey="six" key={itemE.id} className="hvr-shrink hvr-sweep-to-right">
                                                 <Link
                                                     style={{ textDecoration: "none", color: "33669A", margin: 0, }}
-                                                    to={itemE.id}
+                                                    to={itemE.id.toString()}
                                                 >
                                                     <span className="mid" style={{ padding: "5px", paddingLeft: "15px", display: "inline-block" }}><img style={{ width: "30px" }} src={itemE.service_type_icon} /> <span className="cate-name"> <b>{itemE.service_type_name}</b> </span></span>
                                                 </Link>
@@ -809,14 +809,14 @@ function FindCategory() {
 
 
 
-                                    {/* ************For Trip And Travel Api https://kentradigital.com/api/subcatagory?typename=Trip%20and%20Travel********** */}
+                                    {/* ************For Trip And Travel Api https://backend.amaderservice.com/api/subcatagory?typename=Trip%20and%20Travel********** */}
 
                                     {itemF.map((itemF) => (
                                         <Tab.Content>
-                                            <Tab.Pane eventKey="five" key={itemF.id} className="content-border">
+                                            <Tab.Pane eventKey="five" key={itemF.id} className="hvr-shrink hvr-sweep-to-right">
                                                 <Link
                                                     style={{ textDecoration: "none", color: "33669A", margin: 0, }}
-                                                    to={itemF.id}
+                                                    to={itemF.id.toString()}
                                                 >
                                                     <span className="mid" style={{ padding: "5px", paddingLeft: "15px", display: "inline-block" }}><img style={{ width: "30px" }} src={itemF.service_type_icon} /> <span className="cate-name"> <b>{itemF.service_type_name}</b> </span></span>
                                                 </Link>
@@ -825,14 +825,14 @@ function FindCategory() {
                                     ))}
                                     {/* ************For Pest Control Api End********** */}
 
-                                    {/* ************For Pest Control Api https://kentradigital.com/api/subcatagory?typename=Pest********** */}
+                                    {/* ************For Pest Control Api https://backend.amaderservice.com/api/subcatagory?typename=Pest********** */}
 
                                     {itemG.map((itemG) => (
                                         <Tab.Content>
-                                            <Tab.Pane eventKey="eight" key={itemG.id} className="content-border">
+                                            <Tab.Pane eventKey="eight" key={itemG.id} className="hvr-shrink hvr-sweep-to-right">
                                                 <Link
                                                     style={{ textDecoration: "none", color: "33669A", margin: 0, }}
-                                                    to={itemG.id}
+                                                    to={itemG.id.toString()}
                                                 >
                                                     <span className="mid" style={{ padding: "5px", paddingLeft: "15px", display: "inline-block" }}><img style={{ width: "30px" }} src={itemG.service_type_icon} /> <span className="cate-name"> <b>{itemG.service_type_name}</b> </span></span>
                                                 </Link>
@@ -846,14 +846,14 @@ function FindCategory() {
 
 
 
-                                    {/* ************For Pest Control Api https://kentradigital.com/api/subcatagory?typename=Pest********** */}
+                                    {/* ************For Pest Control Api https://backend.amaderservice.com/api/subcatagory?typename=Pest********** */}
 
                                     {itemH.map((itemH) => (
                                         <Tab.Content>
-                                            <Tab.Pane eventKey="nine" key={itemH.id} className="content-border">
+                                            <Tab.Pane eventKey="nine" key={itemH.id} className="hvr-shrink hvr-sweep-to-right">
                                                 <Link
                                                     style={{ textDecoration: "none", color: "33669A", margin: 0, }}
-                                                    to={itemH.id}
+                                                    to={itemH.id.toString()}
                                                 >
                                                     <span className="mid" style={{ padding: "5px", paddingLeft: "15px", display: "inline-block" }}><img style={{ width: "30px" }} src={itemH.service_type_icon} /> <span className="cate-name"> <b>{itemH.service_type_name}</b> </span></span>
                                                 </Link>
@@ -918,10 +918,10 @@ function FindCategory() {
                                 <Col sm={7} className="Bg-b">
 
 
-                                    {/* ************For Appliance Api https://kentradigital.com/api/subcatagory?typename=Appliance%20Repair********** */}
+                                    {/* ************For Appliance Api https://backend.amaderservice.com/api/subcatagory?typename=Appliance%20Repair********** */}
                                     {item.map((item) => (
                                         <Tab.Content>
-                                            <Tab.Pane eventKey="second" key={item.id} className="content-border">
+                                            <Tab.Pane eventKey="second" key={item.id} className="hvr-shrink hvr-sweep-to-right">
                                                 <Link
                                                     style={{ textDecoration: "none", color: "33669A", margin: 0, }}
                                                     to={item.id}
@@ -935,14 +935,14 @@ function FindCategory() {
                                     {/* ************For Appliance Api End********** */}
 
 
-                                    {/* ************For Pest Control Api https://kentradigital.com/api/subcatagory?typename=Pest********** */}
+                                    {/* ************For Pest Control Api https://backend.amaderservice.com/api/subcatagory?typename=Pest********** */}
 
                                     {itemB.map((itemB) => (
                                         <Tab.Content >
-                                            <Tab.Pane eventKey="third" key={itemB.id} className="content-border">
+                                            <Tab.Pane eventKey="third" key={itemB.id} className="hvr-shrink hvr-sweep-to-right">
                                                 <Link
                                                     style={{ textDecoration: "none", color: "33669A", margin: 0, }}
-                                                    to={itemB.id}
+                                                    to={itemB.id.toString()}
                                                 >
                                                     <span className="mid" style={{ padding: "5px", paddingLeft: "15px", display: "inline-block" }}><img style={{ width: "30px" }} src={itemB.service_type_icon} /> <span className="cate-name"> <b>{itemB.service_type_name}</b> </span> </span>
                                                 </Link>
@@ -951,13 +951,13 @@ function FindCategory() {
                                     ))}
                                     {/* ************For Pest Control Api End********** */}
 
-                                    {/* ************For Cleaning Api https://kentradigital.com/api/subcatagory?typename=Cleaning */}
+                                    {/* ************For Cleaning Api https://backend.amaderservice.com/api/subcatagory?typename=Cleaning */}
                                     {itemC.map((itemC) => (
                                         <Tab.Content>
-                                            <Tab.Pane eventKey="fourth" key={itemC.id} className="content-border">
+                                            <Tab.Pane eventKey="fourth" key={itemC.id} className="hvr-shrink hvr-sweep-to-right">
                                                 <Link
                                                     style={{ textDecoration: "none", color: "33669A", margin: 0, }}
-                                                    to={itemC.id}
+                                                    to={itemC.id.toString()}
                                                 >
                                                     <span className="mid" style={{ padding: "5px", paddingLeft: "15px", display: "inline-block" }}><img style={{ width: "30px" }} src={itemC.service_type_icon} /> <span className="cate-name"> <b>{itemC.service_type_name}</b> </span></span>
                                                 </Link>
@@ -972,14 +972,14 @@ function FindCategory() {
 
 
 
-                                    {/* ************For Cleanning https://kentradigital.com/api/subcatagory?typename=Shifting********** */}
+                                    {/* ************For Cleanning https://backend.amaderservice.com/api/subcatagory?typename=Shifting********** */}
 
                                     {itemE.map((itemE) => (
                                         <Tab.Content>
-                                            <Tab.Pane eventKey="six" key={itemE.id} className="content-border">
+                                            <Tab.Pane eventKey="six" key={itemE.id} className="hvr-shrink hvr-sweep-to-right">
                                                 <Link
                                                     style={{ textDecoration: "none", color: "33669A", margin: 0, }}
-                                                    to={itemE.id}
+                                                    to={itemE.id.toString()}
                                                 >
                                                     <span className="mid" style={{ padding: "5px", paddingLeft: "15px", display: "inline-block" }}><img style={{ width: "30px" }} src={itemE.service_type_icon} /> <span className="cate-name"> <b>{itemE.service_type_name}</b> </span></span>
                                                 </Link>
@@ -993,14 +993,14 @@ function FindCategory() {
 
 
 
-                                    {/* ************For Trip And Travel Api https://kentradigital.com/api/subcatagory?typename=Trip%20and%20Travel********** */}
+                                    {/* ************For Trip And Travel Api https://backend.amaderservice.com/api/subcatagory?typename=Trip%20and%20Travel********** */}
 
                                     {itemF.map((itemF) => (
                                         <Tab.Content>
-                                            <Tab.Pane eventKey="five" key={itemF.id} className="content-border">
+                                            <Tab.Pane eventKey="five" key={itemF.id} className="hvr-shrink hvr-sweep-to-right">
                                                 <Link
                                                     style={{ textDecoration: "none", color: "33669A", margin: 0, }}
-                                                    to={itemF.id}
+                                                    to={itemF.id.toString()}
                                                 >
                                                     <span className="mid" style={{ padding: "5px", paddingLeft: "15px", display: "inline-block" }}><img style={{ width: "30px" }} src={itemF.service_type_icon} /> <span className="cate-name"> <b>{itemF.service_type_name}</b> </span></span>
                                                 </Link>
@@ -1009,14 +1009,14 @@ function FindCategory() {
                                     ))}
                                     {/* ************For Pest Control Api End********** */}
 
-                                    {/* ************For Pest Control Api https://kentradigital.com/api/subcatagory?typename=Pest********** */}
+                                    {/* ************For Pest Control Api https://backend.amaderservice.com/api/subcatagory?typename=Pest********** */}
 
                                     {itemG.map((itemG) => (
                                         <Tab.Content>
-                                            <Tab.Pane eventKey="eight" key={itemG.id} className="content-border">
+                                            <Tab.Pane eventKey="eight" key={itemG.id} className="hvr-shrink hvr-sweep-to-right">
                                                 <Link
                                                     style={{ textDecoration: "none", color: "33669A", margin: 0, }}
-                                                    to={itemG.id}
+                                                    to={itemG.id.toString()}
                                                 >
                                                     <span className="mid" style={{ padding: "5px", paddingLeft: "15px", display: "inline-block" }}><img style={{ width: "30px" }} src={itemG.service_type_icon} /> <span className="cate-name"> <b>{itemG.service_type_name}</b> </span></span>
                                                 </Link>
@@ -1030,14 +1030,14 @@ function FindCategory() {
 
 
 
-                                    {/* ************For Pest Control Api https://kentradigital.com/api/subcatagory?typename=Pest********** */}
+                                    {/* ************For Pest Control Api https://backend.amaderservice.com/api/subcatagory?typename=Pest********** */}
 
                                     {itemH.map((itemH) => (
                                         <Tab.Content>
-                                            <Tab.Pane eventKey="nine" key={itemH.id} className="content-border">
+                                            <Tab.Pane eventKey="nine" key={itemH.id} className="hvr-shrink hvr-sweep-to-right">
                                                 <Link
                                                     style={{ textDecoration: "none", color: "33669A", margin: 0, }}
-                                                    to={itemH.id}
+                                                    to={itemH.id.toString()}
                                                 >
                                                     <span className="mid" style={{ padding: "5px", paddingLeft: "15px", display: "inline-block" }}><img style={{ width: "30px" }} src={itemH.service_type_icon} /> <span className="cate-name"> <b>{itemH.service_type_name}</b> </span></span>
                                                 </Link>
@@ -1103,13 +1103,13 @@ function FindCategory() {
                                 <Col sm={7} className="Bg-b">
 
 
-                                    {/* ************For Appliance Api https://kentradigital.com/api/subcatagory?typename=Appliance%20Repair********** */}
+                                    {/* ************For Appliance Api https://backend.amaderservice.com/api/subcatagory?typename=Appliance%20Repair********** */}
                                     {item.map((item) => (
                                         <Tab.Content>
-                                            <Tab.Pane eventKey="second" key={item.id} className="content-border">
+                                            <Tab.Pane eventKey="second" key={item.id} className="hvr-shrink hvr-sweep-to-right">
                                                 <Link
                                                     style={{ textDecoration: "none", color: "33669A", margin: 0, }}
-                                                    to={item.id}
+                                                    to={item.id.toString()}
                                                 >
                                                     <span className="mid" style={{ padding: "5px", paddingLeft: "15px", display: "inline-block" }}><img style={{ width: "30px" }} src={item.service_type_icon} /> <span className="cate-name"> <b>{item.service_type_name}</b> </span></span>
                                                 </Link>
@@ -1120,14 +1120,14 @@ function FindCategory() {
                                     {/* ************For Appliance Api End********** */}
 
 
-                                    {/* ************For Pest Control Api https://kentradigital.com/api/subcatagory?typename=Pest********** */}
+                                    {/* ************For Pest Control Api https://backend.amaderservice.com/api/subcatagory?typename=Pest********** */}
 
                                     {itemB.map((itemB) => (
                                         <Tab.Content >
-                                            <Tab.Pane eventKey="third" key={itemB.id} className="content-border">
+                                            <Tab.Pane eventKey="third" key={itemB.id} className="hvr-shrink hvr-sweep-to-right">
                                                 <Link
                                                     style={{ textDecoration: "none", color: "33669A", margin: 0, }}
-                                                    to={itemB.id}
+                                                    to={itemB.id.toString()}
                                                 >
                                                     <span className="mid" style={{ padding: "5px", paddingLeft: "15px", display: "inline-block" }}><img style={{ width: "30px" }} src={itemB.service_type_icon} /> <span className="cate-name"> <b>{itemB.service_type_name}</b> </span> </span>
                                                 </Link>
@@ -1136,13 +1136,13 @@ function FindCategory() {
                                     ))}
                                     {/* ************For Pest Control Api End********** */}
 
-                                    {/* ************For Cleaning Api https://kentradigital.com/api/subcatagory?typename=Cleaning */}
+                                    {/* ************For Cleaning Api https://backend.amaderservice.com/api/subcatagory?typename=Cleaning */}
                                     {itemC.map((itemC) => (
                                         <Tab.Content>
-                                            <Tab.Pane eventKey="fourth" key={itemC.id} className="content-border">
+                                            <Tab.Pane eventKey="fourth" key={itemC.id} className="hvr-shrink hvr-sweep-to-right">
                                                 <Link
                                                     style={{ textDecoration: "none", color: "33669A", margin: 0, }}
-                                                    to={itemC.id}
+                                                    to={itemC.id.toString()}
                                                 >
                                                     <span className="mid" style={{ padding: "5px", paddingLeft: "15px", display: "inline-block" }}><img style={{ width: "30px" }} src={itemC.service_type_icon} /> <span className="cate-name"> <b>{itemC.service_type_name}</b> </span></span>
                                                 </Link>
@@ -1157,14 +1157,14 @@ function FindCategory() {
 
 
 
-                                    {/* ************For Cleanning https://kentradigital.com/api/subcatagory?typename=Shifting********** */}
+                                    {/* ************For Cleanning https://backend.amaderservice.com/api/subcatagory?typename=Shifting********** */}
 
                                     {itemE.map((itemE) => (
                                         <Tab.Content>
-                                            <Tab.Pane eventKey="six" key={itemE.id} className="content-border">
+                                            <Tab.Pane eventKey="six" key={itemE.id} className="hvr-shrink hvr-sweep-to-right">
                                                 <Link
                                                     style={{ textDecoration: "none", color: "33669A", margin: 0, }}
-                                                    to={itemE.id}
+                                                    to={itemE.id.toString()}
                                                 >
                                                     <span className="mid" style={{ padding: "5px", paddingLeft: "15px", display: "inline-block" }}><img style={{ width: "30px" }} src={itemE.service_type_icon} /> <span className="cate-name"> <b>{itemE.service_type_name}</b> </span></span>
                                                 </Link>
@@ -1178,14 +1178,14 @@ function FindCategory() {
 
 
 
-                                    {/* ************For Trip And Travel Api https://kentradigital.com/api/subcatagory?typename=Trip%20and%20Travel********** */}
+                                    {/* ************For Trip And Travel Api https://backend.amaderservice.com/api/subcatagory?typename=Trip%20and%20Travel********** */}
 
                                     {itemF.map((itemF) => (
                                         <Tab.Content>
-                                            <Tab.Pane eventKey="five" key={itemF.id} className="content-border">
+                                            <Tab.Pane eventKey="five" key={itemF.id} className="hvr-shrink hvr-sweep-to-right">
                                                 <Link
                                                     style={{ textDecoration: "none", color: "33669A", margin: 0, }}
-                                                    to={itemF.id}
+                                                    to={itemF.id.toString()}
                                                 >
                                                     <span className="mid" style={{ padding: "5px", paddingLeft: "15px", display: "inline-block" }}><img style={{ width: "30px" }} src={itemF.service_type_icon} /> <span className="cate-name"> <b>{itemF.service_type_name}</b> </span></span>
                                                 </Link>
@@ -1194,14 +1194,14 @@ function FindCategory() {
                                     ))}
                                     {/* ************For Pest Control Api End********** */}
 
-                                    {/* ************For Pest Control Api https://kentradigital.com/api/subcatagory?typename=Pest********** */}
+                                    {/* ************For Pest Control Api https://backend.amaderservice.com/api/subcatagory?typename=Pest********** */}
 
                                     {itemG.map((itemG) => (
                                         <Tab.Content>
-                                            <Tab.Pane eventKey="eight" key={itemG.id} className="content-border">
+                                            <Tab.Pane eventKey="eight" key={itemG.id} className="hvr-shrink hvr-sweep-to-right">
                                                 <Link
                                                     style={{ textDecoration: "none", color: "33669A", margin: 0, }}
-                                                    to={itemG.id}
+                                                    to={itemG.id.toString()}
                                                 >
                                                     <span className="mid" style={{ padding: "5px", paddingLeft: "15px", display: "inline-block" }}><img style={{ width: "30px" }} src={itemG.service_type_icon} /> <span className="cate-name"> <b>{itemG.service_type_name}</b> </span></span>
                                                 </Link>
@@ -1215,14 +1215,14 @@ function FindCategory() {
 
 
 
-                                    {/* ************For Pest Control Api https://kentradigital.com/api/subcatagory?typename=Pest********** */}
+                                    {/* ************For Pest Control Api https://backend.amaderservice.com/api/subcatagory?typename=Pest********** */}
 
                                     {itemH.map((itemH) => (
                                         <Tab.Content>
-                                            <Tab.Pane eventKey="nine" key={itemH.id} className="content-border">
+                                            <Tab.Pane eventKey="nine" key={itemH.id} className="hvr-shrink hvr-sweep-to-right">
                                                 <Link
                                                     style={{ textDecoration: "none", color: "33669A", margin: 0, }}
-                                                    to={itemH.id}
+                                                    to={itemH.id.toString()}
                                                 >
                                                     <span className="mid" style={{ padding: "5px", paddingLeft: "15px", display: "inline-block" }}><img style={{ width: "30px" }} src={itemH.service_type_icon} /> <span className="cate-name"> <b>{itemH.service_type_name}</b> </span></span>
                                                 </Link>
@@ -1249,7 +1249,7 @@ function FindCategory() {
 
                     <div className="col col-pad" onClick={() => history.push("/1")} style={{ cursor: "pointer" }}>
                         <div className="img-border">
-                            <div className="img-effect">
+                            <div className="img-effect hvr-curl-top-left">
                                 <img className="img-category" data-toggle="modal" data-target="#myModal" src="/img/MainCategory/AcCategory.png" alt="AcCategory.png" />
                                 <h6 style={{ paddingTop: "20px", fontWeight: "bold" }}>Ac Repair Service</h6>
                             </div>
@@ -1258,7 +1258,7 @@ function FindCategory() {
 
                     <div className="col col-pad" onClick={handleShow} style={{ cursor: "pointer" }}>
                         <div className="img-border">
-                            <div className="img-effect">
+                            <div className="img-effect hvr-curl-top-left">
                                 <img className="img-category" data-toggle="modal" data-target="#myModal" src="/img/MainCategory/AppliencRepair.png" alt="AppliencRepair.png" />
                                 <h6 style={{ paddingTop: "20px", fontWeight: "bold" }}>Appliance Repair</h6>
                             </div>
@@ -1267,7 +1267,7 @@ function FindCategory() {
 
                     <div className="col col-pad" onClick={handleShowA} style={{ cursor: "pointer" }}>
                         <div className="img-border">
-                            <div className="img-effect">
+                            <div className="img-effect hvr-curl-top-left">
                                 <img className="img-category" data-toggle="modal" data-target="#myModal" src="/img/MainCategory/BeautySalon mainCategory.png" alt="BeautySalon mainCategory.png" />
                                 <h6 style={{ paddingTop: "20px", fontWeight: "bold" }}>Beauty & Salon</h6>
                             </div>
@@ -1276,7 +1276,7 @@ function FindCategory() {
 
                     <div className="col col-pad" onClick={handleShowB} style={{ cursor: "pointer" }}>
                         <div className="img-border">
-                            <div className="img-effect" >
+                            <div className="img-effect hvr-curl-top-left" >
                                 <img className="img-category" data-toggle="modal" data-target="#myModal" src="/img/MainCategory/cleaning.png" alt="cleaning.png" />
                                 <h6 style={{ paddingTop: "20px", fontWeight: "bold" }}>Cleaning</h6>
                             </div>
@@ -1285,7 +1285,7 @@ function FindCategory() {
 
                     <div className="col col-pad" onClick={() => history.push("/95")} style={{ cursor: "pointer" }}>
                         <div className="img-border">
-                            <div className="img-effect" >
+                            <div className="img-effect hvr-curl-top-left" >
                                 <img className="img-category" data-toggle="modal" data-target="#myModal" src="/img/MainCategory/Electrical.png" alt="Electrical.png" />
                                 <h6 style={{ paddingTop: "20px", fontWeight: "bold" }}>Electrical</h6>
                             </div>
@@ -1294,7 +1294,7 @@ function FindCategory() {
 
                     <div className="col col-pad" onClick={handleShowC} style={{ cursor: "pointer" }}>
                         <div className="img-border">
-                            <div className="img-effect">
+                            <div className="img-effect hvr-curl-top-left">
                                 <img className="img-category img-shift" data-toggle="modal" data-target="#myModal" src="/img/MainCategory/Shifting.png" alt="shifting.png" />
                                 <h6 style={{ paddingTop: "20px", fontWeight: "bold" }}>Shifting</h6>
                             </div>
@@ -1305,7 +1305,7 @@ function FindCategory() {
 
                     <div className="col col-pad" onClick={() => history.push("/64")} style={{ cursor: "pointer" }}>
                         <div className="img-border">
-                            <div className="img-effect">
+                            <div className="img-effect hvr-curl-top-left">
                                 <img className="img-category" data-toggle="modal" data-target="#myModal" src="/img/MainCategory/Plumbing& Sanitary.png" alt="Plumbing& Sanitary.png" />
                                 <h6 style={{ paddingTop: "20px", fontWeight: "bold" }}>Plumbing & Sanitary</h6>
                             </div>
@@ -1315,7 +1315,7 @@ function FindCategory() {
 
                     <div className="col col-pad" onClick={handleShowD} style={{ cursor: "pointer" }}>
                         <div className="img-border">
-                            <div className="img-effect">
+                            <div className="img-effect hvr-curl-top-left">
                                 <img className="img-category" data-toggle="modal" data-target="#myModal" src="/img/MainCategory/Painting& Renovation.png" alt="Painting& Renovation.png" />
                                 <h6 style={{ paddingTop: "20px", fontWeight: "bold" }}>Painting & Renovation</h6>
                             </div>
@@ -1324,7 +1324,7 @@ function FindCategory() {
 
                     <div className="col col-pad" onClick={handleShowE} style={{ cursor: "pointer" }}>
                         <div className="img-border">
-                            <div className="img-effect">
+                            <div className="img-effect hvr-curl-top-left">
                                 <img className="img-category" data-toggle="modal" data-target="#myModal" src="/img/MainCategory/PestControl.png" alt="PestControl.png" />
                                 <h6 style={{ paddingTop: "20px", fontWeight: "bold" }}>Pest Control</h6>
                             </div>
@@ -1333,7 +1333,7 @@ function FindCategory() {
 
                     <div className="col col-pad" onClick={handleClick} style={{ cursor: "pointer" }}>
                         <div className="img-border">
-                            <div className="img-effect">
+                            <div className="img-effect hvr-curl-top-left">
                                 <img className="img-category" data-toggle="modal" data-target="#myModal" src="/img/MainCategory/Others.png" alt="Others.png" />
                                 <h6 style={{ paddingTop: "20px", fontWeight: "bold" }}>All Services</h6>
                             </div>

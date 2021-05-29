@@ -9,3 +9,17 @@
     font-size: large;
     text-decoration: underline;
 }
+
+.userback{
+    background: url("./../../../user.png");
+    /* background: url("./../../back.jpg") no-repeat center center;  */
+    background-size: cover;
+    /* height: 550px; */
+    /* margin-top: 80px !important; */
+}
+
+.uback{
+    background-color: #d3bfdb;
+    padding: 30px;
+    border-radius: 20px;
+}

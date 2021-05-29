@@ -16,7 +16,7 @@ const VendorUpdate = () => {
 
   const history = useHistory();
   const updateInfo = async () => {
-    const link = "https://kentradigital.com/api/vendorUpdateInfo?vendorid=" 
+    const link = "https://backend.amaderservice.com/api/vendorUpdateInfo?vendorid=" 
     + vendorInfo.id + "&email=" 
     + vEmail + "&address=" + vAddress + "&contact=" + vContact;
     const country = await fetch(link).then(res => res.json())

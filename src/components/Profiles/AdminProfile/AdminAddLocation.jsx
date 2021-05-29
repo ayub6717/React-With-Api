@@ -27,14 +27,14 @@ const AdminAddLocaion = () => {
   const history = useHistory();
 
   const createCategory = async () => {
-    const optionsCatagory = await fetch("https://kentradigital.com/api/addCountry?countryname="
+    const optionsCatagory = await fetch("https://backend.amaderservice.com/api/addCountry?countryname="
       + categoryName);
     fetchItemCatagory();
 
   };
 
   const createSubCategory = async (id) => {
-    const link = "https://kentradigital.com/api/addCity?cityname=" + subCategory
+    const link = "https://backend.amaderservice.com/api/addCity?cityname=" + subCategory
       + "&countryid="
       + categoryId;
     const optionsCatagory = await fetch(link);
@@ -44,7 +44,7 @@ const AdminAddLocaion = () => {
 
   const createService = async (id) => {
 
-    const link = "https://kentradigital.com/api/addService?servicename=" + serviceName
+    const link = "https://backend.amaderservice.com/api/addService?servicename=" + serviceName
       + "&servicetypeid="
       + subCategoryId;
     fetch(link)
@@ -54,7 +54,7 @@ const AdminAddLocaion = () => {
   };
 
   const createFinalService = async () => {
-    const link = "https://kentradigital.com/api/addZone?zonename="
+    const link = "https://backend.amaderservice.com/api/addZone?zonename="
       + finalName
       + "&cityid="
       + subCategoryId;
@@ -80,7 +80,7 @@ const AdminAddLocaion = () => {
 
   const fetchItemCatagory = async () => {
     const optionsCatagory = await fetch(
-      `https://kentradigital.com/api/showCountry`
+      `https://backend.amaderservice.com/api/showCountry`
     );
     const itemCatagory = await optionsCatagory.json();
     const newArrayCatagory = itemCatagory.map(({ id, country_name }) => ({
@@ -93,7 +93,7 @@ const AdminAddLocaion = () => {
 
   const fetchItemSubCatagory = async (id) => {
     const optionsCatagory = await fetch(
-      `https://kentradigital.com/api/city?countryid=` + id
+      `https://backend.amaderservice.com/api/city?countryid=` + id
     );
     const itemCatagory = await optionsCatagory.json();
     const newArrayCatagory = itemCatagory.map(({ id, city_name }) => ({
@@ -104,7 +104,7 @@ const AdminAddLocaion = () => {
   };
 
   const fetchItemService = async (id) => {
-    const link = `https://kentradigital.com/api/servicelist?subcatagoryid=` + id;
+    const link = `https://backend.amaderservice.com/api/servicelist?subcatagoryid=` + id;
     const optionsCatagory = await fetch(link);
     const itemCatagory = await optionsCatagory.json();
     const newArrayCatagory = itemCatagory.map(({ id, service_name }) => ({
